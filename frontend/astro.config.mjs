@@ -12,5 +12,5 @@ export default defineConfig({
     })],
   site: 'https://vymktg.github.io/',
   //base: import.meta.env.BASE_URL,
-  base: '/vymktg.com',
+  base: import.meta.env.BASE_URL,
 });
