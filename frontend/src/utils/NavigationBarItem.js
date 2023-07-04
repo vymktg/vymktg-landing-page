@@ -5,7 +5,7 @@ const NAVIGATION_ITEM = [
   },
   {
     title: "How it Works",
-    href: "/how-it-works",
+    href: "how-it-works",
   },
   {
     title: "Services",
