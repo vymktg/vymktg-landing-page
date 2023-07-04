@@ -3,9 +3,9 @@
   "type": "module",
   "version": "0.0.1",
   "scripts": {
-    "dev": "astro dev --load --env .env.dev",
-    "start": "astro dev --load --env .env.dev",
-    "build": "astro build --load --env .env.prod",
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
     "check": "astro check",
