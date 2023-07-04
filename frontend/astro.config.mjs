@@ -10,6 +10,6 @@ export default defineConfig({
         applyBaseStyles: false
       }
     })],
-  site: 'https://vymktg.github.io/vymktg.com/',
-  base: '/',
+  site: 'https://vymktg.github.io/',
+  base: '/vymktg.com/',
 });
