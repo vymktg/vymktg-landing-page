@@ -4,9 +4,7 @@ import NavbarItem from "./NavbarItem.astro";
 import MenuCollapseButton from "./MenuCollapseButton.astro";
 import CallNowButton from "./CallNowButton.astro";
 import NavigationCollapse from "./NavigationCollapse.astro";
-import NAVIGATION_ITEM from "../../utils/NavigationBarItem";
-
-const CURRENT_URL = "/";
+import { NAVIGATION_ITEM } from "../../config";
 ---
 
 <nav class="sticky z-10 py-6">
@@ -21,7 +19,7 @@ const CURRENT_URL = "/";
           <NavbarItem
             href={item.href}
             title={item.title}
-            isActiveUrl={item.href === CURRENT_URL}
+            isActiveUrl={item.href === Astro.url.pathname}
           />
         ))
       }
@@ -29,7 +27,7 @@ const CURRENT_URL = "/";
 
     <MenuCollapseButton className={"sm:block md:hidden"} />
     <CallNowButton />
-    <NavigationCollapse currentUrl={CURRENT_URL} />
+    <NavigationCollapse />
   </div>
 
   <div
