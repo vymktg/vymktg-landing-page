@@ -5,6 +5,8 @@ on:
   # Using a different branch name? Replace `main` with your branch’s name
   push:
     branches: [ main ]
+    paths:
+      - 'frontend'
   # Allows you to run this workflow manually from the Actions tab on GitHub.
   workflow_dispatch:
 
@@ -13,10 +15,6 @@ permissions:
   contents: read
   pages: write
   id-token: write
-
-defaults:
- run:
-  working-directory: frontend
 
 jobs:
   build:
