@@ -6,13 +6,6 @@ import "@fontsource/raleway/700.css";
 import "../../styles/global.css";
 import { SITE } from "../../config";
 
-export type Props = {
-  title: string;
-  description: string;
-  permalink: string;
-  image: string;
-};
-
 const { title = SITE.title, description, permalink, image } = Astro.props;
 ---
 
