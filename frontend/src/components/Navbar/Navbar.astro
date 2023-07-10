@@ -13,7 +13,10 @@ import { NAVIGATION_ITEM } from "../../config";
   >
     <MenuCollapseButton className={"hidden md:block lg:hidden"} />
     <Logo />
-    <ul class="hidden lg:flex flex-row font-medium rounded-lg">
+    <ul
+      class="hidden lg:flex flex-row font-medium rounded-lg"
+      data-href={Astro.url.pathname}
+    >
       {
         NAVIGATION_ITEM.map((item) => (
           <NavbarItem
@@ -36,7 +39,3 @@ import { NAVIGATION_ITEM } from "../../config";
   >
   </div>
 </nav>
-
-<script>
-  console.log("Astro.url.href", Astro.url.href);
-</script>
