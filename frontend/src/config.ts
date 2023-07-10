@@ -1,7 +1,7 @@
 export const NAVIGATION_ITEM = [
   {
     title: "Home",
-    href: "",
+    href: import.meta.env.BASE_URL,
   },
   {
     title: "How it Works",
