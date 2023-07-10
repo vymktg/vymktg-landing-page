@@ -40,7 +40,7 @@ module.exports = {
         typing: 'typing 3s steps(20) alternate, blink 1.2s infinite',
       },
       bottom: {
-        20: '5rem'
+        24: '6rem'
       }
     },
   },
