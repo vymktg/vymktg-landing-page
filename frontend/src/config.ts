@@ -1,23 +1,23 @@
 export const NAVIGATION_ITEM = [
   {
     title: "Home",
-    href: "/",
+    href: "",
   },
   {
     title: "How it Works",
-    href: "/how-it-works",
+    href: "how-it-works",
   },
   {
     title: "Services",
-    href: "/services",
+    href: "services",
   },
   {
     title: "Insight & Project",
-    href: "/insight-project",
+    href: "insight-project",
   },
   {
     title: "Contact",
-    href: "/contact",
+    href: "contact",
   },
 ];
 
