@@ -5,19 +5,19 @@ export const NAVIGATION_ITEM = [
   },
   {
     title: "How it Works",
-    href: "how-it-works",
+    href: `${import.meta.env.BASE_URL}how-it-works`,
   },
   {
     title: "Services",
-    href: "services",
+    href: `${import.meta.env.BASE_URL}services`,
   },
   {
     title: "Insight & Project",
-    href: "insight-project",
+    href: `${import.meta.env.BASE_URL}insight-project`,
   },
   {
     title: "Contact",
-    href: "contact",
+    href: `${import.meta.env.BASE_URL}contact`,
   },
 ];
 

@@ -6,72 +6,32 @@ import Navbar from "../components/Navbar/Navbar.astro";
 <Base title="Not found page.">
   <Navbar />
   <main>
-    <div class="lg:px-24 lg:py-24 md:py-20 md:px-44 px-4 py-24 items-center flex justify-center flex-col-reverse lg:flex-row md:gap-28 gap-16">
-        <div class="xl:pt-24 w-full xl:w-1/2 relative pb-12 lg:pb-0">
-            <div class="relative">
-                <div class="absolute">
-                    <div class="">
-                        <h1 class="my-2 text-gray-800 font-bold text-2xl">
-                            Looks like you've found the
-                            doorway to the great nothing
-                        </h1>
-                        <p class="my-2 text-gray-800">Sorry about that! Please visit our hompage to get where you need to go.</p>
-                        <button class="sm:w-full lg:w-auto my-2 border rounded md py-4 px-8 text-center bg-indigo-600 text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-700 focus:ring-opacity-50">Take me there!</button>
-                    </div>
-                </div>
-                <div>
-                    <img src="https://i.ibb.co/G9DC8S0/404-2.png" />
-                </div>
-            </div>
+    <div
+      class="bg-white absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+    >
+      <div class="text-center w-full mx-auto lg:px-8 z-20">
+        <h2
+          class="text-3xl font-extrabold text-black dark:text-white sm:text-4xl"
+        >
+          <span class="block"> Coming Soon!</span>
+        </h2>
+        <p class="text-xl mt-4 max-w-md mx-auto text-gray-400">
+          This page is not available right now, but it will be soon. Stay tuned!
+        </p>
+        <div class="lg:mt-0 lg:flex-shrink-0">
+          <div class="mt-6 inline-flex rounded-md shadow">
+            <button
+              onclick="location.href = `/`;"
+              type="button"
+              class="py-4 px-6 bg-blue-600 hover:bg-blue-700 focus:ring-blue-500 focus:ring-offset-indigo-200 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 rounded-lg"
+            >
+              Back to home
+            </button>
+          </div>
         </div>
-        <div>
-            <img src="https://i.ibb.co/ck1SGFJ/Group.png" />
-        </div>
+      </div>
     </div>
   </main>
-</Layout>
+</Base>
 
-<style>
-  main {
-    margin: auto;
-    padding: 1.5rem;
-    max-width: 60ch;
-  }
-  h1 {
-    font-size: 3rem;
-    font-weight: 800;
-    margin: 0;
-  }
-  .text-gradient {
-    background-image: var(--accent-gradient);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-size: 400%;
-    background-position: 0%;
-  }
-  .instructions {
-    line-height: 1.6;
-    margin: 1rem 0;
-    border: 1px solid rgba(var(--accent), 25%);
-    background-color: white;
-    padding: 1rem;
-    border-radius: 0.4rem;
-  }
-  .instructions code {
-    font-size: 0.875em;
-    font-weight: bold;
-    background: rgba(var(--accent), 12%);
-    color: rgb(var(--accent));
-    border-radius: 4px;
-    padding: 0.3em 0.45em;
-  }
-  .instructions strong {
-    color: rgb(var(--accent));
-  }
-  .link-card-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-    gap: 1rem;
-    padding: 0;
-  }
-</style>
+<style></style>
