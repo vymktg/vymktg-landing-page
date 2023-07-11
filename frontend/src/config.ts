@@ -12,8 +12,8 @@ export const NAVIGATION_ITEM = [
     href: `${import.meta.env.BASE_URL}services`,
   },
   {
-    title: "Insight & Project",
-    href: `${import.meta.env.BASE_URL}insight-project`,
+    title: "Projects & Insights",
+    href: `${import.meta.env.BASE_URL}projects-insights`,
   },
   {
     title: "Contact",
