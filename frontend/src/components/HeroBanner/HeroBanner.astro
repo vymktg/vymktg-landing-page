@@ -3,6 +3,9 @@
 // console.log('import.meta.env.BASE_URL', import.meta.env.BASE_URL);
 import { Image } from "@astrojs/image/components";
 import heroImage from "../../assets/heroimage.png";
+import HeroBannerImage from "./HeroBannerImage.astro";
+import HeroBannerContent from "./HeroBannerContent.astro";
+import SocialProof from "./SocialProof.astro";
 ---
 
 <!-- Hero -->
@@ -21,90 +24,10 @@ import heroImage from "../../assets/heroimage.png";
     <span
       class="w-4/12 lg:w-2/12 aspect-square bg-gradient-to-tr from-primary to-green-400 absolute -top-5 lg:left-0 rounded-full skew-y-12 blur-2xl opacity-40 skew-x-12 rotate-90"
     ></span>
-    <div
-      class="relative flex flex-col items-center text-center lg:text-left lg:py-7 xl:py-8 lg:items-start lg:max-w-none max-w-3xl mx-auto lg:mx-0 lg:flex-1 lg:w-1/2"
-    >
-      <div
-        class="relative flex flex-col items-center text-center lg:text-left lg:py-7 xl:py-8 lg:items-start lg:max-w-none max-w-3xl mx-auto lg:mx-0 lg:flex-1"
-      >
-        <div>
-          <h1
-            class="text-3xl/tight sm:text-4xl/tight md:text-5xl/tight font-bold text-blue-950"
-          >
-            I'm Vy,
-            <!-- <span
-          class="animate-typing lg:block text-transparent bg-clip-text bg-gradient-to-br from-indigo-600 from-20% via-primary via-30% to-green-600"
-        >
-          Your marketing executor
-        </span> -->
-          </h1>
-          <h2
-            class="animate-typing text-3xl/tight sm:text-4xl/tight md:text-5xl/tight overflow-hidden whitespace-nowrap border-r-4 text-transparent bg-clip-text bg-gradient-to-br from-indigo-600 from-20% via-primary via-30% to-green-600 md:pr-3 font-bold"
-          >
-            Your marketing executor
-          </h2>
-          <!-- <h2
-            class="text-3xl/tight sm:text-4xl/tight md:text-5xl/tight xl:text-6xl/tight"
-          >
-            This is a <span class="type" style="--n:53"
-              >CSS only solution for a multi-line typewriter effect.</span
-            >
-          </h2> -->
-        </div>
-        <p class="md:text-lg text-heading-3 mt-8">
-          Get comprehensive marketing support to set your business apart, from
-          promotions to social media management and event creation, while you
-          focus on growth.
-        </p>
-      </div>
-      <div class="w-full mt-3 xl:mt-0 flex max-w-md mx-auto lg:mx-0">
-        <div class="flex flex-row gap-1 w-full justify-center lg:justify-start">
-          <a
-            href="#"
-            class="inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center text-white rounded-lg bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300"
-          >
-            Get started
-          </a>
-          <a
-            href="#"
-            class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-gray-900 border border-gray-300 rounded-lg hover:bg-gray-100 focus:ring-4 focus:ring-gray-100"
-          >
-            View more
-            <svg
-              class="w-5 h-5 ml-2 -mr-1"
-              fill="currentColor"
-              viewBox="0 0 20 20"
-              xmlns="http://www.w3.org/2000/svg"
-              ><path
-                fill-rule="evenodd"
-                d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-                clip-rule="evenodd"></path></svg
-            >
-          </a>
-        </div>
-      </div>
-      <!-- End Review -->
-    </div>
-    <!-- End Col -->
-
-    <div
-      class="flex flex-1 lg:w-1/2 lg:h-auto relative lg:max-w-none lg:mx-0 mx-auto max-w-3xl"
-    >
-      <img
-        src="images/heroimage.png"
-        alt="Hero image"
-        width="700"
-        height="600"
-        class="lg:absolute lg:w-full lg:h-full rounded-3xl object-contain lg:max-h-none max-h-96 md:min-h-[600px]"
-      />
-      <!-- <Image 
-        src={heroImage}
-        width={596}
-        height={c}
-        alt="Hero Banner Image"
-      /> -->
-    </div>
+    <HeroBannerContent />
+    <HeroBannerImage />
   </div>
+  <SocialProof />
 </section>
 
 <!-- End Hero -->
