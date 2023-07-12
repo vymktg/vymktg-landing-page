@@ -1,13 +1,26 @@
 ---
 import ImageColumn from "./ImageColumn.astro";
-import ContentColumn from "./ContentColumn.astro";
+import ContentLayer from "./ContentLayer.astro";
 ---
 
 <section id="how-it-works">
-  <div
-    class="mx-auto max-w-7xl w-full px-5 sm:px-8 md:px-14 lg:px-5 flex flex-col md:flex-row justify-center align-middle"
-  >
-    <ImageColumn />
-    <ContentColumn />
+  <div class="mx-auto max-w-7xl w-full px-5 sm:px-8 md:px-14 lg:px-5 relative"></div>
+    <!-- <div class="absolute w-11/12 h-11/12">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="100%"
+        height="100%"
+        viewBox="0 0 802 502"
+        fill="none"
+      >
+        <path
+          d="M96.5711 492.475C358.935 520.372 423.374 478.73 670.757 383.251C860.459 327.732 844.888 -93.5932 611.194 20.5064C377.5 134.606 -115.903 58.8828 26.2869 20.5064"
+          stroke="#979494"
+          stroke-width="2"
+          stroke-linejoin="round"
+          stroke-dasharray="15 15"></path>
+      </svg>
+    </div> -->
+    <ContentLayer />
   </div>
 </section>

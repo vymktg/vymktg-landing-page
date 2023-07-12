@@ -21,6 +21,24 @@ export const NAVIGATION_ITEM = [
   },
 ];
 
+export const HOW_IT_WORKS_STEP = [
+  {
+    title: "Initial Meeting",
+    subtitle: "(30m - 1 hr)",
+    description: "Let’s discuss your needs and ensure the perfect match."
+  }, {
+    title: "Proposal and Quote",
+    description: "I will follow up with a proposal to start the FREE 30-days service."
+  }, {
+    title: "Kick-Off Meeting",
+    subtitle: "(1 - 2hrs)",
+    description: "Meeting to dive deeply into the project requirements, prioritize tasks, and set timelines and goals."
+  }, {
+    title: "Measure it",
+    description: "We will track and measure the results of our efforts."
+  }
+];
+
 export const SITE = {
   name: 'Vymktg',
   title: 'Vy Trinh Marketer',
