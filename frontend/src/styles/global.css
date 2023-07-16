@@ -247,4 +247,6 @@ body {
   #faq .faq-item[open] svg { 
     transform: rotate(-180deg);
   }
+  #faq details summary::-webkit-details-marker {   display:none;  
+  }
 }
