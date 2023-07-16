@@ -1,0 +1,24 @@
+---
+import Container from "../shared/Container.astro";
+import Paragraph from "../shared/Paragraph.astro";
+import Title from "../shared/Title.astro";
+import { FAQ_LIST } from "../../config";
+import FAQ from "../shared/FAQ.astro";
+---
+
+<section id="faq">
+  <Container className="lg:w-4/6">
+    <div class="max-w-xl mb-10 md:mx-auto md:text-center space-y-4">
+      <Title>Frequently Asked Questions</Title>
+      <Paragraph>
+        Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+        accusantium doloremque rem aperiam, eaque ipsa quae.
+      </Paragraph>
+    </div>
+    <div
+      class="flex justify-between flex-col"
+    >
+      {FAQ_LIST.map((item, index) => <FAQ {...item} index={index} />)}
+    </div>
+  </Container>
+</section>

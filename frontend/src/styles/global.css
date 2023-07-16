@@ -243,4 +243,8 @@ body {
     --tw-gradient-to-position: ;
     --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
   }
+
+  #faq .faq-item[open] svg { 
+    transform: rotate(-180deg);
+  }
 }
