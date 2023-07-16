@@ -1,0 +1,23 @@
+---
+import SVGLineBackground from "../blocks/SVGLineBackground.astro";
+import ContentLayer from "../blocks/ContentLayer.astro";
+import Title from "../shared/Title.astro";
+import Paragraph from "../shared/Paragraph.astro";
+---
+
+<section id="how-it-works">
+  <div
+    class="mx-auto max-w-7xl w-full px-5 sm:px-8 md:px-14 lg:px-5 text-center mb-6 space-y-4"
+  >
+    <Title>How it Works</Title>
+    <Paragraph>
+      Understanding your challenges and providing tailored solutions to address
+      them effectively.
+    </Paragraph>
+  </div>
+  <div class="mx-auto max-w-7xl w-full px-5 sm:px-8 md:px-14 lg:px-5 relative">
+    <SVGLineBackground />
+
+    <ContentLayer />
+  </div>
+</section>

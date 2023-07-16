@@ -1,11 +1,11 @@
 ---
 import Base from "../layouts/Base.astro";
 import Card from "../components/Card.astro";
-import Navbar from "../components/Navbar/Navbar.astro";
-import HeroBanner from "../components/HeroBanner/HeroBanner.astro";
-import Partners from "../components/Partners/Partners.astro";
-import HowItWorks from "../components/HowItWorks/HowItWorks.astro";
-import Services from "../components/ServiceSection/Services.astro";
+import Navbar from "../components/elements/Navbar.astro";
+import HeroBanner from "../components/sections/HeroBanner.astro";
+import HowItWorks from "../components/sections/HowItWorks.astro";
+import Services from "../components/sections/Services.astro";
+import CTA from "../components/sections/CTA.astro";
 ---
 
 <Base title="Welcome to Astro.">
@@ -14,7 +14,7 @@ import Services from "../components/ServiceSection/Services.astro";
     <HeroBanner />
     <Services />
     <HowItWorks />
-    <Partners />
+    <CTA />
   </main>
 </Base>
 

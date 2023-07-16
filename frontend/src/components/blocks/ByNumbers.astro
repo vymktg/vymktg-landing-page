@@ -1,0 +1,18 @@
+---
+import { BY_NUMBERS } from "../../config";
+import ByNumber from "../shared/ByNumber.astro";
+---
+
+<section class="relative mt-5 md:mt-12 lg:mt-16">
+  <div class="mx-auto max-w-7xl w-full px-5 sm:px-8 md:px-14 lg:px-5">
+    <div
+      class="bg-white bg-opacity-90 mx-auto lg:mx-0 p-5 sm:p-6 py-6 max-w-4xl rounded-3xl border shadow-lg shadow-box-shadow grid grid-cols-2 md:grid-cols-4"
+    >
+      {
+        BY_NUMBERS.map((item) => {
+          <ByNumber {...item} />;
+        })
+      }
+    </div>
+  </div>
+</section>

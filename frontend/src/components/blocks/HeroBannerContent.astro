@@ -1,4 +1,6 @@
 ---
+import Paragraph from "../shared/Paragraph.astro";
+import ButtonLink from "../shared/ButtonLink.astro";
 ---
 
 <div
@@ -19,25 +21,17 @@
         Your marketing executor
       </h2>
     </div>
-    <p class="md:text-lg text-gray-700 mx-5 md:mx-0 w-5/6">
-      Get comprehensive marketing support to set your business apart, from
-      promotions to social media management and event creation, while you focus
-      on growth.
-    </p>
+    <Paragraph className="mx-5 md:mx-0 w-5/6">
+      Driving your business forward with strategic planning, effective
+      execution, and nurturing tactics to maximize your digital marketing
+      landscape.
+    </Paragraph>
     <div class="w-full flex max-w-md mx-auto lg:mx-0">
       <div class="flex flex-row gap-1 w-full justify-center lg:justify-start">
-        <a
-          href="#"
-          class="inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center text-white rounded-lg bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300"
-        >
-          Get started
-        </a>
-        <a
-          href="#"
-          class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-gray-900 border border-gray-300 rounded-lg hover:bg-gray-100 focus:ring-4 focus:ring-gray-100"
-        >
-          View more
+        <ButtonLink href="#" text="Get started" variant="primary" className="mr-3 py-3" />
+        <ButtonLink href="#" text="View more" variant="secondary" className="py-3">
           <svg
+            slot="right-icon"
             class="w-5 h-5 ml-2 -mr-1"
             fill="currentColor"
             viewBox="0 0 20 20"
@@ -47,7 +41,7 @@
               d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
               clip-rule="evenodd"></path></svg
           >
-        </a>
+        </ButtonLink>
       </div>
     </div>
   </div>

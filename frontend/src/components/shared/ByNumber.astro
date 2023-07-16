@@ -1,0 +1,15 @@
+---
+export interface Props {
+  number: string;
+  title: string;
+}
+
+const { number, title } = Astro.props;
+---
+
+<div class="text-center border-r-0 md:border-r border-gray-200">
+  <h2 class="font-semibold text-xl sm:text-xl md:text-2xl text-heading-1">
+    {number}
+  </h2>
+  <p class="mt-2 text-heading-3">{title}</p>
+</div>
