@@ -15,9 +15,7 @@ import FAQ from "../shared/FAQ.astro";
         accusantium doloremque rem aperiam, eaque ipsa quae.
       </Paragraph>
     </div>
-    <div
-      class="flex justify-between flex-col"
-    >
+    <div class="flex justify-between flex-col">
       {FAQ_LIST.map((item, index) => <FAQ {...item} index={index} />)}
     </div>
   </Container>
