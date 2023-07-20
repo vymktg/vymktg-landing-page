@@ -24,27 +24,27 @@ export const NAVIGATION_ITEM = [
 export const SERVICE_LIST = [
   {
     title: 'Social Media Management',
-    description: 'Managing social media accounts effectively can be time-consuming and overwhelming.',
+    description: 'Streamlined your social media accounts with engaging content',
   },
   {
     title: 'Website and SEO',
-    description: `Maximize your website's potential with my website management and optimization services which include updates content, performance optimization`,
+    description: `Boost your online visibility with tailored SEO strategies and website management`,
   }
   , {
     title: 'Online Reputation Management',
-    description: 'Maintaining a positive online reputation is essential for your business.',
+    description: 'Nurturing a positive reputation by building trust to drive sustainable business growth.',
   }
   , {
-    title: 'Email & SMS Marketing',
-    description: 'Both email and text marketing are valuable tools for businesses to connect with their target audience, deliver relevant and personalized content, and drive engagement and conversions. ',
+    title: 'Online Reputation Management',
+    description: 'Nurturing a positive reputation by building trust to drive sustainable business growth',
   },
   {
-    title: 'Paid Advertising Campaigns',
-    description: 'Paid advertising campaigns can be an effective way for small businesses to accelerate their growth.',
+    title: 'Email & SMS Marketing',
+    description: 'Enhance customer engagement, nurture relationships with direct communication',
   }
   , {
-    title: 'Content Creation',
-    description: 'Engaging and informative content plays a vital role in attracting and retaining customers.',
+    title: 'Paid Advertising Campaigns',
+    description: 'Fuel your growth with effective paid advertising Campaigns',
   }
 ];
 
