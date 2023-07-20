@@ -67,23 +67,24 @@ export const BY_NUMBERS = [
 export const FAQ_LIST = [
   {
     question: 'Can you work within my limited marketing budget?',
-    answer: 'Absolutely! Working with small budgets is a common challenge, and I specialize in helping businesses make the most of their resources. I can identify cost-effective tactics, prioritize activities that provide the highest impact, and leverage affordable digital platforms to optimize your marketing within your financial constraints.'
+    answer: 'Absolutely! Working with small budgets is a common challenge, and I specialize in helping businesses make the most of their resources. I can identify cost-effective tactics, prioritize activities with the highest impact, and leverage affordable digital platforms to optimize your marketing within your financial constraints.'
   },
   {
-    question: 'How can hiring you be cost-effective for my small business?',
-    answer: 'Hiring a marketing specialist like me can be a cost-effective solution for your small business. By leveraging my expertise and industry knowledge, I can help you make informed decisions, avoid costly mistakes, and allocate your budget wisely. This leads to optimized marketing strategies and a higher return on investment (ROI) for your marketing efforts.'
+    question: 'How can hiring you be cost-effective for my business?',
+    answer: 'By leveraging my expertise and industry knowledge, I can help you make informed decisions, avoid costly mistakes, and allocate your budget wisely. This leads to optimized marketing strategies and a higher return on investment (ROI) for your marketing efforts.'
   },
   {
-    question: 'How do I know if my small business needs the assistance of a marketing consultant?',
-    answer: `If you're struggling to achieve your marketing goals, lack a clear strategy, or need fresh insights and ideas, it's a good indication that your business could benefit from my assistance as a marketing consultant. I can assess your current efforts, identify areas for improvement, and develop a customized plan to drive growth and increase brand visibility.`
+    question: 'How do I know if my business needs the assistance of a marketer?',
+    answer: `If you're struggling to achieve your marketing goals, lack a clear strategy, or need fresh insights and ideas, it's a good indication that your business could benefit from my assistance as a marketer. I can assess your current efforts, identify areas for improvement, and develop a customized plan to drive growth and increase brand visibility.`
   },
   {
     question: 'How long does it usually take to see tangible results from marketing efforts?',
-    answer: 'The timeframe to see tangible results from marketing efforts can vary depending on several factors such as industry, target audience, and chosen marketing channels. Some strategies may yield immediate results, while others require more time to gain traction. During our collaboration, I will set realistic expectations and develop a timeline based on your objectives and business circumstances.'
-  }, {
-    question: 'Will you provide guidance on maximizing my marketing efforts while minimizing expenses?',
-    answer: 'Absolutely! One of my primary objectives as a marketing consultant is to help businesses optimize their marketing efforts within their budget limitations. I can provide strategies to maximize your ROI, identify cost-effective marketing channels, and suggest innovative approaches to achieve your marketing goals while minimizing expenses.'
+    answer: 'The timeframe can vary depending on the industry, target audience, and chosen marketing channels. Some strategies may yield immediate results, while others require more time to gain traction. During our collaboration, I will set realistic expectations and develop a timeline based on your objectives and business circumstances.'
   }
+  // , {
+  //   question: 'Will you provide guidance on maximizing my marketing efforts while minimizing expenses?',
+  //   answer: 'Absolutely! One of my primary objectives as a marketing consultant is to help businesses optimize their marketing efforts within their budget limitations. I can provide strategies to maximize your ROI, identify cost-effective marketing channels, and suggest innovative approaches to achieve your marketing goals while minimizing expenses.'
+  // }
 ]
 
 export const HOW_IT_WORKS_STEP = [
