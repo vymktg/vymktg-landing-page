@@ -1,5 +1,6 @@
 ---
-import Paragraph from '../shared/Paragraph.astro';
+import ButtonLink from "../shared/ButtonLink.astro";
+import Paragraph from "../shared/Paragraph.astro";
 
 export interface Props {
   title: string;
@@ -10,35 +11,30 @@ const { title, description } = Astro.props;
 ---
 
 <div
-  class="p-5 sm:p-6 lg:p-8 rounded-3xl border border-box-border bg-box-bg shadow-lg shadow-box-shadow relative overflow-hidden"
+  class="service-item rounded-md border border-gray-100 bg-white p-4 hover:bg-gray-50 h-[15rem]"
 >
-  <div class="rounded-xl bg-gray-300 p-3 w-max relative">
-    <span>
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke-width="1.5"
-        stroke="currentColor"
-        class="w-6 h-6"
-      >
-        <path
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5"
-        ></path>
-      </svg>
-    </span>
-  </div>
-  <div class="mt-6 space-y-4 relative">
-    <h2 class="text-lg md:text-xl font-semibold text-[#1F2937]">
+  <a href="" class="flex flex-col gap-4">
+    <svg
+      class="fill-purple-600 w-6 h-6"
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke-width="1.5"
+      stroke="currentColor"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5"
+      ></path>
+    </svg>
+    <h2 class="text-lg md:text-xl font-bold text-[#1F2937]">
       {title}
     </h2>
-    <Paragraph className="line-clamp-3">
-        {description}
+    <Paragraph className="line-clamp-2 text-base font-normal">
+      {description}
     </Paragraph>
+
+    <span class="hidden uppercase font-bold text-purple-600">Learn more</span>
   </div>
-  <span
-    class="absolute w-32 aspect-square -bottom-16 -right-16 bg-[#1d4ed81a] rounded-full"
-  ></span>
 </div>
