@@ -4,6 +4,9 @@ module.exports = {
   content: ["./public/**/*.html", "./src/**/*.{astro,js,ts}"],
   theme: {
     extend: {
+      colors: {
+        primary: '#7c4ad5',
+      },
       screens: {
         midmd: "880px",
       },

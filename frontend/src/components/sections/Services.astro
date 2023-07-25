@@ -7,14 +7,16 @@ import Service from "../cards/Service.astro";
 ---
 
 <section id="services">
-  <Container className="space-y-10 md:sapce-y-12 ">
+  <Container className="space-y-10 md:sapce-y-12">
     <!-- <div class="text-center max-w-3xl mx-auto space-y-4">
       <Title>What we offer</Title>
       <Paragraph>What can i do for you</Paragraph>
     </div> -->
-    <div class="flex flex-col md:flex-row gap-5 md:gap-3">
+    <div class="flex flex-col md:flex-row gap-5 md:gap-10 lg:gap-20">
       <div class="w-full md:w-1/3 flex flex-col gap-4">
-        <Title className="text-center md:text-left">One-stop digital marketing services</Title>
+        <Title className="text-center md:text-left text-black font-extrabold">
+          One-stop digital marketing services
+        </Title>
         <img
           class="rounded-lg h-[15rem] w-full md:w-auto object-cover"
           src="https://web.sociolib.com/centro/wp-content/uploads/sites/3/2023/01/35.jpg"
@@ -26,10 +28,23 @@ import Service from "../cards/Service.astro";
           tellus, luctus nec ullamcorper. Lorem ipsum dolor sit.
         </Paragraph>
 
-        <a href="" class="uppercase font-bold text-purple-600">all services</a>
+        <a href="" class="uppercase font-bold text-purple-600 flex flex-row gap-2 items-center justify-start"
+          >all services
+          <svg
+            slot="right-icon"
+            class="w-4 h-4"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+            ><path
+              fill-rule="evenodd"
+              d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+              clip-rule="evenodd"></path></svg
+          >
+        </a>
       </div>
       <div
-        class="w-full md:w-2/3 grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8"
+        class="w-full md:w-2/3 grid sm:grid-cols-2 lg:grid-cols-2 gap-6 lg:gap-16"
       >
         {SERVICE_LIST.map((item) => <Service {...item} />)}
       </div>

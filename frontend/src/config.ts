@@ -25,26 +25,32 @@ export const SERVICE_LIST = [
   {
     title: 'Social Media Management',
     description: 'Streamlined your social media accounts with engaging content',
+    icon: 'tabler:social'
   },
   {
     title: 'Website and SEO',
     description: `Boost your online visibility with tailored SEO strategies and website management`,
+    icon: 'carbon:dns-services'
   }
   , {
     title: 'Online Reputation Management',
     description: 'Nurturing a positive reputation by building trust to drive sustainable business growth.',
+    icon: 'tabler:award',
   }
   , {
     title: 'Online Reputation Management',
     description: 'Nurturing a positive reputation by building trust to drive sustainable business growth',
+    icon: 'tabler:award',
   },
   {
     title: 'Email & SMS Marketing',
     description: 'Enhance customer engagement, nurture relationships with direct communication',
+    icon: 'mdi:email-seal-outline',
   }
   , {
     title: 'Paid Advertising Campaigns',
     description: 'Fuel your growth with effective paid advertising Campaigns',
+    icon: 'icons8:advertising'
   }
 ];
 

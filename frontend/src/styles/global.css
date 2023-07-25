@@ -254,7 +254,4 @@ body {
   .service-item { 
     transition: background .3s,border .3s,border-radius .3s,box-shadow .3s;
   }
-  .service-item:hover span { 
-    visibility: visible;
-  }
 }
