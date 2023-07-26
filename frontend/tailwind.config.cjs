@@ -5,7 +5,12 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: '#7c4ad5',
+        primary: '#cb0c9f',
+        dark: '#344767',
+      },
+      backgroundImage: { 
+        gradient: 'linear-gradient(310deg, #7928ca, #ff0080)',
+        primary: '#cb0c9f',
       },
       screens: {
         midmd: "880px",

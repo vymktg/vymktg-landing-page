@@ -72,18 +72,22 @@ export const BY_NUMBERS = [
 
 export const FAQ_LIST = [
   {
+    image_url: 'https://demos.creative-tim.com/soft-ui-design-system-pro/assets/img/illustrations/rocket-white.png',
     question: 'Can you work within my limited marketing budget?',
     answer: 'Absolutely! Working with small budgets is a common challenge, and I specialize in helping businesses make the most of their resources. I can identify cost-effective tactics, prioritize activities with the highest impact, and leverage affordable digital platforms to optimize your marketing within your financial constraints.'
   },
   {
+    image_url: 'https://demos.creative-tim.com/soft-ui-design-system-pro/assets/img/illustrations/settings.png',
     question: 'How can hiring you be cost-effective for my business?',
     answer: 'By leveraging my expertise and industry knowledge, I can help you make informed decisions, avoid costly mistakes, and allocate your budget wisely. This leads to optimized marketing strategies and a higher return on investment (ROI) for your marketing efforts.'
   },
   {
+    image_url: 'https://demos.creative-tim.com/soft-ui-design-system-pro/assets/img/illustrations/chat.png',
     question: 'How do I know if my business needs the assistance of a marketer?',
     answer: `If you're struggling to achieve your marketing goals, lack a clear strategy, or need fresh insights and ideas, it's a good indication that your business could benefit from my assistance as a marketer. I can assess your current efforts, identify areas for improvement, and develop a customized plan to drive growth and increase brand visibility.`
   },
   {
+    image_url: 'https://demos.creative-tim.com/soft-ui-design-system-pro/assets/img/illustrations/folder.png',
     question: 'How long does it usually take to see tangible results from marketing efforts?',
     answer: 'The timeframe can vary depending on the industry, target audience, and chosen marketing channels. Some strategies may yield immediate results, while others require more time to gain traction. During our collaboration, I will set realistic expectations and develop a timeline based on your objectives and business circumstances.'
   }

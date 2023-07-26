@@ -233,6 +233,7 @@ html{
 }
 body {
   font-family: "Raleway", sans-serif;
+  color: #67748e;
 }
 
 @layer components {
@@ -244,6 +245,10 @@ body {
     --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
   }
 
+  #faq .faq-item[open] .faq__question { 
+    color: #344767;
+  }
+
   #faq .faq-item[open] svg { 
     transform: rotate(-180deg);
   }
@@ -251,7 +256,11 @@ body {
     display:none;  
   }
 
-  .service-item { 
-    transition: background .3s,border .3s,border-radius .3s,box-shadow .3s;
+  .text-gradient { 
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: relative;
+    z-index: 1;
   }
 }
