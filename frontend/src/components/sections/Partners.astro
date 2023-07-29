@@ -23,12 +23,12 @@ import Container from "../shared/Container.astro";
         ))
       }
     </div> -->
-    <div class="swiper partner-swiper">
-      <Container>
-        <div class="swiper-wrapper flex flex-row">
+    <div class="splide cursor-pointer">
+      <div class="splide__track">
+        <div class="splide__list">
           {
             PARTNER_LIST.map((item) => (
-              <div class="swiper-slide p-4 sm:p-5 group w-40 flex justify-center mx-auto flex-initial">
+              <div class="splide__slide p-4 sm:p-5 group w-40 flex justify-center mx-auto">
                 <img
                   src={`images/${item.url}`}
                   alt="spotify"
@@ -38,9 +38,9 @@ import Container from "../shared/Container.astro";
             ))
           }
         </div>
-      </Container>
+      </div>
     </div>
   </div>
 </section>
 
-<script src="../../js/swiper-init.ts"></script>
+<script src="../../js/splide-init.ts"></script>

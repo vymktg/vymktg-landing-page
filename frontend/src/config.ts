@@ -27,11 +27,11 @@ export const PARTNER_LIST = [
   { url: "chill's.png" },
   { url: "slc-med-spa.png" },
   { url: "meridian-restaurants.png" },
-  // { url: "american-pet-nutrition.png" },
-  // { url: "chic-vintage.png" },
-  // { url: "romanric.png" },
-  // { url: "pate-and-butter.png" },
-  // { url: "cp.png" },
+  { url: "american-pet-nutrition.png" },
+  { url: "chic-vintage.png" },
+  { url: "romanric.png" },
+  { url: "pate-and-butter.png" },
+  { url: "cp.png" },
 ];
 
 export const PROJECT_LIST = [
