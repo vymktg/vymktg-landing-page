@@ -1,0 +1,27 @@
+---
+export interface Props {
+  url: string;
+  name: string;
+  image_url: string;
+}
+
+const { url, name, image_url } = Astro.props;
+---
+
+<a href={url} class="group relative">
+  <img
+    src={image_url}
+    height="800"
+    width="800"
+    class="object-cover rounded-xl"
+  />
+  <div
+    class="backdrop-blur-md bg-purple-500/20 w-full h-full absolute top-0 opacity-0 group-hover:opacity-100 duration-300 rounded-xl"
+  >
+  </div>
+  <div
+    class="opacity-0 group-hover:opacity-100 duration-300 absolute inset-0 z-10 flex justify-center items-center text-2xl text-white font-semibold"
+  >
+    {name}
+  </div>
+</a>

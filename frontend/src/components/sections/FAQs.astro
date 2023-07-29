@@ -10,10 +10,6 @@ import FAQ from "../shared/FAQ.astro";
   <Container className="lg:w-4/6">
     <div class="w-full mb-10 text-center space-y-4">
       <Title className="text-dark">Frequently Asked Questions</Title>
-      <Paragraph className="w-full md:w-2/3 mx-auto">
-        Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-        accusantium doloremque rem aperiam, eaque ipsa quae.
-      </Paragraph>
     </div>
     <div class="flex justify-between flex-col border-0 shadow-xl shadow-gray-200 rounded-xl p-4">
       {FAQ_LIST.map((item, index) => <FAQ {...item} index={index} />)}

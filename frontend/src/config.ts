@@ -21,6 +21,25 @@ export const NAVIGATION_ITEM = [
   },
 ];
 
+export const PARTNER_LIST = [
+  { url: "burger-king.png" },
+  { url: "black-bear-diner.png" },
+  { url: "chill's.png" },
+  { url: "slc-med-spa.png" },
+  { url: "meridian-restaurants.png" },
+  // { url: "american-pet-nutrition.png" },
+  // { url: "chic-vintage.png" },
+  // { url: "romanric.png" },
+  // { url: "pate-and-butter.png" },
+  // { url: "cp.png" },
+]
+
+export const PROJECT_LIST = [
+  { url: "", name: "Project 1", image_url: "https://web.sociolib.com/centro/wp-content/uploads/sites/3/2023/01/31.jpg"},
+  { url: "", name: "Project 2", image_url: "https://web.sociolib.com/centro/wp-content/uploads/sites/3/2023/01/34.jpg"},
+  { url: "", name: "Project 3", image_url: "https://web.sociolib.com/centro/wp-content/uploads/sites/3/2023/01/28.jpg"},
+]
+
 export const SERVICE_LIST = [
   {
     title: 'Social Media Management',

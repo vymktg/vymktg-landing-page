@@ -1,0 +1,18 @@
+---
+import { PROJECT_LIST } from "../../config";
+import type Base from "../../layouts/Base.astro";
+import ProjectItem from "../cards/ProjectItem.astro";
+import Container from "../shared/Container.astro";
+import Title from "../shared/Title.astro";
+---
+
+<section id="featured-works">
+  <Container>
+    <div class="w-full mb-10 text-center space-y-4">
+      <Title className="text-dark">Projects and Insights</Title>
+    </div>
+    <div class="flex flex-row gap-5">
+      {PROJECT_LIST.map((item) => <ProjectItem {...item} />)}
+    </div>
+  </Container>
+</section>
