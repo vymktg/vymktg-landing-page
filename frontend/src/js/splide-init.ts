@@ -4,6 +4,8 @@ const partnerSlider = new Splide(".splide", {
     type: 'loop',
     perPage: 5,
     arrows: false,
+    autoplay: true,
+    interval: 10000,
 });
 
 partnerSlider.mount();
