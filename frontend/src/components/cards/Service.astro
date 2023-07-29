@@ -11,62 +11,19 @@ export interface Props {
 const { title, description, icon } = Astro.props;
 ---
 
-<div class="service-item relative bg-white p-4 group">
-  <a href="" class="flex flex-col gap-4 justify-between items-start px-8 py-5">
-    <div class="flex flex-row justify-between w-full">
-      <!-- {icon && <Icon name={icon} class="w-10 ml-[-2px] text-primary" />} -->
-      <span class="relative service-icon">
-        <span>
-          <svg
-            width="32"
-            height="40"
-            viewBox="0 0 32 40"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M31 10.5V29.5C31 37.1 29.125 39 21.625 39H10.375C2.875 39 1 37.1 1 29.5V10.5C1 2.9 2.875 1 10.375 1H21.625C29.125 1 31 2.9 31 10.5Z"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"></path>
-            <path
-              opacity="0.4"
-              d="M19.7637 7.65088H12.2637"
-              stroke="currentColor"
-              stroke-width="1.5"
-              stroke-linecap="round"
-              stroke-linejoin="round"></path>
-            <path
-              opacity="0.4"
-              d="M15.9941 33.4891C17.5992 33.4891 18.9004 32.1706 18.9004 30.5441C18.9004 28.9176 17.5992 27.5991 15.9941 27.5991C14.3891 27.5991 13.0879 28.9176 13.0879 30.5441C13.0879 32.1706 14.3891 33.4891 15.9941 33.4891Z"
-              stroke="currentColor"
-              stroke-width="1.5"
-              stroke-linecap="round"
-              stroke-linejoin="round"></path>
-          </svg>
-        </span>
-        <img
-          src="data:image/png;base64,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"
-          alt="shape"
-          class="absolute bottom-[-17px] right-[-7px] w-[50px] h-[50px]"
-        />
-      </span>
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
-        <path d="M7 7h8.586L5.293 17.293l1.414 1.414L17 8.414V17h2V5H7v2z">
-        </path>
-      </svg>
-    </div>
-    <h2
-      class="services-title text-lg md:text-xl lg:text-2xl font-bold text-dark"
-    >
+<div
+  class="service-item rounded-md border-0 shadow-lg shadow-gray-200 p-4 group"
+>
+  <a href="" class="flex flex-col gap-4">
+    <!-- {icon && <Icon name={icon} class="w-10 ml-[-2px] text-primary" />} -->
+    <h2 class="text-lg md:text-xl lg:text-2xl font-bold text-dark">
       {title}
     </h2>
-    <!-- <div class="line-clamp-3 text-sm md:text-base lg:text-lg font-normal">
+    <div class="line-clamp-3 text-sm md:text-base lg:text-lg font-normal">
       {description}
-    </div> -->
+    </div>
 
-    <!-- <span
+    <span
       class="opacity-0 font-semibold text-base lg:text-lg text-dark group-hover:opacity-100 flex flex-row gap-2 items-center justify-start duration-500"
       >Learn More <svg
         slot="right-icon"
@@ -79,70 +36,7 @@ const { title, description, icon } = Astro.props;
           d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
           clip-rule="evenodd"></path></svg
       ></span
-    > -->
+    >
   </a>
 </div>
 
-<style>
-  .service-item {
-    border: 1px solid #eaeaef;
-  }
-  .service-item:hover {
-    background-color: white;
-    border-color: white;
-    box-shadow: 0 20px 40px #03041c24;
-    transition: all 0.3s ease-out 0s;
-  }
-  .service-item::after {
-    transition: all 0.3s ease-out 0s;
-    background-image: linear-gradient(
-      329deg,
-      #ff91fa 13.55%,
-      #fa6490 48.54%,
-      #f7d86a 86.44%
-    );
-    content: "";
-    height: 100%;
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 100%;
-    z-index: -1;
-  }
-  .service-item:hover:after {
-    transform: translate(8px, 8px);
-  }
-
-  .service-icon svg {
-    backface-visibility: hidden;
-    transform: translateZ(0);
-    transition: transform 0.3s cubic-bezier(0.21, 0.6, 0.44, 2.18);
-  }
-  .service-item:hover .service-icon svg {
-    transform: translateY(-5px) translate3d(0, -5px, 0);
-  }
-  .service-icon {
-    color: black;
-    display: inline-block;
-    font-size: 16px;
-    font-size: 40px;
-    font-weight: 400;
-    height: 40px;
-    line-height: 40px;
-    margin-bottom: 37px;
-    position: relative;
-    text-align: center;
-    width: 50px;
-  }
-  .service-item .services-title {
-    background-image: linear-gradient(#03041c, #03041c),
-      linear-gradient(#03041c, #03041c);
-    background-position: 100% 100%, 0 100%;
-    background-repeat: no-repeat;
-    background-size: 0 2px, 0 2px;
-    transition: background-size 0.2s linear;
-  }
-  .service-item .services-title:hover {
-    background-size: 0 2px,100% 2px;
-}
-</style>
