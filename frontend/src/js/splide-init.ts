@@ -5,7 +5,7 @@ const partnerSlider = new Splide(".splide", {
     perPage: 5,
     arrows: false,
     autoplay: true,
-    interval: 10000,
+    interval: 5000,
 });
 
 partnerSlider.mount();
