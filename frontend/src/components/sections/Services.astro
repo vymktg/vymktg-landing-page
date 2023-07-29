@@ -13,22 +13,22 @@ import ButtonLink from "../shared/ButtonLink.astro";
       <Title>What we offer</Title>
       <Paragraph>What can i do for you</Paragraph>
     </div> -->
-    <div
-      class="flex flex-col justify-center items-center"
-    >
-      <div class="w-full flex flex-col gap-4 text-center mb-5 md:mb-10 lg:mb-20">
-        <div
-          class="font-bold text-lg sm:text-2xl md:text-3xl text-dark"
-        >
-          What can
-          <span class="text-gradient bg-gradient">I offer you</span>
+    <div class="flex flex-col justify-center items-center">
+      <div
+        class="w-full flex flex-col gap-4 text-center mb-5 md:mb-10 lg:mb-20"
+      >
+        <div class="font-bold text-lg sm:text-2xl md:text-3xl text-dark">
+          How Can I Help ?
+          <!-- <span class="text-gradient bg-gradient">I offer you</span> -->
         </div>
         <Paragraph className="w-3/5 mx-auto">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
           tellus, luctus nec ullamcorper. Lorem ipsum dolor sit.
         </Paragraph>
       </div>
-      <div class="w-full grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 mb-3 md:mb-5 lg:mb-8">
+      <div
+        class="w-full grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 mb-3 md:mb-5 lg:mb-8"
+      >
         {SERVICE_LIST.map((item) => <Service {...item} />)}
       </div>
       <ButtonLink
