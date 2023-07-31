@@ -84,9 +84,9 @@ export const SERVICE_LIST = [
     icon: "icons8:advertising",
   },
   {
-    title: 'Content Creation',
-    description: 'Harness the power of compelling and valuable content',
-    icon: 'tabler:award',
+    title: "Content Creation",
+    description: "Harness the power of compelling and valuable content",
+    icon: "tabler:award",
   },
 ];
 
@@ -106,6 +106,24 @@ export const BY_NUMBERS = [
   {
     number: "5+",
     title: "Years",
+  },
+];
+
+export const CTA_CALCULATOR = [
+  {
+    title: "Effective Marketing",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis.",
+  },
+  {
+    title: "Quick Support",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis.",
+  },
+  {
+    title: "Good Price",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis.",
   },
 ];
 

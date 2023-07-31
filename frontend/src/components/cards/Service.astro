@@ -11,32 +11,30 @@ export interface Props {
 const { title, description, icon } = Astro.props;
 ---
 
-<div
-  class="service-item rounded-md border-0 shadow-lg shadow-gray-200 p-4 group"
+<a
+  href=""
+  class="service-item rounded-md border-0 shadow-lg shadow-gray-200 p-4 group h-36 flex flex-col justify-end items-center gap-4"
 >
-  <a href="" class="flex flex-col gap-4">
-    <!-- {icon && <Icon name={icon} class="w-10 ml-[-2px] text-primary" />} -->
-    <h2 class="text-lg md:text-xl lg:text-2xl font-bold text-dark">
-      {title}
-    </h2>
-    <div class="line-clamp-3 text-sm md:text-base lg:text-lg font-normal">
-      {description}
-    </div>
+  <!-- {icon && <Icon name={icon} class="w-10 ml-[-2px] text-primary" />} -->
+  <h2 class="text-lg md:text-xl lg:text-2xl font-bold text-dark text-center h-16 flex flex-col justify-center items-center">
+    {title}
+  </h2>
+  <!-- <div class="line-clamp-3 text-sm md:text-base lg:text-lg font-normal">
+    {description}
+  </div> -->
 
-    <span
-      class="opacity-0 font-semibold text-base lg:text-lg text-dark group-hover:opacity-100 flex flex-row gap-2 items-center justify-start duration-500"
-      >Learn More <svg
-        slot="right-icon"
-        class="w-3 md:w-4 h-3 md:h-4"
-        fill="currentColor"
-        viewBox="0 0 20 20"
-        xmlns="http://www.w3.org/2000/svg"
-        ><path
-          fill-rule="evenodd"
-          d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-          clip-rule="evenodd"></path></svg
-      ></span
-    >
-  </a>
-</div>
-
+  <span
+    class="opacity-0 font-semibold text-base lg:text-lg text-dark group-hover:opacity-100 flex flex-row gap-2 items-center justify-start duration-500"
+    >Learn More <svg
+      slot="right-icon"
+      class="w-3 md:w-4 h-3 md:h-4"
+      fill="currentColor"
+      viewBox="0 0 20 20"
+      xmlns="http://www.w3.org/2000/svg"
+      ><path
+        fill-rule="evenodd"
+        d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+        clip-rule="evenodd"></path></svg
+    ></span
+  >
+</a>

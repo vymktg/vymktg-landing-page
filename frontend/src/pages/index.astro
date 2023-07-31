@@ -11,9 +11,9 @@ import Partners from "../components/sections/Partners.astro";
 import Qoute from "../components/shared/Qoute.astro";
 import Footer from "../components/sections/Footer.astro";
 import ProjectsInsights from "../components/sections/Projects&Insights.astro";
-import CTA2 from "../components/sections/CTA2.astro";
-import '@splidejs/splide/css/core';
-
+import CTACalculator from "../components/sections/CTACalculator.astro";
+import "@splidejs/splide/css/core";
+import CTAFooter from "../components/sections/CTAFooter.astro";
 ---
 
 <Base title="Welcome to Astro.">
@@ -25,7 +25,9 @@ import '@splidejs/splide/css/core';
     <Qoute />
     <HowItWorks />
     <ProjectsInsights />
+    <CTACalculator />
     <FAQs />
+    <!-- <CTAFooter /> -->
   </main>
   <Footer />
 </Base>
