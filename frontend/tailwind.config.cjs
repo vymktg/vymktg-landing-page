@@ -5,11 +5,11 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: '#cb0c9f',
+        primary: '#974ef2',
         dark: '#344767',
       },
       backgroundImage: { 
-        gradient: 'linear-gradient(310deg, #7928ca, #ff0080)',
+        gradient: 'linear-gradient(to right, rgb(151, 78, 242), rgb(255, 177, 113))',
         primary: '#cb0c9f',
       },
       screens: {
