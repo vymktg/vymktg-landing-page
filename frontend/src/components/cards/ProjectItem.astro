@@ -5,10 +5,10 @@ export interface Props {
   image_url: string;
 }
 
-const { url, name, image_url } = Astro.props;
+const { url, name, image_url, ...props } = Astro.props;
 ---
 
-<a href={url} class="group relative">
+<a href={url} class="group relative" {...props}>
   <img
     src={image_url}
     height="800"

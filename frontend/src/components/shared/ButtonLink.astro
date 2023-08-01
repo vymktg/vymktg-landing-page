@@ -6,7 +6,7 @@ export interface Props {
   variant: "primary" | "secondary";
 }
 
-const { href, text, className, variant } = Astro.props;
+const { href, text, className, variant, ...props } = Astro.props;
 const getThemeStyle = (variant: "primary" | "secondary") => {
   if (variant === "primary") {
     return "bg-blue-700 border-transparent relative after:bg-blue-950 hover:border-blue-950";
@@ -30,6 +30,7 @@ const getTextColor = (variant: "primary" | "secondary") => {
     getTextColor(variant),
     className || "",
   ]}
+  {...props}
 >
   <slot name="left-icon" />
   {text}

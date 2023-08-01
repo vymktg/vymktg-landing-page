@@ -8,15 +8,19 @@ export interface Props {
   icon: string;
 }
 
-const { title, description, icon } = Astro.props;
+const { title, description, icon, ...props } = Astro.props;
 ---
 
 <a
   href=""
   class="service-item rounded-md border border-gray-200 hover:shadow-2xl hover:shadow-gray-200 p-4 group h-36 flex flex-col justify-end items-center gap-4 duration-300"
+  data-aos="fade-up"
+  {...props}
 >
   <!-- {icon && <Icon name={icon} class="w-10 ml-[-2px] text-primary" />} -->
-  <h2 class="text-lg md:text-xl lg:text-2xl font-bold text-dark text-center h-16 flex flex-col justify-center items-center">
+  <h2
+    class="text-lg md:text-xl lg:text-2xl font-bold text-dark text-center h-16 flex flex-col justify-center items-center"
+  >
     {title}
   </h2>
   <!-- <div class="line-clamp-3 text-sm md:text-base lg:text-lg font-normal">

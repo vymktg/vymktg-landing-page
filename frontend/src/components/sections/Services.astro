@@ -30,7 +30,11 @@ import ButtonLink from "../shared/ButtonLink.astro";
       <div
         class="w-full grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 mb-3 md:mb-5 lg:mb-8"
       >
-        {SERVICE_LIST.map((item) => <Service {...item} />)}
+        {
+          SERVICE_LIST.map((item, index) => (
+            <Service {...item} data-aos-delay={500 * index} />
+          ))
+        }
       </div>
       <ButtonLink
         text="Explore Our Services"

@@ -12,7 +12,16 @@ import Title from "../shared/Title.astro";
       <Title className="text-dark">Projects and Insights</Title>
     </div>
     <div class="flex flex-row gap-5">
-      {PROJECT_LIST.map((item) => <ProjectItem {...item} />)}
+      {
+        PROJECT_LIST.map((item, index) => (
+          <ProjectItem
+            {...item}
+            data-aos={`fade-${
+              index === 0 ? "right" : index === 1 ? "up" : "left"
+            }`}
+          />
+        ))
+      }
     </div>
   </Container>
 </section>
