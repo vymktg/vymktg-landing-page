@@ -21,7 +21,7 @@ import ButtonLink from "../shared/ButtonLink.astro";
           How can I help?
           <!-- <span class="text-gradient bg-gradient">I offer you</span> -->
         </div>
-        <Paragraph className="w-full sm:w-5/6 md:w-4/5 lg:w-3/5 mx-auto">
+        <Paragraph className="w-full sm:w-5/6 md:w-4/5 lg:w-3/5 mx-auto" data-aos="fade-up">
           With strategic planning, efficient execution, and nurturing tactics,
           I'll optimize your digital landscape, propelling your business forward
           and fostering sustainable growth.
@@ -32,7 +32,7 @@ import ButtonLink from "../shared/ButtonLink.astro";
       >
         {
           SERVICE_LIST.map((item, index) => (
-            <Service {...item} data-aos-delay={500 * index} />
+            <Service {...item} />
           ))
         }
       </div>

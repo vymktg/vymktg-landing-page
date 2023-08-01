@@ -20,17 +20,19 @@ import Container from "../shared/Container.astro";
         {
           NAVIGATION_ITEM.map((item) => (
             <li>
-              <NavItem
-                href={item.href}
-                title={item.title}
-              />
+              <NavItem href={item.href} title={item.title} />
             </li>
           ))
         }
       </ul>
 
       <MenuCollapseButton className={"sm:block md:hidden"} />
-      <ButtonLink text="Let's Talk" className="hidden md:block text-sm bg-gradient" href="#" variant="primary" data-aos="fade-down"/>
+      <ButtonLink
+        text="Let's Talk"
+        className="hidden md:block text-sm bg-gradient"
+        href="#"
+        variant="primary"
+      />
       <NavigationCollapse />
     </nav>
   </Container>

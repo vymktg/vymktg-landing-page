@@ -117,13 +117,11 @@ export const CTA_CALCULATOR = [
   },
   {
     title: "Efficient Execution",
-    description:
-      "Precise execution and optimization for impactful results.",
+    description: "Precise execution and optimization for impactful results.",
   },
   {
     title: "Nurturing Tactics",
-    description:
-      " Personalized approach to nurture loyalty and steady growth.",
+    description: " Personalized approach to nurture loyalty and steady growth.",
   },
 ];
 
