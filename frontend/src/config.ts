@@ -111,19 +111,19 @@ export const BY_NUMBERS = [
 
 export const CTA_CALCULATOR = [
   {
-    title: "Effective Marketing",
+    title: "Strategic Planning",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis.",
+      "Strategically planned campaigns tailored to your goals and budget. ",
   },
   {
-    title: "Quick Support",
+    title: "Efficient Execution",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis.",
+      "Precise execution and optimization for impactful results.",
   },
   {
-    title: "Good Price",
+    title: "Nurturing Tactics",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis.",
+      " Personalized approach to nurture loyalty and steady growth.",
   },
 ];
 
