@@ -4,12 +4,20 @@ export interface Props {
   text: string;
   className?: string;
   variant: "primary" | "secondary";
+  isShineButton?: boolean;
 }
 
-const { href, text, className, variant, ...props } = Astro.props;
+const {
+  href,
+  text,
+  className,
+  variant,
+  isShineButton = true,
+  ...props
+} = Astro.props;
 const getThemeStyle = (variant: "primary" | "secondary") => {
   if (variant === "primary") {
-    return "bg-primary border-transparent relative after:bg-blue-950 hover:border-blue-950";
+    return "bg-primary border-transparent relative after:bg-indigo-950 hover:border-indigo-950 shadow-2xl hover:shadow-indigo-500 transition-all duration-500";
   }
   return "text-blue-700 hover:bg-gray-100 text-gray-900 border border-gray-300";
 };
@@ -28,6 +36,7 @@ const getTextColor = (variant: "primary" | "secondary") => {
     `inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium rounded-lg cursor-pointer`,
     getThemeStyle(variant),
     getTextColor(variant),
+    "shine-effect",
     className || "",
   ]}
   {...props}
@@ -36,3 +45,29 @@ const getTextColor = (variant: "primary" | "secondary") => {
   {text}
   <slot name="right-icon" />
 </a>
+
+<style>
+  a.shine-effect {
+    position: relative;
+    overflow: hidden;
+  }
+
+  a.shine-effect::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      120deg,
+      transparent,
+      rgba(255, 255, 255, 0.2),
+      transparent
+    );
+    left: -100%;
+    transition: all 650ms ease-in-out;
+  }
+  a.shine-effect:hover:before {
+    left: 100%;
+  }
+</style>

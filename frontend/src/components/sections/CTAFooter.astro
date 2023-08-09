@@ -3,14 +3,11 @@ import Container from "../shared/Container.astro";
 ---
 
 <section class="cta-footer relative">
-  <!-- <div class="bg-[#151515] h-1/2 w-full absolute bottom-0"></div> -->
+  <div class="bg-[#f3f4FF] h-1/2 w-full absolute bottom-0"></div>
   <Container>
-    <div
-      class="z-10 relative rounded-2xl bg-cover bg-center bg-no-repeat"
-      style="background-image: url(images/cta-footer.jpeg)"
-    >
+    <div class="z-10 relative rounded-2xl bg-cover bg-center bg-no-repeat">
       <div
-        class="flex flex-col md:flex-row justify-between items-center backdrop-blur-md bg-black/75 p-16 rounded-2xl gap-12 lg:gap-24"
+        class="flex flex-col md:flex-row justify-between items-center bg-indigo-500 p-16 rounded-2xl gap-12"
       >
         <div class="flex flex-col gap-5 md-gap-2">
           <div
@@ -24,12 +21,40 @@ import Container from "../shared/Container.astro";
             Let’s talk about your next business challenge
           </div>
         </div>
-        <div>
-          <button
-            class="bg-primary rounded-xl text-white whitespace-nowrap py-5 px-12 font-bold"
-          >
-            Calculate Your Plan
-          </button>
+        <div class="flex flex-row w-[20rem]">
+          <div class="relative w-full">
+            <input
+              type="search"
+              id='location-search"'
+              class="block p-5 w-full z-20 text-sm rounded-lg bg-white focus:ring-blue-500 focus:border-blue-500"
+              placeholder="Input your email"
+              required=""
+            />
+            <button
+              type="submit"
+              class="absolute top-0 right-0 p-5 text-sm font-medium bg-primary rounded-r-lg hover:bg-indigo-800"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="21"
+                height="21"
+                viewBox="0 0 21 21"
+                fill="none"
+              >
+                <path
+                  d="M19.5477 1.55293C17.3697 -0.792637 0.986483 4.9532 1.00001 7.051C1.01535 9.42987 7.39809 10.1617 9.16722 10.6581C10.2311 10.9565 10.516 11.2625 10.7613 12.3781C11.8723 17.4305 12.4301 19.9435 13.7014 19.9996C15.7278 20.0892 21.6733 3.842 19.5477 1.55293Z"
+                  stroke="#fff"
+                  stroke-width="1.5"></path>
+                <path
+                  d="M10 11L13.5 7.5"
+                  stroke="#fff"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"></path>
+              </svg>
+              <span class="sr-only">Search</span>
+            </button>
+          </div>
         </div>
       </div>
     </div>
