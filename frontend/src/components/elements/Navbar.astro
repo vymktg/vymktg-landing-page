@@ -6,9 +6,16 @@ import ButtonLink from "../shared/ButtonLink.astro";
 import NavigationCollapse from "../blocks/NavigationCollapse.astro";
 import { NAVIGATION_ITEM } from "../../config";
 import Container from "../shared/Container.astro";
+import { Image } from "astro:assets";
+import bannerShape from "../../assets/images/banner-shape.png";
 ---
 
 <header class="absolute inset-x-0 top-0 z-50 py-6">
+  <Image
+    class="absolute invisible md:visible 2xl:invisible"
+    src={bannerShape}
+    alt="banner shape"
+  />
   <Container>
     <nav class="flex items-center justify-between">
       <MenuCollapseButton className={"hidden md:block lg:hidden"} />
