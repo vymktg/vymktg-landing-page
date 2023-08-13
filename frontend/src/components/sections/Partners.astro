@@ -23,6 +23,7 @@ const partnersImages = await Astro.glob("../../assets/images/partners/*").then(
             partnersImages.map((item) => (
               <div class="splide__slide p-4 sm:p-5 group w-40 flex justify-center mx-auto">
                 <Image
+                  height={64}
                   src={item}
                   alt="spotify"
                   class="h-16 w-auto ease-linear duration-300 lg:grayscale group-hover:!grayscale-0 group-hover:scale-105"
