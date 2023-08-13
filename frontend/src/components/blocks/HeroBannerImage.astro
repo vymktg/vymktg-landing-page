@@ -1,4 +1,10 @@
 ---
+import { Image } from "astro:assets";
+
+import portraitImage from "../../assets/images/portrait.png";
+import columnChart from "../../assets/images/column-chart.png";
+import followGrow from "../../assets/images/follow-grow.png";
+import circleChart from "../../assets/images/circle-chart.png";
 ---
 
 <div
@@ -16,28 +22,30 @@
       autoplay></lottie-player>
   </div> -->
 
-  <img
+  <!-- <img
     src="images/blue 1.png"
     alt="Hero image" 
     class="lg:absolute lg:w-full lg:h-full rounded-3xl object-contain lg:object-fit"
+  /> -->
+
+  <Image
+    src={portraitImage}
+    alt="descriptive text"
+    class="lg:absolute lg:w-full lg:h-full rounded-3xl object-contain lg:object-fit"
   />
-  <img
-    src="images/Card 10.png"
+  <Image
+    src={columnChart}
     alt="Hero image"
     class="absolute bottom-0 left-0 md:w-4/12 lg:w-1/2 w-4/12"
   />
-  <img
-    src="images/Group10.png"
+  <Image
+    src={followGrow}
     alt="Hero image"
-    width="250"
-    height="125"
     class="absolute bottom-0 right-0 md:w-4/12 lg:w-1/2 w-4/12"
   />
-  <img
-    src="images/Card 02.png"
+  <Image
+    src={circleChart}
     alt="Hero image"
-    width="300"
-    height="300"
     class="absolute top-[5rem] lg:top-[10rem] right-0 md:w-4/12 lg:w-1/2 w-4/12"
   />
   <!-- <div

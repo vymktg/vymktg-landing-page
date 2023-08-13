@@ -2,6 +2,10 @@
 import Container from "../shared/Container.astro";
 import { CTA_CALCULATOR } from "../../config";
 import ButtonLink from "../shared/ButtonLink.astro";
+import { Image } from "astro:assets";
+
+import ctaImage from "../../assets/images/cta-cal.jpeg";
+import sketchImage from "../../assets/images/sketch.svg";
 ---
 
 <section class="cta-calculator">
@@ -95,12 +99,11 @@ import ButtonLink from "../shared/ButtonLink.astro";
       </div>
       <div class="cta-calculator__image">
         <div class="relative">
-          <img
-            width="600"
-            height="600"
-            src="images/cta-cal.jpeg"
-            style="
-            -webkit-mask-image: url(images/sketch.svg);"
+          <Image
+            src={ctaImage}
+            style={`
+            -webkit-mask-image: url(${sketchImage.src});`}
+            alt=""
           />
           <div
             class="bg-white right-0 bottom-16 z-10 absolute rounded-lg cross-sale-banner"

@@ -1,4 +1,5 @@
 ---
+import { SITE } from "../../config";
 import Container from "../shared/Container.astro";
 import Paragraph from "../shared/Paragraph.astro";
 ---
@@ -19,13 +20,14 @@ import Paragraph from "../shared/Paragraph.astro";
       </div>
       <div class="flex flex-col gap-10 md:gap-7 w-full lg:w-[33%]">
         <p class="tracking-wide font-bold uppercase">OFFICE</p>
-        <p class="text-base w-10/12">
+        <address class="text-base w-10/12 not-italic">
           Amphitheatre Parkway, Mountain View, California, 94043
-        </p>
+        </address>
 
         <div class="flex flex-col gap-2">
-          <div
+          <a
             class="flex flex-row gap-4 justify-start items-center hover:text-primary cursor-pointer"
+            href={`mailto:${SITE.email}`}
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -49,10 +51,11 @@ import Paragraph from "../shared/Paragraph.astro";
                 stroke-linecap="round"
                 stroke-linejoin="round"></path>
             </svg>
-            <span>vy.trinh@vytrinh.com</span>
-          </div>
-          <div
+            <span>{SITE.email}</span>
+          </a>
+          <a
             class="flex flex-row gap-4 justify-start items-center hover:text-primary cursor-pointer"
+            href={`tel:${SITE.phoneNumber}`}
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -71,8 +74,8 @@ import Paragraph from "../shared/Paragraph.astro";
                 d="M12 19.86C10.73 19.86 9.7 18.83 9.7 17.56C9.7 16.29 10.73 15.26 12 15.26C13.27 15.26 14.3 16.29 14.3 17.56C14.3 18.83 13.27 19.86 12 19.86ZM12 16.75C11.56 16.75 11.2 17.11 11.2 17.55C11.2 17.99 11.56 18.35 12 18.35C12.44 18.35 12.8 17.99 12.8 17.55C12.8 17.11 12.44 16.75 12 16.75Z"
               ></path>
             </svg>
-            <span> + 0318 031 2738</span>
-          </div>
+            <span>{`tel:${SITE.phoneNumber}`}</span>
+          </a>
         </div>
       </div>
       <div class="w-1/2 lg:w-[17%]">

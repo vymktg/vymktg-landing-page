@@ -1,6 +1,12 @@
 ---
 import { PARTNER_LIST } from "../../config";
-import Container from "../shared/Container.astro";
+import { Image } from "astro:assets";
+
+const partnersImages = await Astro.glob("../../assets/images/partners/*").then(
+  (files) => {
+    return files.map((file) => file.default);
+  }
+);
 ---
 
 <section id="partners">
@@ -14,10 +20,10 @@ import Container from "../shared/Container.astro";
       <div class="splide__track">
         <div class="splide__list">
           {
-            PARTNER_LIST.map((item) => (
+            partnersImages.map((item) => (
               <div class="splide__slide p-4 sm:p-5 group w-40 flex justify-center mx-auto">
-                <img
-                  src={`images/${item.url}`}
+                <Image
+                  src={item}
                   alt="spotify"
                   class="h-16 w-auto ease-linear duration-300 lg:grayscale group-hover:!grayscale-0 group-hover:scale-105"
                 />

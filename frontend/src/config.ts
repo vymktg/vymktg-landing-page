@@ -190,6 +190,8 @@ export const SITE = {
   description: "Professional Digital Marketer",
   url: "https://vymktg.github.io/vymktg.com",
   githubUrl: "https://github.com/vymktg/vymktg.com",
+  email: 'vymktg@gmail.com',
+  phoneNumber: '(+01) 123 123 123 123',
   image:
     "https://raw.githubusercontent.com/one-aalam/astro-ink/main/public/astro-banner.png",
   // YT video channel Id (used in media.astro)

@@ -1,16 +1,19 @@
 import { defineConfig } from "astro/config";
 import tailwind from "@astrojs/tailwind";
 
-import image from "@astrojs/image";
-
 // https://astro.build/config
 export default defineConfig({
-  integrations: [tailwind({
-    config: {
-      applyBaseStyles: false
-    }
-  }), image()],
-  site: 'https://vymktg.github.io/',
+  integrations: [
+    tailwind({
+      config: {
+        applyBaseStyles: false,
+      },
+    }),
+  ],
+  experimental: {
+    assets: true,
+  },
+  site: "https://vymktg.github.io/",
   //base: import.meta.env.BASE_URL,
-  base: import.meta.env.PROD ? '/vymktg.com/' : ''
+  base: import.meta.env.PROD ? "/vymktg.com/" : "",
 });
