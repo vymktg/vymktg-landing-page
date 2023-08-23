@@ -8,16 +8,19 @@ import { NAVIGATION_ITEM } from "../../config";
 import Container from "../shared/Container.astro";
 import { Image } from "astro:assets";
 import bannerShape from "../../assets/images/banner-shape.png";
+import NavItemDropdown from "../shared/NavItemDropdown.astro";
+
+const isHomePage = Astro.url.pathname === "/";
 ---
 
-<header class="absolute inset-x-0 top-0 z-50 py-6">
-  <Image
-    class="absolute invisible md:visible 2xl:invisible"
-    src={bannerShape}
-    alt="banner shape"
-  />
+<header
+  class:list={[
+    "absolute inset-x-0 top-0 py-6 z-20",
+    !isHomePage && "text-white",
+  ]}
+>
   <Container>
-    <nav class="flex items-center justify-between">
+    <nav class="relative flex items-center justify-between">
       <MenuCollapseButton className={"hidden md:block lg:hidden"} />
       <Logo />
       <ul
@@ -26,8 +29,12 @@ import bannerShape from "../../assets/images/banner-shape.png";
       >
         {
           NAVIGATION_ITEM.map((item) => (
-            <li>
-              <NavItem href={item.href} title={item.title} />
+            <li class="my-auto">
+              {item.isDropdown ? (
+                <NavItemDropdown href={item.href} title={item.title} />
+              ) : (
+                <NavItem href={item.href} title={item.title} />
+              )}
             </li>
           ))
         }
@@ -43,9 +50,14 @@ import bannerShape from "../../assets/images/banner-shape.png";
       <NavigationCollapse />
     </nav>
   </Container>
-  <div
-    id="drawer-backdrop"
-    class="bg-gray-900 bg-opacity-50 fixed inset-0 z-30 hidden"
-  >
-  </div>
 </header>
+<Image
+  class:list={["absolute invisible", isHomePage && "md:visiable 2xl:invisible"]}
+  src={bannerShape}
+  alt="banner shape"
+/>
+<div
+  id="drawer-backdrop"
+  class="bg-gray-900 bg-opacity-50 fixed inset-0 z-30 hidden"
+>
+</div>

@@ -1,5 +1,6 @@
 ---
 import { NAVIGATION_ITEM } from "../../config";
+const isNotHomePage = Astro.url.pathname != "/";
 ---
 
 <a href={NAVIGATION_ITEM[0].href} class="flex items-center">
@@ -10,7 +11,10 @@ import { NAVIGATION_ITEM } from "../../config";
     width="55"
     height="55"
   /> -->
-  <span class="self-center text-2xl font-semibold whitespace-nowrap text-dark"
-    >VY TRINH</span
+  <span
+    class:list={[
+      "self-center text-2xl font-semibold whitespace-nowrap text-dark",
+      isNotHomePage ? "text-white" : "text-dark",
+    ]}>VY TRINH</span
   >
 </a>

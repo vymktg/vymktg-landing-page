@@ -1,23 +1,18 @@
 ---
-import Base from "../layouts/Base.astro";
-import Card from "../components/Card.astro";
-import Navbar from "../components/elements/Navbar.astro";
 import HeroBanner from "../components/sections/HeroBanner.astro";
 import HowItWorks from "../components/sections/HowItWorks.astro";
 import Services from "../components/sections/Services.astro";
-import CTA from "../components/sections/CTA.astro";
 import FAQs from "../components/sections/FAQs.astro";
 import Partners from "../components/sections/Partners.astro";
 import Qoute from "../components/shared/Qoute.astro";
-import Footer from "../components/sections/Footer.astro";
 import ProjectsInsights from "../components/sections/Projects&Insights.astro";
 import CTACalculator from "../components/sections/CTACalculator.astro";
 import "@splidejs/splide/css/core";
 import CTAFooter from "../components/sections/CTAFooter.astro";
+import BasePage from "../layouts/BasePage.astro";
 ---
 
-<Base title="Welcome to Astro.">
-  <Navbar />
+<BasePage>
   <main class="flex flex-col gap-y-20 md:gap-y-32 overflow-hidden">
     <HeroBanner />
     <Partners />
@@ -29,7 +24,6 @@ import CTAFooter from "../components/sections/CTAFooter.astro";
     <FAQs />
     <CTAFooter />
   </main>
-  <Footer />
-</Base>
+</BasePage>
 
 <script src="../js/index-init.ts"></script>

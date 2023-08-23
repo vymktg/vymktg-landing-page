@@ -1,0 +1,74 @@
+---
+import Container from "./Container.astro";
+import { Image } from "astro:assets";
+import project1 from "../../assets/images/project1.png";
+---
+
+<!-- 
+<section
+  id="client-testimonial"
+  class="bg-cover bg-fixed bg-[url(https://weblearnbd.net/tphtml/seomy-prv/seomy/assets/img/banner/about-inner-bg.jpg)] text-white"
+>
+  <Container>
+    <!-- <div class="grid grid-cols-3 py-10 gap-10">
+      <div class="flex flex-col gap-4 justify-center items-start">
+        <span class="text-3xl font-bold"> Client testimonial</span>
+        <div class="bg-white p-2 text-gray-700 border rounded-lg">
+          "It's really wonderful. Wow what great service, I love it! I am really
+          satisfied with your company service. Man, this thing is getting better
+          and better as I learn more about it."
+        </div>
+        <div class="flex flex-row justify-start items-center gap-4">
+          <img
+            class="w-16 h-16 border-4 border-white rounded-full object-cover"
+            src="https://templatekit.tokomoo.com/socialkit/wp-content/uploads/sites/58/2021/12/beauty-portrait-of-female-face-with-natural-skin-8U5PX7R.jpg"
+          />
+          <div class="flex flex-col">
+            <span class="font-semibold">Jessica Mudd</span>
+            <span>Platify Founder</span>
+          </div>
+        </div>
+      </div>
+      <div class="">
+        <div class="">
+          <img
+            class="w-full rounded-xl border-8 border-white"
+            src="https://templatekit.tokomoo.com/socialkit/wp-content/uploads/sites/58/2021/12/woman-taking-a-snapshot-of-her-plant-for-social-me-2021-10-13-21-44-16-utc-1.jpg"
+          />
+        </div>
+      </div>
+    </div>
+  </Container>
+    
+  </Container>
+</section> -->
+<section class="bg-gray-200 text-black">
+  <Container>
+    <div class="grid grid-cols-1 md:grid-cols-3">
+      <div class="text-lg font-medium">Projects & Insights</div>
+      <div class="col-span-2 text-3xl font-normal]">
+        <div>Tranforming Visions into Reality:</div>
+        <div>Our Impressive Portfolio of Success Stories</div>
+      </div>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3">
+      <div class="col-span-2">
+        <Image src={project1} alt="project 1" />
+      </div>
+      <div class="col-span-1">
+        <div class="flex flex-col gap-3">
+          <span>Emoon</span>
+          <span>Wine shop</span>
+          <span>
+            Our serives help your create digital products and solve your
+            problems objectively, strategy, technology, anda analysis. Our
+            servies also has a high appeal because it has a beatiful color
+            combination and a minimalist concept.
+          </span>
+          <span>Digital Marketing, Social Marketing, Website, SEO</span>
+          <span>2022</span>
+        </div>
+      </div>
+    </div>
+  </Container>
+</section>

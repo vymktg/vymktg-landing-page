@@ -10,6 +10,7 @@ export const NAVIGATION_ITEM = [
   {
     title: "Services",
     href: `${import.meta.env.BASE_URL}services`,
+    isDropdown: true,
   },
   {
     title: "Projects & Insights",
