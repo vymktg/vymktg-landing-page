@@ -13,12 +13,7 @@ import NavItemDropdown from "../shared/NavItemDropdown.astro";
 const isHomePage = Astro.url.pathname === "/";
 ---
 
-<header
-  class:list={[
-    "absolute inset-x-0 top-0 py-6 z-20",
-    !isHomePage && "text-white",
-  ]}
->
+<header class:list={["absolute inset-x-0 top-0 py-6 z-20"]}>
   <Container>
     <nav class="relative flex items-center justify-between">
       <MenuCollapseButton className={"hidden md:block lg:hidden"} />
@@ -29,12 +24,36 @@ const isHomePage = Astro.url.pathname === "/";
       >
         {
           NAVIGATION_ITEM.map((item) => (
-            <li class="my-auto">
-              {item.isDropdown ? (
-                <NavItemDropdown href={item.href} title={item.title} />
-              ) : (
-                <NavItem href={item.href} title={item.title} />
-              )}
+            <li
+              class:list={[
+                "my-auto menu-item relative",
+                Astro.url.pathname === item.href ? "active" : "",
+              ]}
+            >
+              <a
+                href={item.href}
+                class=" duration-300 font-medium ease-linear py-2 px-4"
+                aria-current="page"
+              >
+                {item.title}
+              </a>
+              <div class="menu-item__decoration pointer-events-none absolute top-full left-1/2 overflow-hidden children:w-full children:h-auto w-[9.25rem] -ml-[4.625rem] md:w-[4.25rem] md:-ml-[2.125rem] text-[#4452f5]">
+                <svg
+                  preserveAspectRatio="xMidYMid slice"
+                  width="69"
+                  height="8"
+                  viewBox="0 0 69 8"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="stroke-current"
+                >
+                  <path
+                    d="M1.13838 6.1242C6.812 2.92788 21.2563 1.56082 31.5963 2.78176C42.4294 4.06092 49.6969 8.06731 68.2783 2.76965"
+                    stroke-width="2"
+                    pathLength="1"
+                  />
+                </svg>
+              </div>
             </li>
           ))
         }
@@ -51,13 +70,25 @@ const isHomePage = Astro.url.pathname === "/";
     </nav>
   </Container>
 </header>
-<Image
-  class:list={["absolute invisible", isHomePage && "md:visiable 2xl:invisible"]}
-  src={bannerShape}
-  alt="banner shape"
-/>
+<Image class:list={["absolute"]} src={bannerShape} alt="banner shape" />
 <div
   id="drawer-backdrop"
   class="bg-gray-900 bg-opacity-50 fixed inset-0 z-30 hidden"
 >
 </div>
+
+<style>
+  .menu-item.active .stroke-current > path {
+    stroke-dashoffset: 0;
+  }
+
+  .menu-item .stroke-current > path {
+    stroke-dasharray: 1;
+    stroke-dashoffset: 1;
+  }
+
+  .menu-item:hover .stroke-current > path {
+    stroke-dashoffset: 0;
+    transition: all 0.25s ease-in-out;
+  }
+</style>
