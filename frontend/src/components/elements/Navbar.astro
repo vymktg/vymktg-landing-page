@@ -8,7 +8,6 @@ import { NAVIGATION_ITEM } from "../../config";
 import Container from "../shared/Container.astro";
 import { Image } from "astro:assets";
 import bannerShape from "../../assets/images/banner-shape.png";
-import NavItemDropdown from "../shared/NavItemDropdown.astro";
 
 const isHomePage = Astro.url.pathname === "/";
 ---
@@ -73,7 +72,7 @@ const isHomePage = Astro.url.pathname === "/";
 <Image class:list={["absolute"]} src={bannerShape} alt="banner shape" />
 <div
   id="drawer-backdrop"
-  class="bg-gray-900 bg-opacity-50 fixed inset-0 z-30 hidden"
+  class="bg-gray-900 bg-opacity-50 fixed inset-0 hidden"
 >
 </div>
 
