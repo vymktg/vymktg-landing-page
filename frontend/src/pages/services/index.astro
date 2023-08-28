@@ -174,23 +174,25 @@ const partnersImages = await Astro.glob("../../assets/images/partners/*").then(
       </Container>
     </div>
     <section id="partners" class="my-40">
-      <div class="flex overflow-visible partner-list">
-        {
-          [1, 2, 3, 4].map((item) => (
-            <div class="flex overflow-visible flex-none">
-              {partnersImages.map((item) => (
-                <div class="p-6 sm:p-5 group w-40 flex justify-center mx-auto">
-                  <Image
-                    height={64}
-                    src={item}
-                    alt="spotify"
-                    class="h-16 w-auto ease-linear duration-300 "
-                  />
-                </div>
-              ))}
-            </div>
-          ))
-        }
+      <div class="overflow-auto md:overflow-visible">
+        <div class="flex overflow-visible partner-list">
+          {
+            [1, 2, 3, 4].map((item) => (
+              <div class="flex overflow-visible flex-none">
+                {partnersImages.map((item) => (
+                  <div class="p-6 sm:p-5 group w-40 flex justify-center mx-auto">
+                    <Image
+                      height={64}
+                      src={item}
+                      alt="spotify"
+                      class="h-16 w-auto ease-linear duration-300 "
+                    />
+                  </div>
+                ))}
+              </div>
+            ))
+          }
+        </div>
       </div>
     </section>
     <!-- <CaseStudy /> -->
