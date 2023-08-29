@@ -8,10 +8,12 @@ import { NAVIGATION_ITEM } from "../../config";
 import Container from "../shared/Container.astro";
 import { Image } from "astro:assets";
 import bannerShape from "../../assets/images/banner-shape.png";
-
 ---
 
-<header class:list={["absolute inset-x-0 top-0 py-6 z-20"]}>
+<header
+  class:list={["absolute inset-x-0 top-0 py-6 z-20"]}
+  data-mode={import.meta.env.MODE}
+>
   <Container>
     <nav class="relative flex items-center justify-between">
       <MenuCollapseButton className={"hidden md:block lg:hidden"} />
@@ -25,7 +27,7 @@ import bannerShape from "../../assets/images/banner-shape.png";
             <li
               class:list={[
                 "my-auto menu-item relative",
-                Astro.url.pathname.includes(item.href) ? "active" : "",
+                Astro.url.pathname === `${item.href}/` ? "active" : "",
               ]}
             >
               <a
