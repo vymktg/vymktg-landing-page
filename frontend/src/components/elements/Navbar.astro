@@ -8,6 +8,7 @@ import { NAVIGATION_ITEM } from "../../config";
 import Container from "../shared/Container.astro";
 import { Image } from "astro:assets";
 import bannerShape from "../../assets/images/banner-shape.png";
+import { isActivePage } from "../../js/helper";
 ---
 
 <header
@@ -27,7 +28,7 @@ import bannerShape from "../../assets/images/banner-shape.png";
             <li
               class:list={[
                 "my-auto menu-item relative",
-                Astro.url.pathname === `${item.href}/` ? "active" : "",
+                isActivePage(Astro.url.pathname, item.href) ? "active" : "",
               ]}
             >
               <a
