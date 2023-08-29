@@ -9,7 +9,6 @@ import Container from "../shared/Container.astro";
 import { Image } from "astro:assets";
 import bannerShape from "../../assets/images/banner-shape.png";
 
-const isHomePage = Astro.url.pathname === "/";
 ---
 
 <header class:list={["absolute inset-x-0 top-0 py-6 z-20"]}>
@@ -26,7 +25,7 @@ const isHomePage = Astro.url.pathname === "/";
             <li
               class:list={[
                 "my-auto menu-item relative",
-                Astro.url.pathname === item.href ? "active" : "",
+                Astro.url.pathname.includes(item.href) ? "active" : "",
               ]}
             >
               <a
