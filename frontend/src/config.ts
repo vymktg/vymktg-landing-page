@@ -59,33 +59,43 @@ export const SERVICE_LIST = [
   {
     title: "Social Media Management",
     description: "Streamlined your social media accounts with engaging content",
+    detail: "Managing social media accounts effectively can be time-consuming and overwhelming. My social media management services aim to alleviate this burden. I will ensure timely updates, engaging content, and consistent brand representation across platforms. This includes monitoring audience engagement, analyzing metrics, and implementing strategies to maximize reach and impact. It involves tasks such as content creation, scheduling, community and influencers management, and staying updated with the latest social media trends and algorithms.",
     icon: "tabler:social",
   },
   {
     title: "Website and SEO",
     description: `Boost your online visibility with tailored SEO strategies and website management`,
+    detail: "Maximize your website's potential with my website management and optimization services which include updated content and performance optimization. By ensuring a seamless user experience, improved search engine visibility, and optimal performance, I'll help you attract more visitors and boost conversions.",
     icon: "carbon:dns-services",
   },
   {
-    title: "Online Reputation Management",
+    title: "CRM Marketing",
     description:
       "Nurturing a positive reputation by building trust to drive sustainable business growth.",
+    detail:
+      "Maintaining a positive online reputation is essential for your business. I will assist you to effectively monitoring and managing online reviews, addressing customer feedback, and building a strong brand image. By prioritizing cultivating trust and maintaining a stellar reputation, you can foster customer loyalty and support sustainable growth.",
     icon: "tabler:award",
   },
   {
     title: "Email & SMS Marketing",
     description:
       "Enhance customer engagement, nurture relationships with direct communication",
+    detail:
+      "Both email and text marketing are valuable tools for businesses to connect with their target audience, deliver relevant and personalized content, and drive engagement and conversions. When used strategically and in compliance with applicable regulations and guidelines, email and text marketing can be powerful channels for effective communication and customer relationship-building.",
     icon: "mdi:email-seal-outline",
   },
   {
     title: "Paid Advertising Campaigns",
     description: "Fuel your growth with effective paid advertising Campaigns",
+    detail:
+      "Paid advertising campaigns can be an effective way for small businesses to accelerate their growth. I will help develop and manage targeted ad campaigns on platforms such as Google Ads, Meta, Wix…etc. Through careful strategy and optimization, businesses can increase their brand visibility, attract new customers, and expand their reach.",
     icon: "icons8:advertising",
   },
   {
     title: "Content Creation",
     description: "Harness the power of compelling and valuable content",
+    detail:
+      "Engaging and informative content plays a vital role in attracting and retaining customers. My focus is to craft captivating blog posts, attention-grabbing videos, and visually appealing infographics that align with your brand. By delivering high-quality content, businesses can drive website traffic, boost engagement, and foster brand loyalty.",
     icon: "tabler:award",
   },
 ];
@@ -190,8 +200,8 @@ export const SITE = {
   description: "Professional Digital Marketer",
   url: "https://vymktg.github.io/vymktg.com",
   githubUrl: "https://github.com/vymktg/vymktg.com",
-  email: "vymktg@gmail.com",
-  phoneNumber: "(+01) 123 123 123 123",
+  email: "fromvtovintage@gmail.com",
+  phoneNumber: "+1 801 425 3581",
   image:
     "https://raw.githubusercontent.com/one-aalam/astro-ink/main/public/astro-banner.png",
   // YT video channel Id (used in media.astro)

@@ -2,10 +2,10 @@
 export interface Props {
   index: number;
   title: string;
-  description: string;
+  detail: string;
 }
 
-const { index, title, description } = Astro.props;
+const { index, title, detail } = Astro.props;
 ---
 
 <div class="flex flex-row gap-4">
@@ -13,11 +13,11 @@ const { index, title, description } = Astro.props;
   <div class="flex flex-col gap-3">
     <div class="text-3xl font-semibold">{title}</div>
     <div class="text-lg font-medium md:4/5 tracking-wide">
-      Your future customers are spending hours a day on platforms such as
+      <!-- Your future customers are spending hours a day on platforms such as
       Facebook, Instagram, and Google – we meet them where they are with
-      strategic targeting and placement to cut through the noise.
-      
-      <!-- {description} -->
+      strategic targeting and placement to cut through the noise. -->
+
+      {detail}
     </div>
   </div>
 </div>

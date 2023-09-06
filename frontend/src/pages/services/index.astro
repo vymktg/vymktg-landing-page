@@ -39,7 +39,7 @@ const partnersImages = await Astro.glob("../../assets/images/partners/*").then(
       <Container className="flex flex-col gap-20 z-10">
         <section
           id="service-hero"
-          class="mt-[-15rem] bg-white rounded-md w-full px-12 py-10 md:px-16 md:py-14 lg:px-24 lg:py-20 drop-shadow-2xl"
+          class="mt-[-15rem] bg-white rounded-3xl w-full px-12 py-10 md:px-16 md:py-14 lg:px-24 lg:py-20 drop-shadow-2xl"
         >
           <div class="flex flex-col">
             <div
@@ -173,7 +173,7 @@ const partnersImages = await Astro.glob("../../assets/images/partners/*").then(
         </section>
       </Container>
     </div>
-    <section id="partners" class="my-40">
+    <!-- <section id="partners" class="my-10">
       <div class="overflow-auto md:overflow-visible">
         <div class="flex overflow-visible partner-list">
           {
@@ -194,6 +194,58 @@ const partnersImages = await Astro.glob("../../assets/images/partners/*").then(
           }
         </div>
       </div>
+    </section> -->
+
+    <section class="bg-gray-50">
+      <Container>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 my-16">
+          <div class="grid grid-cols-2 gap-4">
+            {
+              [...partnersImages].splice(0, 4).map((item, index) => (
+                <div class="bg-white shadow-2xl w-full h-60 flex flex-col justify-center items-center rounded-xl">
+                  <Image
+                    src={item}
+                    alt="spotify"
+                    class="h-3/4 w-auto ease-linear duration-300 "
+                  />
+                </div>
+              ))
+            }
+          </div>
+          <div class="flex flex-col gap-7">
+            <div class="text-4xl font-bold">
+              Unlocking Success in the Digital World
+            </div>
+            <div class="text-gray-400 text-lg font-medium">
+              Pntroduced day her apartments. Fully as taste he mr do smile abode
+              every. Luckily offered article led lasting country minutes nor
+              old. Happen people things oh is oppose up parish effect. Law
+              handsome old outweigh humoured far appetite. Connection has put
+              impossible own apartments boisterous. At jointure ladyship an
+              insisted so humanity he. Friendly bachelor entrance to
+
+              <button
+                class="border-blue-600 border-2 flex-initial mt-7 px-8 py-2 rounded-3xl text-blue-600 font-semibold"
+              >
+                Start Now
+              </button>
+            </div>
+            <hr />
+            <div class="grid grid-cols-2 gap-6">
+              {
+                [1, 2, 3, 4].map((item) => (
+                  <div class="flex flex-col">
+                    <div class="font-bold text-5xl">
+                      8 <span class="text-blue-600">+</span>{" "}
+                    </div>
+                    <div class="font-medium text-lg">Clients</div>
+                  </div>
+                ))
+              }
+            </div>
+          </div>
+        </div>
+      </Container>
     </section>
     <!-- <CaseStudy /> -->
     <GetInTouch />
