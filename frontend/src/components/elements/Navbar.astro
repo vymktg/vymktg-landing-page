@@ -9,6 +9,8 @@ import Container from "../shared/Container.astro";
 import { Image } from "astro:assets";
 import bannerShape from "../../assets/images/banner-shape.png";
 import { isActivePage } from "../../js/helper";
+
+const isHomePage = Astro.url.pathname === import.meta.env.BASE_URL;
 ---
 
 <header
@@ -71,7 +73,9 @@ import { isActivePage } from "../../js/helper";
     </nav>
   </Container>
 </header>
-<Image class:list={["absolute"]} src={bannerShape} alt="banner shape" />
+
+{isHomePage && <Image class:list={["absolute"]} src={bannerShape} alt="banner shape" />}
+
 <div
   id="drawer-backdrop"
   class="bg-gray-900 bg-opacity-50 fixed inset-0 hidden"

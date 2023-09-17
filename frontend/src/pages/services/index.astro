@@ -2,7 +2,7 @@
 import Container from "../../components/shared/Container.astro";
 import Breadcrumb from "../../components/shared/Breadcrumb.astro";
 import BasePage from "../../layouts/BasePage.astro";
-import { SERVICE_LIST } from "../../config";
+import { SERVICE_LIST, BY_NUMBERS } from "../../config";
 import GetInTouch from "../../components/shared/GetInTouch.astro";
 import CaseStudy from "../../components/shared/CaseStudy.astro";
 import ServiceItem from "../../components/shared/ServiceItem.astro";
@@ -24,7 +24,7 @@ const partnersImages = await Astro.glob("../../assets/images/partners/*").then(
 ---
 
 <BasePage>
-  <div class="flex flex-col gap-10">
+  <div class="flex flex-col">
     <div class="">
       <div class="bg-[#E4ECF8]">
         <div class="py-64">
@@ -62,7 +62,7 @@ const partnersImages = await Astro.glob("../../assets/images/partners/*").then(
             </div>
           </div>
         </section>
-        <section id="service-list" class="flex flex-col">
+        <section id="service-list" class="flex flex-col pb-40">
           <div class="grid grid-cols-1 md:grid-cols-2 relative">
             <div class="w-full flex flex-col">
               <div class="flex flex-col gap-4">
@@ -196,9 +196,9 @@ const partnersImages = await Astro.glob("../../assets/images/partners/*").then(
       </div>
     </section> -->
 
-    <section class="bg-gray-50">
+    <section class="bg-gray-50 py-40">
       <Container>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-16 my-16">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-24">
           <div class="grid grid-cols-2 gap-4">
             {
               [...partnersImages].splice(0, 4).map((item, index) => (
@@ -212,11 +212,11 @@ const partnersImages = await Astro.glob("../../assets/images/partners/*").then(
               ))
             }
           </div>
-          <div class="flex flex-col gap-7">
+          <div class="flex flex-col gap-10">
             <div class="text-4xl font-bold">
               Unlocking Success in the Digital World
             </div>
-            <div class="text-gray-400 text-lg font-medium">
+            <div class="text-lg font-medium">
               Pntroduced day her apartments. Fully as taste he mr do smile abode
               every. Luckily offered article led lasting country minutes nor
               old. Happen people things oh is oppose up parish effect. Law
@@ -224,21 +224,26 @@ const partnersImages = await Astro.glob("../../assets/images/partners/*").then(
               impossible own apartments boisterous. At jointure ladyship an
               insisted so humanity he. Friendly bachelor entrance to
 
-              <button
-                class="border-blue-600 border-2 flex-initial mt-7 px-8 py-2 rounded-3xl text-blue-600 font-semibold"
-              >
-                Start Now
-              </button>
+              <div>
+                <button
+                  class="border-blue-600 border-2 flex-initial mt-10 px-8 py-2 rounded-3xl text-blue-600 font-semibold"
+                >
+                  Start Now
+                </button>
+              </div>
             </div>
             <hr />
-            <div class="grid grid-cols-2 gap-6">
+            <div class="grid grid-cols-2 gap-12">
               {
-                [1, 2, 3, 4].map((item) => (
+                BY_NUMBERS.map((item) => (
                   <div class="flex flex-col">
-                    <div class="font-bold text-5xl">
-                      8 <span class="text-blue-600">+</span>{" "}
+                    <div class="font-bold text-5xl relative">
+                      {item.number}{" "}
+                      <span class="text-blue-600 absolute text-4xl top-[-.8rem]">
+                        +
+                      </span>{" "}
                     </div>
-                    <div class="font-medium text-lg">Clients</div>
+                    <div class="font-medium text-lg">{item.title}</div>
                   </div>
                 ))
               }
@@ -247,6 +252,39 @@ const partnersImages = await Astro.glob("../../assets/images/partners/*").then(
         </div>
       </Container>
     </section>
+    {
+      [...SERVICE_LIST].map((item, index) => {
+        const { title, services_detail } = item;
+        return (
+          <section
+            class:list={["py-40", index % 2 === 0 ? "bg-white" : "bg-gray-50"]}
+          >
+            <Container>
+              <div class="px-16 lg:px-0">
+                <div class="flex flex-col lg:flex-row gap-20">
+                  <div class="lg:w-1/3">
+                    <h1 class="text-6xl font-semibold">{title}</h1>
+                  </div>
+                  <div class="lg:w-2/3">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-20">
+                      {services_detail &&
+                        services_detail.map((item) => (
+                          <div class="flex flex-col gap-5">
+                            <h2 class="font-medium text-4xl">{item.title}</h2>
+                            <p class="text-lg font-medium tracking-wide">
+                              {item.description}
+                            </p>
+                          </div>
+                        ))}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </Container>
+          </section>
+        );
+      })
+    }
     <!-- <CaseStudy /> -->
     <GetInTouch />
   </div>
