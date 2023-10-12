@@ -131,10 +131,6 @@ export const SERVICE_LIST = [
       {
         title: "Feedback and Analytics",
         description: "Measure the effectiveness of your CRM efforts and make data-driven improvements."
-      },
-      {
-        title: "Hubspot CRM report",
-        description: ""
       }
     ]
   },
