@@ -56,34 +56,34 @@ export const PROJECT_LIST = [
 ];
 
 export const SERVICE_LIST = [
-  {
-    title: "Social Media Management",
-    description: "Streamlined your social media accounts with engaging content",
-    detail: "Managing social media accounts effectively can be time-consuming and overwhelming. My social media management services aim to alleviate this burden. I will ensure timely updates, engaging content, and consistent brand representation across platforms. This includes monitoring audience engagement, analyzing metrics, and implementing strategies to maximize reach and impact. It involves tasks such as content creation, scheduling, community and influencers management, and staying updated with the latest social media trends and algorithms.",
-    icon: "tabler:social",
-    services_detail: [
-      {
-        title: "Content Creation",
-        description: "Tailored social media content to engage your audience, including eye-catching visuals and compelling captions."
-      },
-      {
-        title: "Analytics Insights",
-        description: "Data-driven strategies using in-depth analytics to optimize your social media performance and boost ROI."
-      },
-      {
-        title: "Community Engagement",
-        description: "Foster relationships with your online community through timely responses and active interaction."
-      },
-      {
-        title: "Ad Campaigns",
-        description: "Precision-targeted advertising to expand your reach and drive conversions on social media platforms."
-      },
-      {
-        title: "Influencer Collaboration",
-        description: "Collaborate with industry influencers to increase brand visibility and credibility within your niche."
-      }
-    ]
-  },
+  // {
+  //   title: "Social Media Management",
+  //   description: "Streamlined your social media accounts with engaging content",
+  //   detail: "Managing social media accounts effectively can be time-consuming and overwhelming. My social media management services aim to alleviate this burden. I will ensure timely updates, engaging content, and consistent brand representation across platforms. This includes monitoring audience engagement, analyzing metrics, and implementing strategies to maximize reach and impact. It involves tasks such as content creation, scheduling, community and influencers management, and staying updated with the latest social media trends and algorithms.",
+  //   icon: "tabler:social",
+  //   services_detail: [
+  //     {
+  //       title: "Content Creation",
+  //       description: "Tailored social media content to engage your audience, including eye-catching visuals and compelling captions."
+  //     },
+  //     {
+  //       title: "Analytics Insights",
+  //       description: "Data-driven strategies using in-depth analytics to optimize your social media performance and boost ROI."
+  //     },
+  //     {
+  //       title: "Community Engagement",
+  //       description: "Foster relationships with your online community through timely responses and active interaction."
+  //     },
+  //     {
+  //       title: "Ad Campaigns",
+  //       description: "Precision-targeted advertising to expand your reach and drive conversions on social media platforms."
+  //     },
+  //     {
+  //       title: "Influencer Collaboration",
+  //       description: "Collaborate with industry influencers to increase brand visibility and credibility within your niche."
+  //     }
+  //   ]
+  // },
   {
     title: "Website and SEO",
     description: `Boost your online visibility with tailored SEO strategies and website management`,
@@ -91,25 +91,21 @@ export const SERVICE_LIST = [
     icon: "carbon:dns-services",
     services_detail: [
       {
-        title: "SEO Audit",
-        description: "Comprehensive analysis of your website's SEO health to identify and fix optimization opportunities for higher rankings."
+        title: "Website Development",
+        description: "Design and build user-friendly, responsive websites that reflect your brand and business objectives."
       },
       {
-        title: "Keyword Research",
-        description: "Strategic selection of keywords to drive targeted organic traffic and enhance online visibility."
+        title: "Search Engine Optimization (SEO)",
+        description: "Optimize your website to rank higher on search engines, increasing organic traffic and attracting quality leads."
       },
       {
-        title: "On-Page Optimization",
-        description: "Fine-tuning website elements like meta tags, content, and internal links to improve search engine rankings."
+        title: "Content Management",
+        description: "Keep your website up to date with fresh, relevant content that resonates with your target audience."
       },
       {
-        title: "Link Building",
-        description: "Building high-quality backlinks to increase your website's authority and credibility in search engine results."
-      },
-      {
-        title: "Content Strategy",
-        description: "Creating and optimizing compelling content that not only attracts visitors but also converts them into customers, boosting your website's ROI."
-      },
+        title: "Performance Analysis",
+        description: "Regular analysis and adjustments ensure that your website is continually improving."
+      }
     ]
   },
   {
@@ -121,91 +117,79 @@ export const SERVICE_LIST = [
     icon: "tabler:award",
     services_detail: [
       {
-        title: "CRM Integration",
-        description: "Seamlessly integrate your CRM system to streamline marketing efforts and gain valuable customer insights."
+        title: "Customer Data Management",
+        description: "Organize and manage customer data to gain insights and create personalized marketing campaigns."
       },
       {
-        title: "Email Campaigns",
-        description: "Targeted email marketing using CRM data to nurture leads, increase conversions, and foster customer loyalty."
+        title: "Email Marketing",
+        description: "Engage your audience through targeted email campaigns that deliver the right message at the right time."
       },
       {
-        title: "Customer Segmentation",
-        description: "Precision targeting by categorizing leads and customers based on behavior, demographics, and preferences."
+        title: "Automation and Personalization",
+        description: "Utilize CRM tools to automate repetitive tasks and personalize customer interactions."
       },
       {
-        title: "Lead Scoring",
-        description: "Identify high-value prospects by assigning scores based on engagement, helping prioritize sales efforts effectively."
+        title: "Feedback and Analytics",
+        description: "Measure the effectiveness of your CRM efforts and make data-driven improvements."
       },
       {
-        title: "Automation Workflows",
-        description: "Create automated marketing sequences triggered by CRM data, enhancing efficiency and personalization."
-      },
-      {
-        title: "Analytics & Reporting",
-        description: "Monitor campaign performance and ROI through comprehensive CRM-driven analytics and reporting tools."
-      },
-    ]
-  },
-  {
-    title: "Email & SMS Marketing",
-    description:
-      "Enhance customer engagement, nurture relationships with direct communication",
-    detail:
-      "Both email and text marketing are valuable tools for businesses to connect with their target audience, deliver relevant and personalized content, and drive engagement and conversions. When used strategically and in compliance with applicable regulations and guidelines, email and text marketing can be powerful channels for effective communication and customer relationship-building.",
-    icon: "mdi:email-seal-outline",
-    services_detail: [
-      {
-        title: "Email Campaigns",
-        description: "Craft and deliver engaging email marketing campaigns tailored to your audience for increased engagement and conversions."
-      },
-      {
-        title: "SMS Blasts",
-        description: "Send targeted SMS messages to reach your customers with time-sensitive promotions and updates."
-      },
-      {
-        title: "Segmentation Strategies",
-        description: "Divide your audience into segments for more personalized email and SMS communication, enhancing relevance and response rates."
-      },
-      {
-        title: "Automation Sequences",
-        description: "Set up automated email and SMS sequences to nurture leads and guide them through the customer journey."
-      },
-      {
-        title: "Analytics & Optimization",
-        description: "Monitor campaign performance, gather insights, and optimize future strategies for better results in email and SMS marketing."
+        title: "Hubspot CRM report",
+        description: ""
       }
     ]
   },
+  // {
+  //   title: "Email & SMS Marketing",
+  //   description:
+  //     "Enhance customer engagement, nurture relationships with direct communication",
+  //   detail:
+  //     "Both email and text marketing are valuable tools for businesses to connect with their target audience, deliver relevant and personalized content, and drive engagement and conversions. When used strategically and in compliance with applicable regulations and guidelines, email and text marketing can be powerful channels for effective communication and customer relationship-building.",
+  //   icon: "mdi:email-seal-outline",
+  //   services_detail: [
+  //     {
+  //       title: "Email Campaigns",
+  //       description: "Craft and deliver engaging email marketing campaigns tailored to your audience for increased engagement and conversions."
+  //     },
+  //     {
+  //       title: "SMS Blasts",
+  //       description: "Send targeted SMS messages to reach your customers with time-sensitive promotions and updates."
+  //     },
+  //     {
+  //       title: "Segmentation Strategies",
+  //       description: "Divide your audience into segments for more personalized email and SMS communication, enhancing relevance and response rates."
+  //     },
+  //     {
+  //       title: "Automation Sequences",
+  //       description: "Set up automated email and SMS sequences to nurture leads and guide them through the customer journey."
+  //     },
+  //     {
+  //       title: "Analytics & Optimization",
+  //       description: "Monitor campaign performance, gather insights, and optimize future strategies for better results in email and SMS marketing."
+  //     }
+  //   ]
+  // },
   {
-    title: "Paid Advertising Campaigns",
+    title: "Paid Advertising",
     description: "Fuel your growth with effective paid advertising Campaigns",
     detail:
       "Paid advertising campaigns can be an effective way for small businesses to accelerate their growth. I will help develop and manage targeted ad campaigns on platforms such as Google Ads, Meta, Wix…etc. Through careful strategy and optimization, businesses can increase their brand visibility, attract new customers, and expand their reach.",
     icon: "icons8:advertising",
     services_detail: [
       {
-        title: "PPC Management",
-        description: "Expert management of pay-per-click campaigns to maximize ROI through strategic bidding and ad optimization."
+        title: "Campaign Strategy",
+        description: "Develop a tailored advertising strategy based on your goals, target audience, and budget."
       },
       {
-        title: "Ad Copywriting",
-        description: "Crafting compelling ad copy that resonates with your audience and drives clicks and conversions."
+        title: "Ad Creation",
+        description: "Designs compelling ad creatives that grab attention and drive clicks."
       },
       {
-        title: "Ad Creative Design",
-        description: "Creating visually appealing and highly clickable ad creatives for various platforms."
+        title: "Campaign Management",
+        description: "Monitor and optimize your campaigns to ensure you get the best conversion."
       },
       {
-        title: "Keyword Research",
-        description: "In-depth keyword research to target the most relevant and cost-effective keywords for your campaign."
-      },
-      {
-        title: "A/B Testing",
-        description: "Continuous testing of ad variations to refine strategies and boost campaign performance."
-      },
-      {
-        title: "Budget Allocation",
-        description: "Strategic allocation of ad spend across different platforms and campaigns for optimal results."
+        title: "Performance Reporting",
+        description: "Detailed reporting keeps you informed about the success of your advertising efforts."
       }
     ]
   },
@@ -217,24 +201,20 @@ export const SERVICE_LIST = [
     icon: "tabler:award",
     services_detail: [
       {
-        title: "Blogging Services",
-        description: "Regularly updated, SEO-optimized blog content to establish authority and drive organic traffic to your website."
+        title: "Content Strategy",
+        description: "I work with you to develop a content strategy that aligns with your goals and resonates with your target audience."
       },
       {
-        title: "Video Production",
-        description: "Engaging video content creation for YouTube, social media, and website engagement."
+        title: "Content Creation",
+        description: "From blog posts and articles to videos and infographics, I produce a wide range of content types to keep your audience engaged."
       },
       {
-        title: "Social Media Posts",
-        description: "Crafted, eye-catching posts for various social platforms to engage your audience and boost brand presence."
+        title: "Visual Design",
+        description: "Create eye-catching visuals that enhance your content and brand identity."
       },
       {
-        title: "Infographics",
-        description: "Visually compelling data representation to communicate complex information in a simple, shareable format."
-      },
-      {
-        title: "Podcast Production",
-        description: "Scripting, recording, and editing of podcast episodes to enhance your brand's thought leadership and audience reach."
+        title: "Content Optimization",
+        description: "Ensure that your content is not only creative but also optimized for search engines to maximize its reach."
       }
     ]
   },
