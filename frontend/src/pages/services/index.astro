@@ -196,7 +196,7 @@ const partnersImages = await Astro.glob("../../assets/images/partners/*").then(
       </div>
     </section> -->
 
-    <section class="bg-gray-50 py-40">
+    <section class="bg-gray-50 py-40 hidden">
       <Container>
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-24">
           <div class="grid grid-cols-2 gap-4">
@@ -257,7 +257,7 @@ const partnersImages = await Astro.glob("../../assets/images/partners/*").then(
         const { title, services_detail } = item;
         return (
           <section
-            class:list={["py-40", index % 2 === 0 ? "bg-white" : "bg-gray-50"]}
+            class:list={["py-40", index % 2 === 0 ? "bg-gray-50" : "bg-white"]}
           >
             <Container>
               <div class="px-16 lg:px-0">
