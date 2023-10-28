@@ -5,11 +5,35 @@ import portraitImage from "../../assets/images/portrait.png";
 import columnChart from "../../assets/images/column-chart.png";
 import followGrow from "../../assets/images/follow-grow.png";
 import circleChart from "../../assets/images/circle-chart.png";
+import heroImage from "../../assets/images/hero-image.png";
+
+const TOP_RIGHT_IMAGE = "absolute top-0 right-0";
+const TOP_RIGHT_IMAGE_WIDTH = "w-[300px] md:w-[450px] lg:w-[700px]";
 ---
 
-<div
-  class="w-full lg:w-1/2 relative flex justify-center lg:max-h-none max-h-96 lg:min-h-[37.5rem]"
->
+<div class="">
+  <div class:list={[TOP_RIGHT_IMAGE, " z-[-1]"]}>
+    <Image
+      src={heroImage}
+      class={TOP_RIGHT_IMAGE_WIDTH}
+      alt=""
+    />
+  </div>
+  <div class:list={[TOP_RIGHT_IMAGE, " z-[-2]"]}>
+    <img
+    class={TOP_RIGHT_IMAGE_WIDTH}
+      src="https://wp.themepure.net/seomy/wp-content/themes/seomy/assets/img/shape/banner-4-shape-1.png"
+    />
+  </div>
+  <div class:list={[TOP_RIGHT_IMAGE, " z-[-3]"]}>
+    <img
+    class={TOP_RIGHT_IMAGE_WIDTH}
+      src="https://wp.themepure.net/seomy/wp-content/themes/seomy/assets/img/shape/banner-4-shape-2.png"
+    />
+  </div>
+</div>
+
+<div class="">
   <!-- <div class="absolute m-auto hidden lg:block lg:top-[-20rem] lg:left-[-18rem]">
     <lottie-player
       class="sm:w-[35rem] sm:h-[35rem] lg:w-[70rem] lg:h-[70rem] blur-none"
@@ -27,7 +51,7 @@ import circleChart from "../../assets/images/circle-chart.png";
     alt="Hero image" 
     class="lg:absolute lg:w-full lg:h-full rounded-3xl object-contain lg:object-fit"
   /> -->
-
+  <!-- 
   <Image
     src={portraitImage}
     alt="descriptive text"
@@ -47,7 +71,7 @@ import circleChart from "../../assets/images/circle-chart.png";
     src={circleChart}
     alt="Hero image"
     class="absolute top-[5rem] lg:top-[10rem] right-0 md:w-4/12 lg:w-1/2 w-4/12"
-  />
+  /> -->
   <!-- <div
     class="rounded-full bg-[#AAD2DE] w-[15rem] h-[15rem] lg:w-[30rem] lg:h-[30rem] bottom-[0rem] absolute z-[-1]"
   >

@@ -1,0 +1,66 @@
+---
+import { NAVIGATION_ITEM } from "../../config";
+import { isActivePage } from "../../js/helper";
+import ButtonLink from "../shared/ButtonLink.astro";
+---
+
+<ul class="hidden lg:flex flex-row" data-href={Astro.url.pathname}>
+  {
+    NAVIGATION_ITEM.map((item) => (
+      <li
+        class:list={[
+          "my-auto menu-item relative",
+          isActivePage(Astro.url.pathname, item.href) ? "active" : "",
+        ]}
+      >
+        <a
+          href={item.href}
+          class="text-base duration-300 font-medium ease-linear py-2 px-4"
+          aria-current="page"
+        >
+          {item.title}
+        </a>
+        <div class="menu-item__decoration text-[#4452f5] pointer-events-none absolute top-full left-1/2 overflow-hidden children:w-full children:h-auto w-[9.25rem] -ml-[4.625rem] md:w-[4.25rem] md:-ml-[2.125rem]">
+          <svg
+            preserveAspectRatio="xMidYMid slice"
+            width="69"
+            height="8"
+            viewBox="0 0 69 8"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            class="stroke-current"
+          >
+            <path
+              d="M1.13838 6.1242C6.812 2.92788 21.2563 1.56082 31.5963 2.78176C42.4294 4.06092 49.6969 8.06731 68.2783 2.76965"
+              stroke-width="2"
+              pathLength="1"
+            />
+          </svg>
+        </div>
+      </li>
+    ))
+  }
+</ul>
+<ButtonLink
+  text="Let's Talk"
+  className="hidden lg:block text-base bg-primary"
+  href="#"
+  variant="primary"
+/>
+
+
+<style>
+  .menu-item.active .stroke-current > path {
+    stroke-dashoffset: 0;
+  }
+
+  .menu-item .stroke-current > path {
+    stroke-dasharray: 1;
+    stroke-dashoffset: 1;
+  }
+
+  .menu-item:hover .stroke-current > path {
+    stroke-dashoffset: 0;
+    transition: all 0.25s ease-in-out;
+  }
+</style>

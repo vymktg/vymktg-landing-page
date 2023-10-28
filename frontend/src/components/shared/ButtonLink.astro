@@ -17,7 +17,7 @@ const {
 } = Astro.props;
 const getThemeStyle = (variant: "primary" | "secondary") => {
   if (variant === "primary") {
-    return "bg-primary border-transparent relative after:bg-blue-950 hover:border-blue-950 shadow-2xl hover:shadow-blue-500 transition-all duration-500";
+    return "bg-primary border-transparent relative after:bg-primary hover:border-primary shadow-2xl hover:shadow-primary transition-all duration-500";
   }
   return "text-blue-700 hover:bg-gray-100 text-gray-900 border border-gray-300";
 };
@@ -33,7 +33,7 @@ const getTextColor = (variant: "primary" | "secondary") => {
 <a
   href={href}
   class:list={[
-    `inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium rounded-lg cursor-pointer`,
+    `inline-flex items-center justify-center py-3 text-base rounded-full cursor-pointer px-10 font-semibold`,
     getThemeStyle(variant),
     getTextColor(variant),
     "shine-effect",

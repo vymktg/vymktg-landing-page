@@ -1,6 +1,7 @@
 ---
 import { PARTNER_LIST } from "../../config";
 import { Image } from "astro:assets";
+import Container from "../shared/Container.astro";
 
 const partnersImages = await Astro.glob("../../assets/images/partners/*").then(
   (files) => {
@@ -9,8 +10,8 @@ const partnersImages = await Astro.glob("../../assets/images/partners/*").then(
 );
 ---
 
-<section id="partners">
-  <div class="mx-auto max-w-7xl w-full px-5 sm:px-8 md:px-14 lg:px-5 space-y-8">
+<div id="partners" class="mt-[-4rem]">
+  <Container className="rounded-3xl shadow-xl bg-white">
     <div class="splide cursor-pointer">
       <div class="splide__track">
         <div class="splide__list">
@@ -29,7 +30,7 @@ const partnersImages = await Astro.glob("../../assets/images/partners/*").then(
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </Container>
+</div>
 
 <script src="../../js/splide-init.ts"></script>

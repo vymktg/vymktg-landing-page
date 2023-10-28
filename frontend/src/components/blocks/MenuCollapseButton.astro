@@ -33,6 +33,8 @@ const { className } = Astro.props;
     "[id=navbar-hamburger-btn]"
   );
 
+  const BACKDROP_BLUR = '!bg-opacity-50';
+
   const navbarHamburger = document.getElementById("drawer-aside");
   const drawerBackdrop = document.getElementById("drawer-backdrop");
 
@@ -42,10 +44,10 @@ const { className } = Astro.props;
 
     if (isNavbarHidden) {
       navbarHamburger?.classList.remove("-translate-x-full");
-      drawerBackdrop?.classList.remove("hidden");
+      drawerBackdrop?.classList.add(`${BACKDROP_BLUR}`,'z-40');
     } else {
       navbarHamburger?.classList.add("-translate-x-full");
-      drawerBackdrop?.classList.add("hidden");
+      drawerBackdrop?.classList.remove(`${BACKDROP_BLUR}`,'z-40');
     }
   };
 
@@ -65,7 +67,7 @@ const { className } = Astro.props;
       handleCollapseDrawerSidebar();
     } else if (
       !navbarHamburger?.contains(e.target as Node) &&
-      !drawerBackdrop?.classList.contains("hidden")
+      drawerBackdrop?.classList.contains(`${BACKDROP_BLUR}`)
     ) {
       handleCollapseDrawerSidebar();
     }

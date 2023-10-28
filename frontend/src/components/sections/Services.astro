@@ -5,54 +5,103 @@ import Title from "../shared/Title.astro";
 import Container from "../shared/Container.astro";
 import Service from "../cards/Service.astro";
 import ButtonLink from "../shared/ButtonLink.astro";
+import Partners from "./Partners.astro";
+import WebSeo from "../icon/WebSeo.astro";
+import OnlineMarketing from "../icon/OnlineMarketing.astro";
 ---
 
-<section id="services">
-  <Container className="space-y-10 md:sapce-y-12">
-    <!-- <div class="text-center max-w-3xl mx-auto space-y-4">
-      <Title>What we offer</Title>
-      <Paragraph>What can i do for you</Paragraph>
-    </div> -->
-    <div class="flex flex-col justify-center items-center">
-      <div
-        class="w-full flex flex-col gap-4 text-center mb-5 md:mb-10 lg:mb-20"
-      >
-        <div class="font-bold text-lg sm:text-2xl md:text-3xl text-dark">
+<section id="services" class="relative">
+  <Partners />
+  <Container className="space-y-10 md:sapce-y-12 my-40">
+    <div class="flex flex-row justify-center gap-10">
+      <div class="w-5/12 flex flex-col gap-9 mb-5 md:mb-10 lg:mb-20 items-start">
+        <h2 class="font-bold text-lg sm:text-2xl md:text-4xl text-dark">
           How can I help?
-          <!-- <span class="text-gradient bg-gradient">I offer you</span> -->
-        </div>
-        <Paragraph
-          className="w-full sm:w-5/6 md:w-4/5 lg:w-3/5 mx-auto"
-          data-aos="fade-up"
-        >
+        </h2>
+        <Paragraph className="font-light" data-aos="fade-up">
           With strategic planning, efficient execution, and nurturing tactics,
           I'll optimize your digital landscape, propelling your business forward
           and fostering sustainable growth.
         </Paragraph>
-      </div>
-      <div
-        class="w-full grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 mb-3 md:mb-5 lg:mb-8"
-      >
-        {SERVICE_LIST.map((item, index) => <Service {...item} />)}
-      </div>
-      <ButtonLink
-        href={NAVIGATION_ITEM[2].href}
-        text="Explore Our Services"
-        variant="primary"
-        className="bg-primary capitalize flex felx-row gap-2"
-      >
-        <svg
-          slot="right-icon"
-          class="w-4 h-4"
-          fill="currentColor"
-          viewBox="0 0 20 20"
-          xmlns="http://www.w3.org/2000/svg"
-          ><path
-            fill-rule="evenodd"
-            d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-            clip-rule="evenodd"></path></svg
+        <ButtonLink
+          href={NAVIGATION_ITEM[2].href}
+          text="Explore Our Services"
+          variant="primary"
+          className="bg-primary capitalize flex felx-row gap-2"
         >
-      </ButtonLink>
+          <svg
+            slot="right-icon"
+            class="w-4 h-4"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+            ><path
+              fill-rule="evenodd"
+              d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+              clip-rule="evenodd"></path></svg
+          >
+        </ButtonLink>
+      </div>
+      <div class="w-7/12 flex flex-row gap-x-10">
+        <div class="flex flex-col w-1/2 gap-y-10">
+          <Service {...SERVICE_LIST[0]}>
+            <WebSeo />
+          </Service>
+          <Service {...SERVICE_LIST[1]}>
+            <OnlineMarketing name="service-icon" />
+          </Service>
+        </div>
+        <div class="flex flex-col w-1/2">
+          <Service className="mt-10" {...SERVICE_LIST[2]} />
+          <Service className="mt-10" {...SERVICE_LIST[3]} />
+        </div>
+      </div>
     </div>
   </Container>
 </section>
+<!-- <section id="services" class="relative">
+  <Partners />
+  <Container className="space-y-10 md:sapce-y-12 my-40">
+    <div class="flex flex-col justify-center gap-10">
+      <div class="flex flex-row gap-9 mb-5 md:mb-10 lg:mb-20 items-start">
+        <h2 class="font-bold text-lg sm:text-2xl md:text-4xl text-dark w-1/2">
+          How can I help? <br /> Growth your business.
+        </h2>
+        <div class="w-1/2" data-aos="fade-up">
+          <p class="text-sub-gray font-normal mb-6">
+            With strategic planning, efficient execution, and nurturing tactics,
+            I'll optimize your digital landscape, propelling your business
+            forward and fostering sustainable growth.
+          </p>
+          <a href={NAVIGATION_ITEM[2].href} class="text-primary capitalize font-semibold">
+            <span class="w-14 border-y-2 border-primary inline-block mr-3">
+            </span>
+            Explore Our Services
+          </a>
+        </div>
+      </div>
+      <div class="grid grid-cols-4 gap-x-4">
+        {
+          SERVICE_LIST.map(({ title, description }) => (
+            <a
+              href="#"
+              class:list={[
+                "rounded-3xl bg-white hover:shadow-2xl shadow-services-box p-8 group duration-500 hover:scale-105 h-72",
+              ]}
+            >
+              <div class="flex flex-col gap-4 items-start">
+                <div class="bg-gray-100 w-14 h-14 flex justify-center items-center rounded-full">
+                  <WebSeo />
+                </div>
+                <h2 class="text-lg md:text-xl font-semibold">{title}</h2>
+                <div class="line-clamp-3 text-sm md:text-base lg:text-lg font-light text-text-gray">
+                  {description}
+                </div>
+              </div>
+            </a>
+          ))
+        }
+      </div>
+    </div>
+  </Container>
+</section> -->

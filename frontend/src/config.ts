@@ -21,6 +21,13 @@ export const NAVIGATION_ITEM = [
   },
 ];
 
+export const HERO_BANNER_CONTENT = {
+  title: "I'm Vy,",
+  highlight_title: "Marketing executor",
+  description:
+    "As a specialist in digital marketing and communication, I take pride in being your dedicated partner to handle all your marketing efforts. My mission is clear: help you focus on what you do best – growing your business.",
+};
+
 export const PARTNER_LIST = [
   { url: "burger-king.png" },
   { url: "black-bear-diner.png" },
@@ -34,34 +41,13 @@ export const PARTNER_LIST = [
   { url: "cp.png" },
 ];
 
-export const PROJECT_LIST = [
-  {
-    url: "",
-    name: "Project 1",
-    image_url:
-      "https://web.sociolib.com/centro/wp-content/uploads/sites/3/2023/01/31.jpg",
-  },
-  {
-    url: "",
-    name: "Project 2",
-    image_url:
-      "https://web.sociolib.com/centro/wp-content/uploads/sites/3/2023/01/34.jpg",
-  },
-  {
-    url: "",
-    name: "Project 3",
-    image_url:
-      "https://web.sociolib.com/centro/wp-content/uploads/sites/3/2023/01/28.jpg",
-  },
-];
-
 export const SERVICE_LIST = [
   // {
   //   title: "Social Media Management",
   //   description: "Streamlined your social media accounts with engaging content",
   //   detail: "Managing social media accounts effectively can be time-consuming and overwhelming. My social media management services aim to alleviate this burden. I will ensure timely updates, engaging content, and consistent brand representation across platforms. This includes monitoring audience engagement, analyzing metrics, and implementing strategies to maximize reach and impact. It involves tasks such as content creation, scheduling, community and influencers management, and staying updated with the latest social media trends and algorithms.",
   //   icon: "tabler:social",
-  //   services_detail: [
+  //   service_detail: [
   //     {
   //       title: "Content Creation",
   //       description: "Tailored social media content to engage your audience, including eye-catching visuals and compelling captions."
@@ -87,26 +73,31 @@ export const SERVICE_LIST = [
   {
     title: "Website and SEO",
     description: `Boost your online visibility with tailored SEO strategies and website management`,
-    detail: "Maximize your website's potential with my website management and optimization services which include updated content and performance optimization. By ensuring a seamless user experience, improved search engine visibility, and optimal performance, I'll help you attract more visitors and boost conversions.",
+    detail:
+      "Maximize your website's potential with my website management and optimization services which include updated content and performance optimization. By ensuring a seamless user experience, improved search engine visibility, and optimal performance, I'll help you attract more visitors and boost conversions.",
     icon: "carbon:dns-services",
-    services_detail: [
+    service_detail: [
       {
         title: "Website Development",
-        description: "Design and build user-friendly, responsive websites that reflect your brand and business objectives."
+        description:
+          "Design and build user-friendly, responsive websites that reflect your brand and business objectives.",
       },
       {
         title: "Search Engine Optimization (SEO)",
-        description: "Optimize your website to rank higher on search engines, increasing organic traffic and attracting quality leads."
+        description:
+          "Optimize your website to rank higher on search engines, increasing organic traffic and attracting quality leads.",
       },
       {
         title: "Content Management",
-        description: "Keep your website up to date with fresh, relevant content that resonates with your target audience."
+        description:
+          "Keep your website up to date with fresh, relevant content that resonates with your target audience.",
       },
       {
         title: "Performance Analysis",
-        description: "Regular analysis and adjustments ensure that your website is continually improving."
-      }
-    ]
+        description:
+          "Regular analysis and adjustments ensure that your website is continually improving.",
+      },
+    ],
   },
   {
     title: "CRM Marketing",
@@ -115,24 +106,28 @@ export const SERVICE_LIST = [
     detail:
       "Maintaining a positive online reputation is essential for your business. I will assist you to effectively monitoring and managing online reviews, addressing customer feedback, and building a strong brand image. By prioritizing cultivating trust and maintaining a stellar reputation, you can foster customer loyalty and support sustainable growth.",
     icon: "tabler:award",
-    services_detail: [
+    service_detail: [
       {
         title: "Customer Data Management",
-        description: "Organize and manage customer data to gain insights and create personalized marketing campaigns."
+        description:
+          "Organize and manage customer data to gain insights and create personalized marketing campaigns.",
       },
       {
         title: "Email Marketing",
-        description: "Engage your audience through targeted email campaigns that deliver the right message at the right time."
+        description:
+          "Engage your audience through targeted email campaigns that deliver the right message at the right time.",
       },
       {
         title: "Automation and Personalization",
-        description: "Utilize CRM tools to automate repetitive tasks and personalize customer interactions."
+        description:
+          "Utilize CRM tools to automate repetitive tasks and personalize customer interactions.",
       },
       {
         title: "Feedback and Analytics",
-        description: "Measure the effectiveness of your CRM efforts and make data-driven improvements."
-      }
-    ]
+        description:
+          "Measure the effectiveness of your CRM efforts and make data-driven improvements.",
+      },
+    ],
   },
   // {
   //   title: "Email & SMS Marketing",
@@ -141,7 +136,7 @@ export const SERVICE_LIST = [
   //   detail:
   //     "Both email and text marketing are valuable tools for businesses to connect with their target audience, deliver relevant and personalized content, and drive engagement and conversions. When used strategically and in compliance with applicable regulations and guidelines, email and text marketing can be powerful channels for effective communication and customer relationship-building.",
   //   icon: "mdi:email-seal-outline",
-  //   services_detail: [
+  //   service_detail: [
   //     {
   //       title: "Email Campaigns",
   //       description: "Craft and deliver engaging email marketing campaigns tailored to your audience for increased engagement and conversions."
@@ -170,24 +165,28 @@ export const SERVICE_LIST = [
     detail:
       "Paid advertising campaigns can be an effective way for small businesses to accelerate their growth. I will help develop and manage targeted ad campaigns on platforms such as Google Ads, Meta, Wix…etc. Through careful strategy and optimization, businesses can increase their brand visibility, attract new customers, and expand their reach.",
     icon: "icons8:advertising",
-    services_detail: [
+    service_detail: [
       {
         title: "Campaign Strategy",
-        description: "Develop a tailored advertising strategy based on your goals, target audience, and budget."
+        description:
+          "Develop a tailored advertising strategy based on your goals, target audience, and budget.",
       },
       {
         title: "Ad Creation",
-        description: "Designs compelling ad creatives that grab attention and drive clicks."
+        description:
+          "Designs compelling ad creatives that grab attention and drive clicks.",
       },
       {
         title: "Campaign Management",
-        description: "Monitor and optimize your campaigns to ensure you get the best conversion."
+        description:
+          "Monitor and optimize your campaigns to ensure you get the best conversion.",
       },
       {
         title: "Performance Reporting",
-        description: "Detailed reporting keeps you informed about the success of your advertising efforts."
-      }
-    ]
+        description:
+          "Detailed reporting keeps you informed about the success of your advertising efforts.",
+      },
+    ],
   },
   {
     title: "Content Creation",
@@ -195,24 +194,59 @@ export const SERVICE_LIST = [
     detail:
       "Engaging and informative content plays a vital role in attracting and retaining customers. My focus is to craft captivating blog posts, attention-grabbing videos, and visually appealing infographics that align with your brand. By delivering high-quality content, businesses can drive website traffic, boost engagement, and foster brand loyalty.",
     icon: "tabler:award",
-    services_detail: [
+    service_detail: [
       {
         title: "Content Strategy",
-        description: "I work with you to develop a content strategy that aligns with your goals and resonates with your target audience."
+        description:
+          "I work with you to develop a content strategy that aligns with your goals and resonates with your target audience.",
       },
       {
         title: "Content Creation",
-        description: "From blog posts and articles to videos and infographics, I produce a wide range of content types to keep your audience engaged."
+        description:
+          "From blog posts and articles to videos and infographics, I produce a wide range of content types to keep your audience engaged.",
       },
       {
         title: "Visual Design",
-        description: "Create eye-catching visuals that enhance your content and brand identity."
+        description:
+          "Create eye-catching visuals that enhance your content and brand identity.",
       },
       {
         title: "Content Optimization",
-        description: "Ensure that your content is not only creative but also optimized for search engines to maximize its reach."
-      }
-    ]
+        description:
+          "Ensure that your content is not only creative but also optimized for search engines to maximize its reach.",
+      },
+    ],
+  },
+];
+
+export const PROJECT_LIST = [
+  {
+    url: "",
+    name: "Project 1",
+    image_url:
+      "https://wp.themepure.net/seomy/wp-content/uploads/2023/09/project-2-thumb-4.jpg",
+    services: [SERVICE_LIST[0], SERVICE_LIST[1]]
+  },
+  {
+    url: "",
+    name: "Project 2",
+    image_url:
+      "https://wp.themepure.net/seomy/wp-content/uploads/2023/09/project-2-thumb-1.jpg",
+    services: [SERVICE_LIST[2], SERVICE_LIST[3]]
+  },
+  {
+    url: "",
+    name: "Project 3",
+    image_url:
+      "https://wp.themepure.net/seomy/wp-content/uploads/2023/09/project-2-thumb-3.jpg",
+    services: [SERVICE_LIST[1], SERVICE_LIST[3]]
+  },
+  {
+    url: "",
+    name: "Project 4",
+    image_url:
+      "https://wp.themepure.net/seomy/wp-content/uploads/2023/09/project-2-thumb-2.jpg",
+    services: [SERVICE_LIST[0], SERVICE_LIST[2]]
   },
 ];
 

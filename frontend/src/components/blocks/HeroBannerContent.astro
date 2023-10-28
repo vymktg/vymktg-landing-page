@@ -1,47 +1,39 @@
 ---
 import Paragraph from "../shared/Paragraph.astro";
 import ButtonLink from "../shared/ButtonLink.astro";
+import { HERO_BANNER_CONTENT } from "../../config";
 ---
 
-<div
-  class="relative h-100 flex flex-col items-center text-center lg:text-left lg:py-7 xl:py-36 lg:items-start lg:max-w-none max-w-3xl mx-auto lg:mx-0 lg:flex-1 lg:w-1/2"
->
+<div class="pt-72">
   <div
-    class="relative flex flex-col justify-center items-center text-center lg:text-left lg:py-7 xl:py-8 lg:items-start lg:max-w-none max-w-3xl mx-auto lg:mx-0 lg:flex-1 gap-5 sm:gap-7 md:gap-10"
+    class="flex flex-col justify-center items-start gap-5 sm:gap-7 md:gap-10"
   >
-    <div>
+    <div
+      class="text-3xl/tight sm:text-4xl/tight md:text-5xl/tight xl:text-6xl/tight font-bold"
+    >
+      <h2>{HERO_BANNER_CONTENT.title}</h2>
       <h1
-        class="text-3xl/tight sm:text-4xl/tight md:text-5xl/tight xl:text-6xl/tight font-bold text-dark"
+        class="animate-typing overflow-hidden whitespace-nowrap border-r-4 bg-hero-text-content text-transparent bg-clip-text md:pr-3"
       >
-        I'm Vy,
+        {HERO_BANNER_CONTENT.highlight_title}
       </h1>
-      <h2
-        class="animate-typing text-3xl/tight sm:text-4xl/tight md:text-5xl/tight xl:text-6xl/tight overflow-hidden whitespace-nowrap border-r-4 text-transparent bg-clip-text bg-gradient-to-br from-blue-600 from-20% via-primary via-30% to-green-600 md:pr-3 font-bold"
-      >
-        Your marketing executor
-      </h2>
     </div>
-    <Paragraph className="md:w-5/6" data-aos="fade-up">
-      As a specialist in digital marketing and communication, I take pride in
-      being your dedicated partner to handle all your marketing efforts. My
-      mission is clear: help you focus on what you do best – growing your
-      business.
+    <Paragraph className="md:w-1/2" data-aos="fade-up">
+      {HERO_BANNER_CONTENT.description}
     </Paragraph>
     <div class="w-full flex max-w-md mx-auto lg:mx-0">
-      <div
-        class="flex flex-row gap-1 w-full justify-center lg:justify-start"
-      >
+      <div class="flex flex-row gap-4 w-full justify-center lg:justify-start">
         <ButtonLink
           href="#"
           text="Get started"
           variant="primary"
-          className="mr-3 py-3"
+          className="py-3 px-12"
         />
         <ButtonLink
           href="#"
           text="View more"
           variant="secondary"
-          className="py-3"
+          className="py-3 px-10"
         >
           <svg
             slot="right-icon"

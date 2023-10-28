@@ -1,0 +1,76 @@
+---
+import Container from "../shared/Container.astro";
+import POSTER_IMAGE from "../../assets/images/4.png";
+import PAID_ADVERTISING from "../../assets/images/paid-advertising.png";
+import CRM from "../../assets/images/CRM.png";
+import { Image } from "astro:assets";
+import { SERVICE_LIST } from "../../config";
+---
+
+<div id="qoute" class="bg-gray-50">
+  <Container className="py-40 flex flex-col gap-10 justify-center items-center">
+    <h2 class="text-4xl font-semibold">
+      <span class="italic text-primary mr-2 font-bold">Out With the</span>Old
+      Rules
+    </h2>
+    <div id="services" class="flex flex-row justify-center gap-3">
+      {
+        SERVICE_LIST.map((item, index) => (
+          <span
+            id={`service-${index}`}
+            class="service rounded-full cursor-pointer font-semibold text-lg border border-black px-7 py-2 hover:text-white hover:bg-primary hover:border-primary transition-all duration-300"
+          >
+            {item.title}
+          </span>
+        ))
+      }
+    </div>
+    <div class="device device-macbook-pro-2018">
+      <div class="device-frame">
+        <img
+          class="device-screen !absolute top-[29px] opacity-0 transition-opacity duration-300 opacity-100"
+          src="https://pagespeedplus.com/storage/app/uploads/public/5e0/2ae/877/5e02ae8771553433799915.jpg"
+          loading="lazy"
+        />
+        <Image
+          class="device-screen !absolute top-[29px] opacity-0 transition-opacity duration-300 !object-contain"
+          src={POSTER_IMAGE}
+          alt=""
+        />
+        <Image
+          class="device-screen !absolute top-[29px] opacity-0 transition-opacity duration-300"
+          src={PAID_ADVERTISING}
+          alt=""
+        />
+        <Image
+          class="device-screen !absolute top-[29px] opacity-0 transition-opacity duration-300"
+          src={CRM}
+          alt=""
+        />
+      </div>
+      <div class="device-stripe"></div>
+      <div class="device-header"></div>
+      <div class="device-sensors"></div>
+      <div class="device-btns"></div>
+      <div class="device-power"></div>
+      <div class="device-home"></div>
+    </div>
+  </Container>
+</div>
+
+<script>
+  const serviceDeviceImgEls = document.querySelectorAll("#qoute .device img");
+  document.addEventListener("DOMContentLoaded", (_) => {
+    const servicesEl = document.querySelectorAll("#qoute #services span");
+    servicesEl.forEach((item, index) => {
+      item.addEventListener("mouseover", (_) => {
+        serviceDeviceImgEls.forEach((element, position) => {
+          element.classList.remove("opacity-100");
+          if (index === position) {
+            element.classList.add("opacity-100");
+          }
+        });
+      });
+    });
+  });
+</script>
