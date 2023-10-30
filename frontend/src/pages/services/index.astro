@@ -10,17 +10,45 @@ import { Image } from "astro:assets";
 
 //https://devicescss.xyz/
 import "../../styles/devices.min.css";
+import ServiceDetail from "../../components/sections/ServiceDetail.astro";
 
 const IMAGE_URL =
   "https://img.freepik.com/free-photo/executive-manager-woman-explaining-management-statistics-working-company-strategy-overtime-office-meeting-room_482257-2393.jpg?w=2000&t=st=1692199113~exp=1692199713~hmac=d5c916f23047dd54d2dd79780d0f4f52ce66d994dbf8c159fc1db74d57c66722";
 
 const itemPerColumn = SERVICE_LIST.length / 2;
 
-const partnersImages = await Astro.glob("../../assets/images/partners/*").then(
+
+const serviceImages:{[index:string]:any} = {}
+
+await Astro.glob("../../assets/images/partners/*").then(
   (files) => {
-    return files.map((file) => file.default);
+    files.forEach((file) => { 
+      const name = file.default.src.split(".")[0].split("/").pop()
+      serviceImages[name]=file.default
+    })
   }
 );
+await Astro.glob("../../assets/images/services/*").then(
+  (files) => {
+    files.forEach((file) => { 
+      const name = file.default.src.split(".")[0].split("/").pop()
+      serviceImages[name]=file.default
+    })
+  }
+)
+
+const services = SERVICE_LIST.map((item) => { 
+  const image = serviceImages[item.image_name];
+  return  {
+    ...item, 
+    testimonial: {
+      ...item.testimonial,
+      avatar_url: serviceImages[item.testimonial.avatar],
+      company_logo_url: serviceImages[item.testimonial.company_logo],
+    },
+    image
+  }
+});
 ---
 
 <BasePage>
@@ -196,7 +224,7 @@ const partnersImages = await Astro.glob("../../assets/images/partners/*").then(
       </div>
     </section> -->
 
-    <section class="bg-gray-50 py-40 hidden">
+    <!-- <section class="bg-gray-50 py-40 hidden">
       <Container>
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-24">
           <div class="grid grid-cols-2 gap-4">
@@ -251,38 +279,18 @@ const partnersImages = await Astro.glob("../../assets/images/partners/*").then(
           </div>
         </div>
       </Container>
-    </section>
+    </section> -->
     {
-      [...SERVICE_LIST].map((item, index) => {
-        const { title, services_detail } = item;
-        return (
-          <section
-            class:list={["py-40", index % 2 === 0 ? "bg-gray-50" : "bg-white"]}
-          >
-            <Container>
-              <div class="px-16 lg:px-0">
-                <div class="flex flex-col lg:flex-row gap-20">
-                  <div class="lg:w-1/3">
-                    <h1 class="text-6xl font-semibold">{title}</h1>
-                  </div>
-                  <div class="lg:w-2/3">
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-20">
-                      {services_detail &&
-                        services_detail.map((item) => (
-                          <div class="flex flex-col gap-5">
-                            <h2 class="font-medium text-4xl">{item.title}</h2>
-                            <p class="text-lg font-medium tracking-wide">
-                              {item.description}
-                            </p>
-                          </div>
-                        ))}
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </Container>
-          </section>
-        );
+      services.map((item) => { 
+        const avatar_url =  serviceImages[item.testimonial.avatar]; 
+        const company_logo_url = serviceImages[item.testimonial.company_logo];
+        return <ServiceDetail
+          {...item}
+          avatar_url={avatar_url}
+          company_logo_url={company_logo_url}
+        >
+          {item.image && <Image src={item.image} alt="" />}
+        </ServiceDetail>
       })
     }
     <!-- <CaseStudy /> -->

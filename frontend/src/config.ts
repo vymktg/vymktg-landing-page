@@ -76,6 +76,8 @@ export const SERVICE_LIST = [
     detail:
       "Maximize your website's potential with my website management and optimization services which include updated content and performance optimization. By ensuring a seamless user experience, improved search engine visibility, and optimal performance, I'll help you attract more visitors and boost conversions.",
     icon: "carbon:dns-services",
+    image_name: "web-and-seo",
+    background: "pink",
     service_detail: [
       {
         title: "Website Development",
@@ -98,6 +100,14 @@ export const SERVICE_LIST = [
           "Regular analysis and adjustments ensure that your website is continually improving.",
       },
     ],
+    testimonial: {
+      company_name: "",
+      name: "Mr. Alex James Smith",
+      position: "Chief marketing officer",
+      comment: "Outstanding results! Their marketing expertise propelled our business to new heights. The ROI was incredible, and their dedication unmatched. Partnering with them was the best decision we made!",
+      company_logo: "slc-med-spa",
+      avatar: "alex",
+    },
   },
   {
     title: "CRM Marketing",
@@ -106,6 +116,8 @@ export const SERVICE_LIST = [
     detail:
       "Maintaining a positive online reputation is essential for your business. I will assist you to effectively monitoring and managing online reviews, addressing customer feedback, and building a strong brand image. By prioritizing cultivating trust and maintaining a stellar reputation, you can foster customer loyalty and support sustainable growth.",
     icon: "tabler:award",
+    image_name: "CRM",
+    background: "green",
     service_detail: [
       {
         title: "Customer Data Management",
@@ -128,6 +140,14 @@ export const SERVICE_LIST = [
           "Measure the effectiveness of your CRM efforts and make data-driven improvements.",
       },
     ],
+    testimonial: {
+      company_name: "",
+      name: "Mr. Henry Thomas Johnson",
+      position: "Marketing manager",
+      comment: "A game-changer! Their team's creativity and strategic approach revitalized our brand. The increase in sales and brand awareness was phenomenal. Trustworthy, professional, and results-driven – we highly recommend them!",
+      company_logo: "meridian-restaurants",
+      avatar: "henry",
+    },
   },
   // {
   //   title: "Email & SMS Marketing",
@@ -165,6 +185,8 @@ export const SERVICE_LIST = [
     detail:
       "Paid advertising campaigns can be an effective way for small businesses to accelerate their growth. I will help develop and manage targeted ad campaigns on platforms such as Google Ads, Meta, Wix…etc. Through careful strategy and optimization, businesses can increase their brand visibility, attract new customers, and expand their reach.",
     icon: "icons8:advertising",
+    image_name: "paid-advertising",
+    background: "violet",
     service_detail: [
       {
         title: "Campaign Strategy",
@@ -187,6 +209,14 @@ export const SERVICE_LIST = [
           "Detailed reporting keeps you informed about the success of your advertising efforts.",
       },
     ],
+    testimonial: {
+      company_name: "",
+      name: "Mr. Johannes Robert Miller",
+      position: "Product manager",
+      comment: "Unmatched excellence! This marketing team understood our unique needs and delivered beyond our expectations. Their innovative campaigns brought in quality leads, significantly impacting our bottom line. Truly the best in the business!",
+      company_logo: "black-bear-diner",
+      avatar: "johannes",
+    },
   },
   {
     title: "Content Creation",
@@ -194,6 +224,8 @@ export const SERVICE_LIST = [
     detail:
       "Engaging and informative content plays a vital role in attracting and retaining customers. My focus is to craft captivating blog posts, attention-grabbing videos, and visually appealing infographics that align with your brand. By delivering high-quality content, businesses can drive website traffic, boost engagement, and foster brand loyalty.",
     icon: "tabler:award",
+    image_name: "manage-data",
+    background: "pink",
     service_detail: [
       {
         title: "Content Strategy",
@@ -216,6 +248,14 @@ export const SERVICE_LIST = [
           "Ensure that your content is not only creative but also optimized for search engines to maximize its reach.",
       },
     ],
+    testimonial: {
+      company_name: "",
+      name: "Mr. Mark William Davis",
+      position: "Chief executive officer",
+      comment: "Exceptional service! From the first meeting to the campaign's execution, their commitment to our success was evident. Our online presence soared, and customer engagement skyrocketed. Working with them was a transformative experience for our business!",
+      company_logo: "burger-king",
+      avatar: "mark",
+    },
   },
 ];
 
@@ -225,28 +265,28 @@ export const PROJECT_LIST = [
     name: "Project 1",
     image_url:
       "https://wp.themepure.net/seomy/wp-content/uploads/2023/09/project-2-thumb-4.jpg",
-    services: [SERVICE_LIST[0], SERVICE_LIST[1]]
+    services: [SERVICE_LIST[0], SERVICE_LIST[1]],
   },
   {
     url: "",
     name: "Project 2",
     image_url:
       "https://wp.themepure.net/seomy/wp-content/uploads/2023/09/project-2-thumb-1.jpg",
-    services: [SERVICE_LIST[2], SERVICE_LIST[3]]
+    services: [SERVICE_LIST[2], SERVICE_LIST[3]],
   },
   {
     url: "",
     name: "Project 3",
     image_url:
       "https://wp.themepure.net/seomy/wp-content/uploads/2023/09/project-2-thumb-3.jpg",
-    services: [SERVICE_LIST[1], SERVICE_LIST[3]]
+    services: [SERVICE_LIST[1], SERVICE_LIST[3]],
   },
   {
     url: "",
     name: "Project 4",
     image_url:
       "https://wp.themepure.net/seomy/wp-content/uploads/2023/09/project-2-thumb-2.jpg",
-    services: [SERVICE_LIST[0], SERVICE_LIST[2]]
+    services: [SERVICE_LIST[0], SERVICE_LIST[2]],
   },
 ];
 

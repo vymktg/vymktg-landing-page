@@ -1,8 +1,9 @@
 ---
 import Container from "../shared/Container.astro";
-import POSTER_IMAGE from "../../assets/images/4.png";
-import PAID_ADVERTISING from "../../assets/images/paid-advertising.png";
-import CRM from "../../assets/images/CRM.png";
+import POSTER_IMAGE from "../../assets/images/services/content.png";
+import PAID_ADVERTISING from "../../assets/images/services/paid-advertising.png";
+import WEB_AND_SEO from "../../assets/images/services/web-and-seo.jpg";
+import CRM from "../../assets/images/services/CRM.png";
 import { Image } from "astro:assets";
 import { SERVICE_LIST } from "../../config";
 ---
@@ -27,10 +28,10 @@ import { SERVICE_LIST } from "../../config";
     </div>
     <div class="device device-macbook-pro-2018">
       <div class="device-frame">
-        <img
-          class="device-screen !absolute top-[29px] opacity-0 transition-opacity duration-300 opacity-100"
-          src="https://pagespeedplus.com/storage/app/uploads/public/5e0/2ae/877/5e02ae8771553433799915.jpg"
-          loading="lazy"
+        <Image
+          class="device-screen !absolute top-[29px] opacity-0 transition-opacity duration-300 !object-contain"
+          src={WEB_AND_SEO}
+          alt=""
         />
         <Image
           class="device-screen !absolute top-[29px] opacity-0 transition-opacity duration-300 !object-contain"

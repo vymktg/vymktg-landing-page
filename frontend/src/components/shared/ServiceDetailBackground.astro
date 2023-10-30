@@ -1,0 +1,168 @@
+---
+import type { ServiceBackgroundEnum } from '../../interface/enum';
+interface Props { 
+    backgroundName: ServiceBackgroundEnum;
+}
+
+const { backgroundName } = Astro.props;
+---
+
+<div class:list={["background", backgroundName || 'pink']}>
+    <div></div>
+    <div></div>
+    <div></div>
+ </div>
+
+
+<style>
+.background.pink {
+    position: absolute;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: linear-gradient(to right, #FFFFFF, #ECE9E6);
+    display: flex;
+    flex-grow: 1;
+    z-index: -1;
+}
+
+.background.pink div {
+    position: absolute;
+    border-radius: 100%;
+    height: 0;
+    filter: blur(240vw);
+    opacity: 0.4;
+}
+
+.background.pink div:nth-child(1) {
+    background: linear-gradient(132deg, #f5dcd7 0.00%, #ffffff 100.00%);
+    width: 150%;
+    padding-top: 150%;
+    left: 0%;
+    top: 0%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.background.pink div:nth-child(2) {
+    background: linear-gradient(132deg, #f5dcd7 0.00%, #d2bcbc 100.00%);
+    width: 150%;
+    padding-top: 150%;
+    left: 0%;
+    top: 0%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.background.pink div:nth-child(3) {
+    background: linear-gradient(132deg, #fdf2dc 0.00%, #f8ca68 100.00%);
+    width: 81%;
+    padding-top: 81%;
+    left: 78%;
+    top: 49%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.background.violet {
+    position: absolute;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: linear-gradient(to right, #FFFFFF, #ECE9E6);
+    display: flex;
+    flex-grow: 1;
+    z-index: -1;
+}
+
+.background.violet div {
+    position: absolute;
+    border-radius: 100%;
+    height: 0;
+    filter: blur(240vw);
+    opacity: 0.4;
+}
+
+.background.violet div:nth-child(1) {
+    background: linear-gradient(132deg, #f485b2 0.00%, #fddfeb 100.00%);
+    width: 150%;
+    padding-top: 150%;
+    left: 0%;
+    top: 0%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.background.violet div:nth-child(2) {
+    background: linear-gradient(132deg, #f5c6ee 0.00%, #d2ccf0 100.00%);
+    width: 104%;
+    padding-top: 104%;
+    left: 48%;
+    top: 35%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.background.violet div:nth-child(3) {
+    background: linear-gradient(132deg, #e8e6f3 0.00%, #543ae9 100.00%);
+    width: 100%;
+    padding-top: 100%;
+    left: 85%;
+    top: 76%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.background.green {
+    position: absolute;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: linear-gradient(to right, #FFFFFF, #ECE9E6);
+    display: flex;
+    flex-grow: 1;
+    z-index: -1;
+}
+
+.background.green div {
+    position: absolute;
+    border-radius: 100%;
+    height: 0;
+    filter: blur(240vw);
+    opacity: 0.4;
+}
+
+.background.green div:nth-child(1) {
+    background: linear-gradient(132deg, #30dfb6 0.00%, #c1e2da 100.00%);
+    width: 97%;
+    padding-top: 97%;
+    left: 12%;
+    top: 8%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.background.green div:nth-child(2) {
+    background: linear-gradient(132deg, #d0e1de 0.00%, #c6d7d1 100.00%);
+    width: 40%;
+    padding-top: 40%;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.background.green div:nth-child(3) {
+    background: linear-gradient(132deg, #eaf0ee 0.00%, #93d7c0 100.00%);
+    width: 150%;
+    padding-top: 150%;
+    left: 80%;
+    top: 75%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+
+
+
+
+
+
+</style>

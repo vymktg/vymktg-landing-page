@@ -10,9 +10,6 @@ export default defineConfig({
       },
     }),
   ],
-  experimental: {
-    assets: true,
-  },
   site: "https://vymktg.github.io/",
   //base: import.meta.env.BASE_URL,
   base: import.meta.env.PROD ? "/vymktg.com/" : "",
