@@ -16,35 +16,34 @@ import ServiceDetail from "../../components/sections/ServiceDetail.astro";
 const itemPerColumn = SERVICE_LIST.length / 2;
 
 
-const serviceImages:{[index:string]:any} = {}
+// const serviceImages:{[index:string]:any} = {}
 
-await Astro.glob("../../assets/images/partners/*").then(
-  (files) => {
-    files.forEach((file) => { 
-      const name = file.default.src.split(".")[0].split("/").pop()
-      serviceImages[name]=file.default
-    })
-  }
-);
-await Astro.glob("../../assets/images/services/*").then(
-  (files) => {
-    files.forEach((file) => { 
-      const name = file.default.src.split(".")[0].split("/").pop()
-      serviceImages[name]=file.default
-    })
-  }
-)
+// await Astro.glob("../../assets/images/partners/*").then(
+//   (files) => {
+//     files.forEach((file) => { 
+//       const name = file.default.src.split(".")[0].split("/").pop()
+//       serviceImages[name]=file.default
+//     })
+//   }
+// );
+// await Astro.glob("../../assets/images/services/*").then(
+//   (files) => {
+//     files.forEach((file) => { 
+//       const name = file.default.src.split(".")[0].split("/").pop()
+//       serviceImages[name]=file.default
+//     })
+//   }
+// )
 
 const services = SERVICE_LIST.map((item) => { 
-  const image = serviceImages[item.image_name];
+  // const image = serviceImages[item.image_name];
   return  {
     ...item, 
     testimonial: {
       ...item.testimonial,
-      avatar_url: serviceImages[item.testimonial.avatar],
-      company_logo_url: serviceImages[item.testimonial.company_logo],
-    },
-    image
+      // avatar_url: serviceImages[item.testimonial.avatar],
+      // company_logo_url: serviceImages[item.testimonial.company_logo],
+    }
   }
 });
 ---
@@ -279,15 +278,11 @@ const services = SERVICE_LIST.map((item) => {
       </Container>
     </section> -->
     {
-      services.map((item) => { 
-        const avatar =  serviceImages[item.testimonial.avatar]; 
-        const companyLogo = serviceImages[item.testimonial.company_logo];
+      services.map((item) => {
         return <ServiceDetail
           {...item}
-          avatar={avatar}
-          companyLogo={companyLogo}
         >
-          {item.image && <Image src={item.image} alt="" />}
+         <Image src={import(/* @vite-ignore */ `../../assets/images/services/${item.image_name}`)} alt="" />
         </ServiceDetail>
       })
     }

@@ -21,4 +21,6 @@ export interface Service {
   service_detail: Array<ServiceItemInterface>;
   testimonial: TestimonialInterface;
   background: ServiceBackgroundEnum;
+  company_logo: string;
+  avatar: string;
 }

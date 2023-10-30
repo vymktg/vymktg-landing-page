@@ -5,18 +5,15 @@ import Container from "../shared/Container.astro";
 import ServiceDetailBackground from "../shared/ServiceDetailBackground.astro";
 
 export interface Props extends Service {
-  companyLogo:  ImageMetadata;
-  avatar: ImageMetadata;
+
 }
 
 const {
   title,
   service_detail,
   description,
-  testimonial: { name, position, comment },
-  avatar, 
-  companyLogo,
-  background
+  testimonial: { name, position, comment, avatar, company_logo },
+  background,
 } = Astro.props;
 ---
 
@@ -33,10 +30,12 @@ const {
             </p>
           </div>
           <div class="bg-white p-8 flex flex-col gap-4">
-            {companyLogo && <Image src={companyLogo} class="grayscale w-40 h-20 object-scale-down" alt="" />}
+            /* @vite-ignore */
+            <Image src={import(/* @vite-ignore */ `../../assets/images/partners/${company_logo}`)} class="grayscale w-40 h-20 object-scale-down" alt="" />
             <p class="text-base">{`"${comment}"`}</p>
             <div class="flex flex-row text-base font-semibold justify-start items-center gap-4">
-              {avatar && <Image src={avatar} class="object-cover w-10 h-10 rounded-full" alt="" />}
+              /* @vite-ignore */
+              <Image src={import(/* @vite-ignore */ `../../assets/images/services/${avatar}`)} class="object-cover w-10 h-10 rounded-full" alt="" />
               <div>
                 <p class="text-base">{name}</p>
               <p class="text-base">{position}</p>
