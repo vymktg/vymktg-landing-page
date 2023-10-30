@@ -1,4 +1,4 @@
-import { defineConfig } from "astro/config";
+import { defineConfig, passthroughImageService } from "astro/config";
 import tailwind from "@astrojs/tailwind";
 
 // https://astro.build/config
@@ -10,6 +10,9 @@ export default defineConfig({
       },
     }),
   ],
+  image: {
+    service: passthroughImageService(),
+  },
   site: "https://vymktg.github.io/",
   //base: import.meta.env.BASE_URL,
   base: import.meta.env.PROD ? "/vymktg.com/" : "",

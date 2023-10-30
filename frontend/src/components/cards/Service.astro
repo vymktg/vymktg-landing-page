@@ -1,6 +1,4 @@
 ---
-import ButtonLink from "../shared/ButtonLink.astro";
-import Paragraph from "../shared/Paragraph.astro";
 export interface Props {
   title: string;
   description: string;
@@ -8,7 +6,7 @@ export interface Props {
   className?: string;
 }
 
-const { title, description, icon, className } = Astro.props;
+const { title, description, className } = Astro.props;
 ---
 
 <a

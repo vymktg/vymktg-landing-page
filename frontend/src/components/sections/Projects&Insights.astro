@@ -1,9 +1,7 @@
 ---
 import { NAVIGATION_ITEM, PROJECT_LIST } from "../../config";
-import type Base from "../../layouts/Base.astro";
 import ProjectItem from "../cards/ProjectItem.astro";
 import Container from "../shared/Container.astro";
-import Title from "../shared/Title.astro";
 ---
 
 <section id="featured-works">
@@ -42,7 +40,7 @@ import Title from "../shared/Title.astro";
 
   document.addEventListener("DOMContentLoaded", () => {
     productList.forEach((item) => {
-      item.addEventListener("mouseover", (event) => {
+      item.addEventListener("mouseover", () => {
         productList.forEach((item) => {
           item.classList.remove("flex-4");
         });

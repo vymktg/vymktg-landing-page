@@ -2,9 +2,8 @@
 import Container from "../../components/shared/Container.astro";
 import Breadcrumb from "../../components/shared/Breadcrumb.astro";
 import BasePage from "../../layouts/BasePage.astro";
-import { SERVICE_LIST, BY_NUMBERS } from "../../config";
+import { SERVICE_LIST } from "../../config";
 import GetInTouch from "../../components/shared/GetInTouch.astro";
-import CaseStudy from "../../components/shared/CaseStudy.astro";
 import ServiceItem from "../../components/shared/ServiceItem.astro";
 import { Image } from "astro:assets";
 
@@ -12,8 +11,7 @@ import { Image } from "astro:assets";
 import "../../styles/devices.min.css";
 import ServiceDetail from "../../components/sections/ServiceDetail.astro";
 
-const IMAGE_URL =
-  "https://img.freepik.com/free-photo/executive-manager-woman-explaining-management-statistics-working-company-strategy-overtime-office-meeting-room_482257-2393.jpg?w=2000&t=st=1692199113~exp=1692199713~hmac=d5c916f23047dd54d2dd79780d0f4f52ce66d994dbf8c159fc1db74d57c66722";
+//const IMAGE_URL = "https://img.freepik.com/free-photo/executive-manager-woman-explaining-management-statistics-working-company-strategy-overtime-office-meeting-room_482257-2393.jpg?w=2000&t=st=1692199113~exp=1692199713~hmac=d5c916f23047dd54d2dd79780d0f4f52ce66d994dbf8c159fc1db74d57c66722";
 
 const itemPerColumn = SERVICE_LIST.length / 2;
 
@@ -282,12 +280,12 @@ const services = SERVICE_LIST.map((item) => {
     </section> -->
     {
       services.map((item) => { 
-        const avatar_url =  serviceImages[item.testimonial.avatar]; 
-        const company_logo_url = serviceImages[item.testimonial.company_logo];
+        const avatar =  serviceImages[item.testimonial.avatar]; 
+        const companyLogo = serviceImages[item.testimonial.company_logo];
         return <ServiceDetail
           {...item}
-          avatar_url={avatar_url}
-          company_logo_url={company_logo_url}
+          avatar={avatar}
+          companyLogo={companyLogo}
         >
           {item.image && <Image src={item.image} alt="" />}
         </ServiceDetail>

@@ -15,7 +15,7 @@ if (svg != null) {
   console.log(length);
 
   let callback = (entries: IntersectionObserverEntry[]) => {
-    entries.forEach((entry) => {
+    entries.forEach(() => {
       window.addEventListener("scroll", function () {
         const scrollpercent =
           (document.body.scrollTop + document.documentElement.scrollTop) /
