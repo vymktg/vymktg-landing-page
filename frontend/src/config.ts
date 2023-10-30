@@ -76,7 +76,7 @@ export const SERVICE_LIST = [
     detail:
       "Maximize your website's potential with my website management and optimization services which include updated content and performance optimization. By ensuring a seamless user experience, improved search engine visibility, and optimal performance, I'll help you attract more visitors and boost conversions.",
     icon: "carbon:dns-services",
-    image_name: "web-and-seo.png",
+    image_name: "web-and-seo",
     background: "pink",
     service_detail: [
       {
@@ -105,8 +105,8 @@ export const SERVICE_LIST = [
       name: "Mr. Alex James Smith",
       position: "Chief marketing officer",
       comment: "Outstanding results! Their marketing expertise propelled our business to new heights. The ROI was incredible, and their dedication unmatched. Partnering with them was the best decision we made!",
-      company_logo: "slc-med-spa.png",
-      avatar: "alex.png",
+      company_logo: "slc-med-spa",
+      avatar: "alex",
     },
   },
   {
@@ -116,7 +116,7 @@ export const SERVICE_LIST = [
     detail:
       "Maintaining a positive online reputation is essential for your business. I will assist you to effectively monitoring and managing online reviews, addressing customer feedback, and building a strong brand image. By prioritizing cultivating trust and maintaining a stellar reputation, you can foster customer loyalty and support sustainable growth.",
     icon: "tabler:award",
-    image_name: "CRM.png",
+    image_name: "CRM",
     background: "green",
     service_detail: [
       {
@@ -145,8 +145,8 @@ export const SERVICE_LIST = [
       name: "Mr. Henry Thomas Johnson",
       position: "Marketing manager",
       comment: "A game-changer! Their team's creativity and strategic approach revitalized our brand. The increase in sales and brand awareness was phenomenal. Trustworthy, professional, and results-driven – we highly recommend them!",
-      company_logo: "meridian-restaurants.png",
-      avatar: "henry.png",
+      company_logo: "meridian-restaurants",
+      avatar: "henry",
     },
   },
   // {
@@ -185,7 +185,7 @@ export const SERVICE_LIST = [
     detail:
       "Paid advertising campaigns can be an effective way for small businesses to accelerate their growth. I will help develop and manage targeted ad campaigns on platforms such as Google Ads, Meta, Wix…etc. Through careful strategy and optimization, businesses can increase their brand visibility, attract new customers, and expand their reach.",
     icon: "icons8:advertising",
-    image_name: "paid-advertising.png",
+    image_name: "paid-advertising",
     background: "violet",
     service_detail: [
       {
@@ -214,8 +214,8 @@ export const SERVICE_LIST = [
       name: "Mr. Johannes Robert Miller",
       position: "Product manager",
       comment: "Unmatched excellence! This marketing team understood our unique needs and delivered beyond our expectations. Their innovative campaigns brought in quality leads, significantly impacting our bottom line. Truly the best in the business!",
-      company_logo: "black-bear-diner.png",
-      avatar: "johannes.png",
+      company_logo: "black-bear-diner",
+      avatar: "johannes",
     },
   },
   {
@@ -224,7 +224,7 @@ export const SERVICE_LIST = [
     detail:
       "Engaging and informative content plays a vital role in attracting and retaining customers. My focus is to craft captivating blog posts, attention-grabbing videos, and visually appealing infographics that align with your brand. By delivering high-quality content, businesses can drive website traffic, boost engagement, and foster brand loyalty.",
     icon: "tabler:award",
-    image_name: "manage-data.png",
+    image_name: "manage-data",
     background: "pink",
     service_detail: [
       {
@@ -253,8 +253,8 @@ export const SERVICE_LIST = [
       name: "Mr. Mark William Davis",
       position: "Chief executive officer",
       comment: "Exceptional service! From the first meeting to the campaign's execution, their commitment to our success was evident. Our online presence soared, and customer engagement skyrocketed. Working with them was a transformative experience for our business!",
-      company_logo: "burger-king.png",
-      avatar: "mark.png",
+      company_logo: "burger-king",
+      avatar: "mark",
     },
   },
 ];

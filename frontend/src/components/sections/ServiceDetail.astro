@@ -14,7 +14,10 @@ const {
   description,
   testimonial: { name, position, comment, avatar, company_logo },
   background,
+  image_name,
 } = Astro.props;
+
+const images = import.meta.glob("../../assets/images/services/*");
 ---
 
 <section class="pb-32">
@@ -30,12 +33,10 @@ const {
             </p>
           </div>
           <div class="bg-white p-8 flex flex-col gap-4">
-            /* @vite-ignore */
-            <Image src={import(/* @vite-ignore */ `../../assets/images/partners/${company_logo}`)} class="grayscale w-40 h-20 object-scale-down" alt="" />
+            <Image src={images[`../../assets/images/services/${company_logo}.png`]()} class="grayscale w-40 h-20 object-scale-down" alt="" />
             <p class="text-base">{`"${comment}"`}</p>
-            <div class="flex flex-row text-base font-semibold justify-start items-center gap-4">
-              /* @vite-ignore */
-              <Image src={import(/* @vite-ignore */ `../../assets/images/services/${avatar}`)} class="object-cover w-10 h-10 rounded-full" alt="" />
+            <div class="flex flex-row text-base font-semibold justify-start items-center gap-5">
+              <Image src={images[`../../assets/images/services/${avatar}.png`]()} class="object-cover w-14 h-14 rounded-full" alt="" />
               <div>
                 <p class="text-base">{name}</p>
               <p class="text-base">{position}</p>
@@ -44,7 +45,7 @@ const {
           </div>
         </div>
         <div class="lg:w-2/3 flex flex-col gap-14">
-          <slot />
+          <Image src={images[`../../assets/images/services/${image_name}.png`]()} alt="" />
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-14">
             {
               service_detail &&
