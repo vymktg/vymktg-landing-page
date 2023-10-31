@@ -76,7 +76,7 @@ export const SERVICE_LIST = [
     detail:
       "Maximize your website's potential with my website management and optimization services which include updated content and performance optimization. By ensuring a seamless user experience, improved search engine visibility, and optimal performance, I'll help you attract more visitors and boost conversions.",
     icon: "carbon:dns-services",
-    image_name: "web-and-seo",
+    image_name: "manage-data",
     background: "pink",
     service_detail: [
       {
@@ -224,7 +224,7 @@ export const SERVICE_LIST = [
     detail:
       "Engaging and informative content plays a vital role in attracting and retaining customers. My focus is to craft captivating blog posts, attention-grabbing videos, and visually appealing infographics that align with your brand. By delivering high-quality content, businesses can drive website traffic, boost engagement, and foster brand loyalty.",
     icon: "tabler:award",
-    image_name: "manage-data",
+    image_name: "web-and-seo",
     background: "pink",
     service_detail: [
       {
@@ -390,8 +390,10 @@ export const SITE = {
   description: "Professional Digital Marketer",
   url: "https://vymktg.github.io/vymktg.com",
   githubUrl: "https://github.com/vymktg/vymktg.com",
-  email: "fromvtovintage@gmail.com",
-  phoneNumber: "+1 801 425 3581",
+  email: "vytrinh.mktg@gmail.com",
+  phoneNumber: "+1 801-425-3581",
+  copyRightText: "© Copyright 2023 Vy Trinh MKTG. All rights reserved.",
+  address: "Salt Lake City, Utah, USA",
   image:
     "https://raw.githubusercontent.com/one-aalam/astro-ink/main/public/astro-banner.png",
   // YT video channel Id (used in media.astro)

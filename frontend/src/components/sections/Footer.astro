@@ -20,7 +20,7 @@ import Container from "../shared/Container.astro";
       <div class="flex flex-col gap-10 md:gap-7 w-full lg:w-[33%]">
         <p class="tracking-wide font-bold uppercase">OFFICE</p>
         <address class="text-base w-10/12 not-italic">
-          Salt Lake City, Utah, USA
+          {SITE.address}
         </address>
 
         <div class="flex flex-col gap-2">
@@ -54,7 +54,7 @@ import Container from "../shared/Container.astro";
           </a>
           <a
             class="flex flex-row gap-4 justify-start items-center hover:text-primary cursor-pointer"
-            href={`tel:${SITE.phoneNumber}`}
+            href={`tel:${SITE.phoneNumber.replace('-', '')}`}
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -135,7 +135,7 @@ import Container from "../shared/Container.astro";
     >
       <div class="flex flex-col justify-between sm:flex-row">
         <p class="text-sm">
-          © Copyright 2023 Vy Trinh MKTG. All rights reserved.
+          {SITE.copyRightText}
         </p>
       </div>
 
