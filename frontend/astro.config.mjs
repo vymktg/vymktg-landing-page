@@ -13,7 +13,7 @@ export default defineConfig({
   image: {
     service: passthroughImageService(),
   },
-  site: "https://vymktg.github.io/",
+  site: "https://vymktg.com/",
   //base: import.meta.env.BASE_URL,
   base: import.meta.env.PROD ? "/vymktg.com/" : "",
 });
