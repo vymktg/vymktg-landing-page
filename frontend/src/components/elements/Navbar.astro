@@ -6,11 +6,13 @@ import Container from "../shared/Container.astro";
 import { Image } from "astro:assets";
 import bannerShape from "../../assets/images/banner-shape.png";
 import DesktopNavbar from "./DesktopNavbar.astro";
+import HeaderOffer from "./HeaderOffer.astro";
 
 const isHomePage = Astro.url.pathname === import.meta.env.BASE_URL;
 ---
 
-<header class="z-10" data-mode={import.meta.env.MODE}>
+<header class=`z-10 ${!isHomePage ? 'bg-[#E4ECF8]' : ''}` data-mode={import.meta.env.MODE}>
+  <HeaderOffer />
   <Container>
     <div
       class="shadow-2xl rounded-full backdrop-blur-md bg-[#ffffff0a] px-4 py-3 border border-[#ffffff80]"

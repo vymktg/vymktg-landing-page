@@ -1,15 +1,13 @@
 ---
-import HeaderOffer from "../components/elements/HeaderOffer.astro";
 import Navbar from "../components/elements/Navbar.astro";
 import Footer from "../components/sections/Footer.astro";
 import Base from "./Base.astro";
 ---
 
 <Base title="Welcome to Astro.">
-  <HeaderOffer />
-  <Navbar />
-  <main class="">
-    <slot />
+  <main class="relative">
+    <Navbar />
+      <slot />
+    <Footer />
   </main>
-  <Footer />
 </Base>
