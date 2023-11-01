@@ -7,17 +7,16 @@ import ButtonLink from "../shared/ButtonLink.astro";
 import Partners from "./Partners.astro";
 import WebSeo from "../icon/WebSeo.astro";
 import OnlineMarketing from "../icon/OnlineMarketing.astro";
+import Title from "../shared/Title.astro";
 ---
 
 <section id="services" class="relative">
   <Partners />
   <Container className="space-y-10 md:sapce-y-12 my-40">
-    <div class="flex flex-row justify-center gap-10">
-      <div class="w-5/12 flex flex-col gap-9 mb-5 md:mb-10 lg:mb-20 items-start">
-        <h2 class="font-bold text-lg sm:text-2xl md:text-4xl text-dark">
-          How can I help?
-        </h2>
-        <Paragraph className="font-light" data-aos="fade-up">
+    <div class="flex flex-col xl:flex-row justify-center gap-10">
+      <div class="xl:w-5/12 flex flex-col gap-9 mb-5 md:mb-10 lg:mb-20 items-center sm:items-start">
+        <Title>How can I help?</Title>
+        <Paragraph className="font-light w-10/12 sm:w-full text-center sm:text-left" data-aos="fade-up">
           With strategic planning, efficient execution, and nurturing tactics,
           I'll optimize your digital landscape, propelling your business forward
           and fostering sustainable growth.
@@ -41,8 +40,8 @@ import OnlineMarketing from "../icon/OnlineMarketing.astro";
           >
         </ButtonLink>
       </div>
-      <div class="w-7/12 flex flex-row gap-x-10">
-        <div class="flex flex-col w-1/2 gap-y-10">
+      <div class="xl:w-7/12 flex flex-col sm:flex-row gap-10">
+        <div class="flex flex-col sm:w-1/2 gap-y-10">
           <Service {...SERVICE_LIST[0]}>
             <WebSeo />
           </Service>
@@ -50,9 +49,9 @@ import OnlineMarketing from "../icon/OnlineMarketing.astro";
             <OnlineMarketing name="service-icon" />
           </Service>
         </div>
-        <div class="flex flex-col w-1/2">
-          <Service className="mt-10" {...SERVICE_LIST[2]} />
-          <Service className="mt-10" {...SERVICE_LIST[3]} />
+        <div class="flex flex-col sm:w-1/2 gap-y-10 xl:mt-10">
+          <Service {...SERVICE_LIST[2]} />
+          <Service {...SERVICE_LIST[3]} />
         </div>
       </div>
     </div>

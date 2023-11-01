@@ -10,7 +10,7 @@ import { Image } from "astro:assets";
 //https://devicescss.xyz/
 import "../../styles/devices.min.css";
 import ServiceDetail from "../../components/sections/ServiceDetail.astro";
-import type { Service } from "../../interface/Service";
+import type { ServiceInterface } from "../../interface/Service";
 
 //const IMAGE_URL = "https://img.freepik.com/free-photo/executive-manager-woman-explaining-management-statistics-working-company-strategy-overtime-office-meeting-room_482257-2393.jpg?w=2000&t=st=1692199113~exp=1692199713~hmac=d5c916f23047dd54d2dd79780d0f4f52ce66d994dbf8c159fc1db74d57c66722";
 
@@ -279,7 +279,7 @@ const services = SERVICE_LIST.map((item) => {
       </Container>
     </section> -->
     {
-      services.map((item: Service) => (<ServiceDetail
+      services.map((item: ServiceInterface) => (<ServiceDetail
           {...item}
         />
         ))

@@ -6,26 +6,26 @@ import Container from "../shared/Container.astro";
 
 <section id="featured-works">
   <Container className="flex flex-col gap-10">
-    <div class="flex justify-between items-center">
+    <div class="flex flex-col md:flex-row justify-start md:justify-between items-start gap-8 md:gap-0">
       <h2 class="text-6xl font-semibold leading-[4rem]">Projects</br> and Insights</h2>
-      <div class="w-1/3" data-aos="fade-up">
-        <p class="text-sub-gray font-normal mb-3">
+      <div class="md:w-1/3 text-right md:text-left" data-aos="fade-up">
+        <p class="text-sub-gray font-normal mb-3 text-right md:text-left text-xl">
           I'll optimize your digital landscape, propelling your business forward
           and fostering sustainable growth.
         </p>
         <a
           href={NAVIGATION_ITEM[3].href}
-          class="text-primary capitalize font-semibold"
+        class="text-primary capitalize font-semibold text-xl"
         >
           <span class="w-14 border-y-2 border-primary inline-block mr-3"> </span>
           Explore All Insights
         </a>
       </div>
     </div>
-    <div class="flex flex-row gap-5">
+    <div class="grid md:grid-cols-2 xl:flex xl:flex-row gap-5">
       {
         PROJECT_LIST.map((item, index) => (
-          <ProjectItem {...item} className={index === 0 ? "flex-4" : ""} />
+          <ProjectItem {...item} className={index === 0 ? "xl:flex-4" : ""} />
         ))
       }
     </div>
@@ -34,17 +34,21 @@ import Container from "../shared/Container.astro";
 
 
 <script>
-  const productList = document.querySelectorAll(
+  const projectList = document.querySelectorAll(
     "#featured-works .project-item"
   );
 
-  document.addEventListener("DOMContentLoaded", () => {
-    productList.forEach((item) => {
-      item.addEventListener("mouseover", () => {
-        productList.forEach((item) => {
+  const onProductClicked = (element: Element) => { 
+    projectList.forEach((item) => {
           item.classList.remove("flex-4");
         });
-        item.classList.add("flex-4");
+        element.classList.add("flex-4");
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    projectList.forEach((item) => {
+      item.addEventListener("mouseover", () => {
+        onProductClicked(item);
       });
     });
   });

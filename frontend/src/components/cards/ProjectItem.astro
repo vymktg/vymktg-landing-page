@@ -12,12 +12,12 @@ const { className, url, name, image_url, services, ...props } = Astro.props;
 
 <a
   href={url}
-  class={`project-item group relative transition-all duration-700 flex-1 ${className}`}
+  class={`project-item group relative transition-all duration-700 xl:flex-1 ${className}`}
   {...props}
 >
   <img
     src={image_url}
-    class="object-cover rounded-xl h-[420px] w-full"
+    class="object-cover rounded-xl xl:h-[420px] w-full"
     alt="Example"
   />
   <!-- <div
@@ -25,14 +25,14 @@ const { className, url, name, image_url, services, ...props } = Astro.props;
   >
   </div> -->
   <span
-    class="title opacity-0 duration-300 absolute z-10 bottom-10 left-10 text-white"
+    class="title xl:opacity-0 duration-300 absolute z-10 bottom-5 left-5 xl:bottom-10 xl:left-10 text-white"
   >
     <div class="flex flex-col gap-3">
-      <span class="text-2xl font-semibold">{name}</span>
+      <span class="text-xl xl:text-2xl font-semibold">{name}</span>
       <div class="service flex flex-row gap-3 transition-all delay-100">
         {
           services.length > 0 &&
-            services.map((item: Service) => <span class="whitespace-nowrap">{item?.title}</span>)
+            services.map((item: Service) => <span class="whitespace-nowrap text-sx xl:text-xl">{item?.title}</span>)
         }
       </div>
     </div>

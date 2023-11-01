@@ -29,7 +29,7 @@ const isHomePage = Astro.url.pathname === import.meta.env.BASE_URL;
 {
   isHomePage && (
     <Image
-      class:list={["absolute top-0 left-0 z-[-1]"]}
+      class:list={["absolute top-0 left-0 z-[-1] hidden xl:block"]}
       src={bannerShape}
       alt="banner shape"
     />
@@ -37,6 +37,6 @@ const isHomePage = Astro.url.pathname === import.meta.env.BASE_URL;
 }
 <div
   id="drawer-backdrop"
-  class="bg-gray-900 bg-opacity-0 fixed inset-0 transition-all duration-200 lg:hidden md:block"
+  class="bg-gray-900 bg-opacity-0 fixed inset-0 transition-all duration-200 hidden"
 >
 </div>

@@ -14,7 +14,7 @@ import { SERVICE_LIST } from "../../config";
       <span class="italic text-primary mr-2 font-bold">Out With the</span>Old
       Rules
     </h2>
-    <div id="services" class="flex flex-row justify-center gap-3">
+    <div id="services" class="grid grid-cols-2 xl:grid-cols-4 justify-center gap-3">
       {
         SERVICE_LIST.map((item, index) => (
           <span
@@ -26,10 +26,10 @@ import { SERVICE_LIST } from "../../config";
         ))
       }
     </div>
-    <div class="device device-macbook-pro-2018">
+    <div class="device device-macbook-pro-2018 !scale-[60%] sm:!scale-75 md:scale-100">
       <div class="device-frame">
         <Image
-          class="device-screen !absolute top-[29px] opacity-0 transition-opacity duration-300 !object-contain"
+          class="device-screen !absolute top-[29px] opacity-0 transition-opacity duration-300 !object-contain opacity-100"
           src={WEB_AND_SEO}
           alt=""
         />
@@ -61,17 +61,26 @@ import { SERVICE_LIST } from "../../config";
 
 <script>
   const serviceDeviceImgEls = document.querySelectorAll("#qoute .device img");
+
+  const handleServicesElClicked = (index) => { 
+    serviceDeviceImgEls.forEach((element, position) => {
+      element.classList.remove("opacity-100");
+      if (index === position) {
+        element.classList.add("opacity-100");
+      }
+    });
+  }
+
   document.addEventListener("DOMContentLoaded", (_) => {
     const servicesEl = document.querySelectorAll("#qoute #services span");
     servicesEl.forEach((item, index) => {
       item.addEventListener("mouseover", (_) => {
-        serviceDeviceImgEls.forEach((element, position) => {
-          element.classList.remove("opacity-100");
-          if (index === position) {
-            element.classList.add("opacity-100");
-          }
-        });
+        handleServicesElClicked(index);
       });
+      // item.addEventListener("touchtart", (_) => { 
+      //   handleServicesElClicked(index);
+      //   console.log('123')
+      // })
     });
   });
 </script>

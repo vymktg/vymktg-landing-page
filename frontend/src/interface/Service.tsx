@@ -14,7 +14,7 @@ export interface ServiceItemInterface {
   description: string;
 }
 
-export interface Service {
+export interface ServiceInterface {
   title: string;
   description: string;
   icon: string;

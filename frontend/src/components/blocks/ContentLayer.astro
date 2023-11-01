@@ -4,7 +4,7 @@ import { HOW_IT_WORKS_STEP } from "../../config";
 
 <div
   id="how-it-works__content-layer"
-  class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20 relative h-[35rem] md:h-[40rem] lg:h-[32rem]"
+  class="px-4 md:py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20 relative h-[50rem] md:h-[40rem] lg:h-[32rem]"
 >
   {
     HOW_IT_WORKS_STEP.map((item, index) => {
@@ -16,13 +16,13 @@ import { HOW_IT_WORKS_STEP } from "../../config";
           className += " top-0 left-0";
           break;
         case 2:
-          className += " top-28 right-0 lg:top-0 lg:right-36 xl:right-52";
+          className += " top-1/4 right-0 lg:top-0 lg:right-36 xl:right-52";
           break;
         case 3:
-          className += " bottom-28 left-0 lg:right-12 lg:left-auto lg:bottom-0";
+          className += " top-1/2 left-0 lg:right-12 lg:left-auto lg:bottom-0";
           break;
         case 4:
-          className += " bottom-8 right-0 lg:left-32 lg:bottom-0";
+          className += " bottom-0 right-0 lg:left-32 lg:bottom-0";
           break;
         default:
           className += "";
@@ -35,8 +35,8 @@ import { HOW_IT_WORKS_STEP } from "../../config";
         <div
           id={`how-it-works-item-${position}`}
           class:list={[
-            "absolute w-36 md:w-56 lg:w-72 flex flex-col gap-2 md:gap-3 lg:gap-4",
-            className || "",
+            "absolute w-1/2 md:w-56 lg:w-72 flex flex-col gap-2 md:gap-3 lg:gap-4",
+            className,
           ]}
         >
           <div
@@ -46,13 +46,13 @@ import { HOW_IT_WORKS_STEP } from "../../config";
           >
             {position}
           </div>
-          <div class="flex flex-col gap-2 md:gap-3 bg-white pt-2 pl-2 pb-2">
-            <p class="sm:text-md md:text-xl lg:text-2xl font-semibold md:font-bold">
+          <div class="flex flex-col gap-3 bg-white pt-2 pl-2 pb-2">
+            <p class="text-2xl lg:text-2xl font-semibold md:font-bold">
               {title}
             </p>
-            <p class="text-xs md:text-base">{description}</p>
+            <p class="text-base">{description}</p>
             {subtitle && (
-              <p class="text-xs md:text-base">{subtitle}</p>
+              <p class="text-base">{subtitle}</p>
             )}
           </div>
         </div>

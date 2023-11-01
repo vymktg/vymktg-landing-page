@@ -44,10 +44,10 @@ const { className } = Astro.props;
 
     if (isNavbarHidden) {
       navbarHamburger?.classList.remove("-translate-x-full");
-      drawerBackdrop?.classList.add(`${BACKDROP_BLUR}`,'z-40');
+      drawerBackdrop?.classList.add(`${BACKDROP_BLUR}`,'!z-40', '!block');
     } else {
       navbarHamburger?.classList.add("-translate-x-full");
-      drawerBackdrop?.classList.remove(`${BACKDROP_BLUR}`,'z-40');
+      drawerBackdrop?.classList.remove(`${BACKDROP_BLUR}`,'!z-40', '!block');
     }
   };
 
