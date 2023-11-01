@@ -12,20 +12,22 @@ const TOP_RIGHT_IMAGE_WIDTH = "w-[300px] sm:w-[450px] md:w-[550px] lg:w-[700px]"
 ---
 
 <div class="">
-  <div class:list={[TOP_RIGHT_IMAGE, " z-[-1]"]}>
+  <div class:list={[TOP_RIGHT_IMAGE, "z-[-1]"]}>
     <Image
       src={heroImage}
       class={TOP_RIGHT_IMAGE_WIDTH}
       alt=""
+      widths={[300,450,550,700]}
+      quality="mid"
     />
   </div>
-  <div class:list={[TOP_RIGHT_IMAGE, " z-[-2]"]}>
+  <div class:list={[TOP_RIGHT_IMAGE, "z-[-2]"]}>
     <img
     class={TOP_RIGHT_IMAGE_WIDTH}
       src="https://wp.themepure.net/seomy/wp-content/themes/seomy/assets/img/shape/banner-4-shape-1.png"
     />
   </div>
-  <div class:list={[TOP_RIGHT_IMAGE, " z-[-3]"]}>
+  <div class:list={[TOP_RIGHT_IMAGE, "z-[-3]"]}>
     <img
     class={TOP_RIGHT_IMAGE_WIDTH}
       src="https://wp.themepure.net/seomy/wp-content/themes/seomy/assets/img/shape/banner-4-shape-2.png"

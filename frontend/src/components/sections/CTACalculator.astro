@@ -4,7 +4,7 @@ import { CTA_CALCULATOR } from "../../config";
 import ButtonLink from "../shared/ButtonLink.astro";
 import { Image } from "astro:assets";
 
-import ctaImage from "../../assets/images/cta-cal.jpeg";
+import ctaImage from "../../assets/images/cta-cal-min.jpeg";
 ---
 
 <section class="cta-calculator">
@@ -22,6 +22,7 @@ import ctaImage from "../../assets/images/cta-cal.jpeg";
             class="rounded-3xl shadow-2xl md:w-[95%]"
             src={ctaImage}
             alt=""
+            widths={[250,400,600,800]}
           /> 
           <div
             class="bg-white right-[-0.5rem] bottom-16 z-10 absolute rounded-lg cross-sale-banner"
