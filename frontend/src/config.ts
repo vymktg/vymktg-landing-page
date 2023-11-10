@@ -386,7 +386,7 @@ export const HOW_IT_WORKS_STEP = [
 
 export const SITE = {
   name: "Vymktg",
-  title: "Vy Trinh Marketer",
+  title: "Vy Trinh digital marketing and communication specialist",
   description: "Professional Digital Marketer",
   url: "https://vymktg.github.io/vymktg.com",
   githubUrl: "https://github.com/vymktg/vymktg.com",
