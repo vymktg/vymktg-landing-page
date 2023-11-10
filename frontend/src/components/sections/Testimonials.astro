@@ -6,18 +6,20 @@ const KEYWORD = "For";
 
 const BRAND_BANNER = [
   {
-    tag: "Company",
+    tag: "Recruiter",
     title: "Empower Your Enterprise: Tailored Solutions for Optimal Growth",
     content:
       "Elevate your business with our tailored solutions. From innovative strategies to seamless execution, we empower your enterprise to thrive in a dynamic market. Experience growth like never before.",
     href: "https://www.linkedin.com/in/vy-trinh-fromvtovintage/",
+    target: "_blank"
   },
   {
-    tag: "Client",
+    tag: "Partner",
     title: "Elevate Experiences: Unforgettable Journeys with Vy Trinh",
     content:
       "Transform your consumer journey with us. Our personalized approach ensures unforgettable experiences. Elevate your lifestyle with products/services designed to exceed expectations. Embrace excellence, choose VyTrinh.",
     href: NAVIGATION_ITEM[2].href,
+    target: "_self"
   },
 ];
 
@@ -56,7 +58,7 @@ const PADDING_TOP_ITEM = "pt-14";
       <div class="relative">
         {
           BRAND_BANNER.map((item, index) => {
-            const { title, content, href } = item;
+            const { title, content, href, target } = item;
             return (
               <div
                 class:list={[
@@ -75,7 +77,7 @@ const PADDING_TOP_ITEM = "pt-14";
                   <p class="text-lg text-gray-500 font-normal w-10/12">
                     {content}
                   </p>
-                  <a href={href} class="flex flex-row justify-center items-center gap-3 text-2xl">
+                  <a href={href} class="flex flex-row justify-center items-center gap-3 text-2xl" target={target}>
                     Explore
                     <span class="w-10 h-10 bg-primary rounded-full flex flex-row justify-center items-center">
                       <svg
