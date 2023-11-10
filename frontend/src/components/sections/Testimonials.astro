@@ -1,4 +1,5 @@
 ---
+import { NAVIGATION_ITEM } from "../../config";
 import Container from "../shared/Container.astro";
 
 const KEYWORD = "For";
@@ -9,12 +10,14 @@ const BRAND_BANNER = [
     title: "Empower Your Enterprise: Tailored Solutions for Optimal Growth",
     content:
       "Elevate your business with our tailored solutions. From innovative strategies to seamless execution, we empower your enterprise to thrive in a dynamic market. Experience growth like never before.",
+    href: "https://www.linkedin.com/in/vy-trinh-fromvtovintage/",
   },
   {
     tag: "Client",
     title: "Elevate Experiences: Unforgettable Journeys with Vy Trinh",
     content:
       "Transform your consumer journey with us. Our personalized approach ensures unforgettable experiences. Elevate your lifestyle with products/services designed to exceed expectations. Embrace excellence, choose VyTrinh.",
+    href: NAVIGATION_ITEM[2].href,
   },
 ];
 
@@ -53,7 +56,7 @@ const PADDING_TOP_ITEM = "pt-14";
       <div class="relative">
         {
           BRAND_BANNER.map((item, index) => {
-            const { title, content } = item;
+            const { title, content, href } = item;
             return (
               <div
                 class:list={[
@@ -62,12 +65,39 @@ const PADDING_TOP_ITEM = "pt-14";
                 ]}
                 style="grid-template-columns: minmax(0, 45%) minmax(0, 55%)"
               >
-                <div class:list={["flex flex-col gap-10", PADDING_TOP_ITEM]}>
+                <div
+                  class:list={[
+                    "flex flex-col gap-10 items-start",
+                    PADDING_TOP_ITEM,
+                  ]}
+                >
                   <h2 class="text-5xl leading-[4rem]">{title}</h2>
                   <p class="text-lg text-gray-500 font-normal w-10/12">
                     {content}
                   </p>
-                  <div></div>
+                  <a href={href} class="flex flex-row justify-center items-center gap-3 text-2xl">
+                    Explore
+                    <span class="w-10 h-10 bg-primary rounded-full flex flex-row justify-center items-center">
+                      <svg
+                        fill="#fff"
+                        height="16px"
+                        width="16px"
+                        version="1.1"
+                        id="Layer_1"
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                        viewBox="0 0 330 330"
+                        xml:space="preserve"
+                      >
+                        <path
+                          id="XMLID_27_"
+                          d="M15,180h263.787l-49.394,49.394c-5.858,5.857-5.858,15.355,0,21.213C232.322,253.535,236.161,255,240,255
+                          s7.678-1.465,10.606-4.394l75-75c5.858-5.857,5.858-15.355,0-21.213l-75-75c-5.857-5.857-15.355-5.857-21.213,0
+                          c-5.858,5.857-5.858,15.355,0,21.213L278.787,150H15c-8.284,0-15,6.716-15,15S6.716,180,15,180z"
+                        />
+                      </svg>
+                    </span>
+                  </a>
                 </div>
                 <div class="grid grid-cols-7 grid-rows-3 gap-4">
                   <img
@@ -109,6 +139,12 @@ const PADDING_TOP_ITEM = "pt-14";
   const contentEl = document.querySelectorAll("#brand-banner .content");
 
   const onHoverBrand = (activeItem: Element, index: Number) => {
+    const activeForTitle = activeItem.querySelector(".for-title");
+
+    if (!activeForTitle) { 
+      return;
+    }
+
     brandBannerEl.forEach((item) => {
       const forTitle = item.querySelector(".for-title");
       forTitle.classList.remove("is-visible");
@@ -118,8 +154,6 @@ const PADDING_TOP_ITEM = "pt-14";
     contentEl.forEach((item) => {
       item.classList.remove("is-visible");
     });
-
-    const activeForTitle = activeItem.querySelector(".for-title");
     activeForTitle.classList.add("is-visible");
     activeItem.classList.add("!text-black");
 
