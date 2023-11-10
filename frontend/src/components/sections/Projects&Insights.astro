@@ -25,7 +25,7 @@ import Paragraph from "../shared/Paragraph.astro";
     <div class="grid md:grid-cols-2 xl:flex xl:flex-row gap-5">
       {
         PROJECT_LIST.map((item, index) => (
-          <ProjectItem {...item} className={index === 0 ? "xl:flex-4" : ""} />
+          <ProjectItem {...item} className={index === 0 ? "!flex-4" : ""} />
         ))
       }
     </div>
@@ -40,9 +40,9 @@ import Paragraph from "../shared/Paragraph.astro";
 
   const onProductClicked = (element: Element) => { 
     projectList.forEach((item) => {
-          item.classList.remove("flex-4");
+          item.classList.remove("!flex-4");
         });
-        element.classList.add("flex-4");
+        element.classList.add("!flex-4");
   }
 
   document.addEventListener("DOMContentLoaded", () => {

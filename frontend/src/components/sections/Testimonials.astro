@@ -1,7 +1,137 @@
 ---
+import Container from "../shared/Container.astro";
+
+const KEYWORD = "For";
+
+const BRAND_BANNER = [
+  {
+    tag: "Company",
+    title: "Empower Your Enterprise: Tailored Solutions for Optimal Growth",
+    content:
+      "Elevate your business with our tailored solutions. From innovative strategies to seamless execution, we empower your enterprise to thrive in a dynamic market. Experience growth like never before.",
+  },
+  {
+    tag: "Client",
+    title: "Elevate Experiences: Unforgettable Journeys with Vy Trinh",
+    content:
+      "Transform your consumer journey with us. Our personalized approach ensures unforgettable experiences. Elevate your lifestyle with products/services designed to exceed expectations. Embrace excellence, choose VyTrinh.",
+  },
+];
+
+const PADDING_TOP_ITEM = "pt-14";
 ---
-<section id="testimonial">  
-    <div>
-        
+
+<section id="brand-banner">
+  <Container>
+    <div
+      class="grid gap-4"
+      style="grid-template-columns: minmax(0, 15%) minmax(0, 85%)"
+    >
+      <div class:list={["flex flex-col", PADDING_TOP_ITEM]}>
+        {
+          BRAND_BANNER.map((item, index) => (
+            <div
+              class:list={[
+                "group flex flex-row gap-2 font-medium cursor-pointer text-gray-500 pb-3",
+                index === 0 ? "!text-black" : "",
+              ]}
+              data-index={index}
+            >
+              <span
+                class:list={[
+                  "for-title !block pointer-events-none text-lg is-invisible",
+                  index === 0 ? "is-visible" : "",
+                ]}
+              >
+                {KEYWORD}
+              </span>
+              <span class="pointer-events-none text-lg">{item.tag}</span>
+            </div>
+          ))
+        }
+      </div>
+      <div class="relative">
+        {
+          BRAND_BANNER.map((item, index) => {
+            const { title, content } = item;
+            return (
+              <div
+                class:list={[
+                  `grid content item-${index} is-invisible`,
+                  index === 0 ? "is-visible" : "absolute top-0 right-0",
+                ]}
+                style="grid-template-columns: minmax(0, 45%) minmax(0, 55%)"
+              >
+                <div class:list={["flex flex-col gap-10", PADDING_TOP_ITEM]}>
+                  <h2 class="text-5xl leading-[4rem]">{title}</h2>
+                  <p class="text-lg text-gray-500 font-normal w-10/12">
+                    {content}
+                  </p>
+                </div>
+                <div class="grid grid-cols-7 grid-rows-3 gap-4">
+                  <img
+                    class="col-start-2 col-span-3 row-span-2 w-full h-full object-cover"
+                    src="https://thumbs.dreamstime.com/z/business-meeting-13123825.jpg"
+                  />
+                  <img
+                    class="col-start-5 row-start-2 row-span-2 col-span-3 w-full h-full object-cover"
+                    src="https://previews.123rf.com/images/pressmaster/pressmaster0810/pressmaster081000374/3716878-vertical-image-of-people-interacting-together-at-meeting.jpg"
+                  />
+                  <img
+                    class="row-start-3 row-span-1 col-span-4 w-full h-full object-cover"
+                    src="https://images.prismic.io/wildgoose/3a553239-8fde-489a-9ae2-cda33cee940b_team-meeting-games-for-the-office.webp?auto=compress,format&w=1348&h=600"
+                  />
+                </div>
+              </div>
+            );
+          })
+        }
+      </div>
     </div>
+  </Container>
 </section>
+
+<style>
+  .is-invisible {
+    transition: opacity 1.5s ease;
+    opacity: 0;
+    visibility: hidden;
+  }
+  .is-visible {
+    opacity: 1;
+    visibility: visible;
+  }
+</style>
+
+<script>
+  const brandBannerEl = document.querySelectorAll("#brand-banner .group");
+  const contentEl = document.querySelectorAll("#brand-banner .content");
+
+  const onHoverBrand = (activeItem: Element, index: Number) => {
+    brandBannerEl.forEach((item) => {
+      const forTitle = item.querySelector(".for-title");
+      forTitle.classList.remove("is-visible");
+      item.classList.remove("!text-black");
+    });
+
+    contentEl.forEach((item) => {
+      item.classList.remove("is-visible");
+    });
+
+    const activeForTitle = activeItem.querySelector(".for-title");
+    activeForTitle.classList.add("is-visible");
+    activeItem.classList.add("!text-black");
+
+    const contentActive = document.querySelector(
+      `#brand-banner .item-${index}`
+    );
+    contentActive?.classList?.add("is-visible");
+  };
+
+  brandBannerEl.forEach((item, index) => {
+    item.addEventListener("mouseover", (event: Event) => {
+      const activeItem = event.target as Element;
+      onHoverBrand(activeItem, index);
+    });
+  });
+</script>

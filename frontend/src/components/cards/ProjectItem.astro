@@ -4,7 +4,7 @@ export interface Props {
   url: string;
   name: string;
   image_url: string;
-  className: string;
+className: string;
   services: Array<Service>;
 }
 const { className, url, name, image_url, services, ...props } = Astro.props;
@@ -12,7 +12,7 @@ const { className, url, name, image_url, services, ...props } = Astro.props;
 
 <a
   href={url}
-  class={`project-item group relative transition-all duration-700 xl:flex-1 ${className}`}
+  class={`project-item group relative transition-all duration-700 xl:flex-1 ${className} group`}
   {...props}
 >
   <img
@@ -25,7 +25,7 @@ const { className, url, name, image_url, services, ...props } = Astro.props;
   >
   </div> -->
   <span
-    class="title xl:opacity-0 duration-300 absolute z-10 bottom-5 left-5 xl:bottom-10 xl:left-10 text-white"
+    class="title xl:opacity-0 transition-opacity duration-700 absolute z-10 bottom-5 left-5 xl:bottom-10 xl:left-10 text-white"
   >
     <div class="flex flex-col gap-3">
       <span class="text-xl xl:text-2xl font-semibold">{name}</span>
@@ -40,7 +40,7 @@ const { className, url, name, image_url, services, ...props } = Astro.props;
 </a>
 
 <style>
-  .project-item.flex-4 {
+  .project-item.\!flex-4 {
     .title {
       opacity: 100;
     }

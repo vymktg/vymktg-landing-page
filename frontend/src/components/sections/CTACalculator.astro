@@ -22,8 +22,8 @@ import ctaImage from "../../assets/images/cta-cal.png";
             class="rounded-3xl shadow-2xl md:w-[95%]"
             src={ctaImage}
             alt=""
-            widths={[250,400,600,800]}
-          /> 
+            widths={[250, 400, 600, 800]}
+          />
           <div
             class="bg-white right-[-0.5rem] bottom-16 z-10 absolute rounded-lg cross-sale-banner"
           >
@@ -39,7 +39,9 @@ import ctaImage from "../../assets/images/cta-cal.png";
         </div>
       </div>
 
-      <div class="w-full md:w-1/2 xl:w-7/12 flex flex-col gap-10 justify-center items-center md:items-start px-5">
+      <div
+        class="w-full md:w-1/2 xl:w-7/12 flex flex-col gap-10 justify-center items-center md:items-start px-10"
+      >
         {
           CTA_CALCULATOR.map((item, index) => (
             <div
@@ -77,7 +79,9 @@ import ctaImage from "../../assets/images/cta-cal.png";
                 <h2 class="text-xl md:text-2xl font-semibold text-center md:text-left">
                   {item.title}
                 </h2>
-                <p class="text-base lg:text-lg text-center md:text-left">{item.description}</p>
+                <p class="text-base lg:text-lg text-center md:text-left">
+                  {item.description}
+                </p>
               </div>
             </div>
           ))

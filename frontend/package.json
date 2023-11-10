@@ -1,6 +1,6 @@
 {
   "name": "frontend",
-  "type": "module",
+  "type": "commonjs",
   "version": "0.0.1",
   "scripts": {
     "dev": "astro dev",
@@ -9,7 +9,7 @@
     "preview": "astro preview",
     "astro": "astro",
     "check": "astro check",
-    "prettier": "prettier --write ."
+    "prettier": "prettier --write . --plugin=prettier-plugin-astro"
   },
   "dependencies": {
     "@astrojs/check": "^0.3.0",
