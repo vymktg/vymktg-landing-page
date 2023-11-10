@@ -14,9 +14,14 @@ import Title from "../shared/Title.astro";
   <Partners />
   <Container className="space-y-10 md:sapce-y-12 my-40">
     <div class="flex flex-col xl:flex-row justify-center gap-10">
-      <div class="xl:w-5/12 flex flex-col gap-9 mb-5 md:mb-10 lg:mb-20 items-center sm:items-start">
+      <div
+        class="xl:w-5/12 flex flex-col gap-9 mb-5 md:mb-10 lg:mb-20 items-center sm:items-start"
+      >
         <Title>How can I help?</Title>
-        <Paragraph className="font-light w-10/12 sm:w-full text-center sm:text-left" data-aos="fade-up">
+        <Paragraph
+          className="font-light w-10/12 sm:w-full text-center sm:text-left"
+          data-aos="fade-up"
+        >
           With strategic planning, efficient execution, and nurturing tactics,
           I'll optimize your digital landscape, propelling your business forward
           and fostering sustainable growth.
@@ -45,13 +50,13 @@ import Title from "../shared/Title.astro";
           <Service {...SERVICE_LIST[0]}>
             <WebSeo />
           </Service>
-          <Service {...SERVICE_LIST[1]}>
-            <OnlineMarketing name="service-icon" />
-          </Service>
+          <Service {...SERVICE_LIST[1]} />
         </div>
         <div class="flex flex-col sm:w-1/2 gap-y-10 xl:mt-10">
           <Service {...SERVICE_LIST[2]} />
-          <Service {...SERVICE_LIST[3]} />
+          <Service {...SERVICE_LIST[3]}>
+            <OnlineMarketing name="service-icon" />
+          </Service>
         </div>
       </div>
     </div>
