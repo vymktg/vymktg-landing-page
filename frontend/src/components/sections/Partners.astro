@@ -16,7 +16,7 @@ const partnersImages = await Astro.glob("../../assets/images/partners/*").then(
         <div class="splide__list">
           {
             partnersImages.map((item) => (
-              <div class="splide__slide p-4 sm:p-5 group w-40 flex justify-center mx-auto">
+              <div class="splide__slide p-2 group w-40 flex justify-center mx-auto">
                 <Image
                   height={64}
                   src={item}
