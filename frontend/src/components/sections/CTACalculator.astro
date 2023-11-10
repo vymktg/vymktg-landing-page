@@ -1,6 +1,6 @@
 ---
 import Container from "../shared/Container.astro";
-import { CTA_CALCULATOR } from "../../config";
+import { CTA_CALCULATOR, NAVIGATION_ITEM } from "../../config";
 import ButtonLink from "../shared/ButtonLink.astro";
 import { Image } from "astro:assets";
 
@@ -95,6 +95,7 @@ import ctaImage from "../../assets/images/cta-cal.png";
           <ButtonLink
             text="Estimate Your Investment"
             variant="primary"
+            href={`${NAVIGATION_ITEM[2].href}#get-in-touch`}
             className="bg-primary capitalize flex felx-row gap-2 mb-3"
           >
             <svg

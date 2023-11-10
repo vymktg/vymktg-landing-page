@@ -1,7 +1,7 @@
 ---
 import Paragraph from "../shared/Paragraph.astro";
 import ButtonLink from "../shared/ButtonLink.astro";
-import { HERO_BANNER_CONTENT } from "../../config";
+import { HERO_BANNER_CONTENT, NAVIGATION_ITEM } from "../../config";
 ---
 
 <div class="pt-72 sm:pt-96 md:pt-[28rem] lg:pt-96">
@@ -21,15 +21,17 @@ import { HERO_BANNER_CONTENT } from "../../config";
     <Paragraph className="lg:w-1/2" data-aos="fade-up">
       {HERO_BANNER_CONTENT.description}
     </Paragraph>
-    <div class="flex flex-row gap-2 sm:gap-4 w-full justify-center sm:justify-start">
+    <div
+      class="flex flex-row gap-2 sm:gap-4 w-full justify-center sm:justify-start"
+    >
       <ButtonLink
-        href="#"
+        href={NAVIGATION_ITEM[2].href}
         text="Get started"
         variant="primary"
       />
       <ButtonLink
-        href="#"
-        text="View more"
+        href={NAVIGATION_ITEM[4].href}
+        text="About me"
         variant="secondary"
       >
         <svg
