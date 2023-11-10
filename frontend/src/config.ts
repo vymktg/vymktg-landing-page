@@ -22,7 +22,7 @@ export const NAVIGATION_ITEM = [
 ];
 
 export const HERO_BANNER_CONTENT = {
-  title: "I'm Vy,",
+  title: "Your,",
   highlight_title: "Marketing executor",
   description:
     "As a specialist in digital marketing and communication, I take pride in being your dedicated partner to handle all your marketing efforts. My mission is clear: help you focus on what you do best – growing your business.",
