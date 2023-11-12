@@ -104,7 +104,8 @@ export const SERVICE_LIST = [
       company_name: "",
       name: "Mr. Diane. M",
       position: "Chief marketing officer",
-      comment: "Our website is easier to use, more intuitive, and looks better. One of the clients even mentioned that the new website makes us seem like a bigger company than we actually are.",
+      comment:
+        "Our website is easier to use, more intuitive, and looks better. One of the clients even mentioned that the new website makes us seem like a bigger company than we actually are.",
       company_logo: "slc-med-spa",
       avatar: "alex",
     },
@@ -144,7 +145,8 @@ export const SERVICE_LIST = [
       company_name: "",
       name: "Mr. Rhett. L",
       position: "Marketing manager",
-      comment: "Vy's strategic contributions significantly enhanced operational efficiency, resulting in an impressive 50% revenue boost. Such expertise and commitment are invaluable for businesses aiming to achieve excellence.",
+      comment:
+        "Vy's strategic contributions significantly enhanced operational efficiency, resulting in an impressive 50% revenue boost. Such expertise and commitment are invaluable for businesses aiming to achieve excellence.",
       company_logo: "meridian-restaurants",
       avatar: "henry",
     },
@@ -213,7 +215,8 @@ export const SERVICE_LIST = [
       company_name: "",
       name: "Mr. Anonymous",
       position: "Product manager",
-      comment: "A customer is worth about $100 to my business, so I am willing to spend $50 to get that customer.",
+      comment:
+        "A customer is worth about $100 to my business, so I am willing to spend $50 to get that customer.",
       company_logo: "black-bear-diner",
       avatar: "johannes",
     },
@@ -252,7 +255,8 @@ export const SERVICE_LIST = [
       company_name: "",
       name: "Mr. Andrew Davis",
       position: "Chief executive officer",
-      comment: "Content builds relationships. Relationships are built on trust. Trust drives revenue.",
+      comment:
+        "Content builds relationships. Relationships are built on trust. Trust drives revenue.",
       company_logo: "burger-king",
       avatar: "mark",
     },
@@ -387,15 +391,15 @@ export const HOW_IT_WORKS_STEP = [
 export const SITE = {
   name: "Vymktg",
   title: "Your Digital Marketing Partner",
-  description: "Your partner in digital marketing, specializing in SEO/Website optimization, Content Creation, CRM Marketing, and Paid Advertising.",
+  description:
+    "Your partner in digital marketing, specializing in SEO/Website optimization, Content Creation, CRM Marketing, and Paid Advertising.",
   url: "https://vymktg.github.io/vymktg.com",
   githubUrl: "https://github.com/vymktg/vymktg.com",
   email: "vytrinh.mktg@gmail.com",
   phoneNumber: "+1 801-425-3581",
   copyRightText: "© Copyright 2023 Vy Trinh MKTG. All rights reserved.",
   address: "Salt Lake City, Utah, USA",
-  image:
-    "https://raw.githubusercontent.com/one-aalam/astro-ink/main/public/astro-banner.png",
+  image: "/images/vy-pro_384.png",
   // YT video channel Id (used in media.astro)
   ytChannelId: "",
   // Optional, user/author settings (example)

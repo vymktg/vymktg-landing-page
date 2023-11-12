@@ -2,7 +2,7 @@
 import "../../styles/global.css";
 import { SITE } from "../../config";
 
-const { title = SITE.title, description, permalink, image } = Astro.props;
+const { title = SITE.title, description = SITE.description, permalink, image } = Astro.props;
 ---
 
 <meta charset="UTF-8" />
