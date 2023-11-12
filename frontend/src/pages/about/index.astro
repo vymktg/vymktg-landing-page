@@ -1,0 +1,108 @@
+---
+import Container from "../../components/shared/Container.astro";
+import BasePage from "../../layouts/BasePage.astro";
+import { Image } from "astro:assets";
+import Image_1 from "../../../src/assets/images/Vy-Pro-2023-66.jpg";
+import Image_2 from "../../../src/assets/images/Vy-Pro-2023-120.jpg";
+---
+
+<BasePage>
+  <div class="flex flex-col">
+    <div class="">
+      <div class="bg-[#E4ECF8]">
+        <div class="pb-52 pt-40">
+          <Container
+            className="flex flex-col justify-center items-center mb-12 pb-10"
+          >
+            <h1 class="text-7xl font-bold mx-auto">About</h1>
+          </Container>
+        </div>
+      </div>
+      <div class="mt-[-5rem] bg-white md:rounded-tl-3xl md:rounded-tr-3xl">
+        <Container className="flex flex-col gap-20 z-10 md:py-40 pb-40">
+          <div class="flex flex-col md:flex-row gap-10 md:gap-20">
+            <Image
+              src={Image_1}
+              class="md:w-4/12 rounded-2xl md:rounded-full h-[20rem] object-cover md:h-full mt-[-10rem] md:mt-0"
+              style="object-position: 100% 0"
+              alt=""
+            />
+            <div class="md:w-8/12 flex flex-col gap-6">
+              <div>
+                <div class="text-4xl mb-4 font-semibold">Hello, I'm Vy,</div>
+                <p class="text-xl font-medium">Your Marketing Executor.</p>
+              </div>
+              <div class="text-lg flex flex-col gap-6 leading-9">
+                <p>
+                  As a business owner, you recognize the vital role that digital
+                  marketing plays in setting your business apart from the
+                  competition. However, it's natural to have uncertainties about
+                  which methods best fit your unique needs. Perhaps you already
+                  have a preferred strategy but lack the necessary resources or
+                  expertise to execute it effectively. That's where I step in. I
+                  am here to provide comprehensive support and guidance at every
+                  stage of your digital marketing journey.
+                </p>
+                <p>
+                  My approach is anchored in the SEN Framework: Strategy,
+                  Execution, and Nurturing. I firmly believe that a well-defined
+                  strategy, effective execution, and ongoing nurturing of
+                  customer relationships are vital for achieving marketing
+                  success in the digital landscape. By entrusting your digital
+                  marketing efforts to me, you can focus on what you do
+                  best—running your business. Together, we will propel your
+                  business forward and make a lasting impact in the
+                  ever-evolving market.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="flex flex-col-reverse md:flex-row gap-10 md:gap-20">
+            <div class="md:w-8/12 flex flex-col gap-6">
+              <h2 class="text-3xl mb-2 font-medium">A bit about me,</h2>
+              <div class="text-lg flex flex-col gap-6 leading-9">
+                <p>
+                  I grew up in a small town about 2.5 hours away from Ho Chi
+                  Minh City, Vietnam. In 2009, I left my home country to start a
+                  new life in the United States. After completing my bachelor's
+                  degree in Marketing, I worked as a professional marketer in
+                  various industries, including Medical Spas, Real Estate, Food
+                  and Beverage, Retail, and more. I also ventured into creating
+                  my own brands, which included a clothing brand and a
+                  Vietnamese restaurant concept.
+                </p>
+
+                <p>
+                  I refer to myself as a marketing executor because I strongly
+                  believe in achieving tangible results. This requires hands-on
+                  efforts, from strategic planning to efficient execution, and
+                  ensuring continuous growth through nurturing tactics. My
+                  commitment is to deliver measurable outcomes in the world of
+                  marketing.
+                </p>
+                <p>
+                  In addition to spending time in front of my computer solving
+                  the challenges faced by businesses, I also find joy in outdoor
+                  activities such as skiing, backpacking, rock climbing, and
+                  mountain biking. I'm proud to consider myself a “Utahn.”
+                </p>
+
+                <p>
+                  I would love the opportunity to chat with you and discuss how
+                  I can assist you and your business in flourishing.
+                </p>
+              </div>
+            </div>
+            <Image
+              src={Image_2}
+              class="md:w-4/12 rounded-2xl md:rounded-full h-[20rem] object-cover md:h-full"
+              alt=""
+            />
+          </div>
+        </Container>
+      </div>
+    </div>
+  </div>
+</BasePage>
+
+<style></style>
