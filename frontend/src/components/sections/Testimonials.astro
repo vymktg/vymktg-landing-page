@@ -6,7 +6,7 @@ import RECRUITER_1 from "../../../src/assets/images/Vy-Pro-2023-46-X2.jpg";
 import RECRUITER_2 from "../../../src/assets/images/Vy-Pro-2023-54-X2.jpg";
 import RECRUITER_3 from "../../../src/assets/images/Vy-Pro-2023-83-X2.jpg";
 
-import CLIENT_1 from "../../../src/assets/images/Vy-Pro-2023-105-X2.jpg";
+import CLIENT_1 from "../../../src/assets/images/Vy-Pro-2023-105 1.png";
 import CLIENT_2 from "../../../src/assets/images/Vy-Pro-2023-117.jpg";
 import CLIENT_3 from "../../../src/assets/images/Vy-Pro-2023-145-X2.jpg";
 
@@ -113,27 +113,45 @@ const PADDING_TOP_ITEM = "pt-14";
                     </span>
                   </a>
                 </div>
-                <div class="grid grid-cols-7 grid-rows-3 gap-4">
-                  {index === 0 ? (
-                    <>
-                      <Image 
-                        class="col-start-2 col-span-3 row-span-2 w-full h-full object-cover" src={RECRUITER_2} alt="" />
-                      <Image 
-                        class="col-start-5 row-start-2 row-span-2 col-span-3 w-full h-full object-cover" src={RECRUITER_1} alt="" />
-                      <Image 
-                        class="row-start-3 row-span-1 col-span-4 w-full h-full object-cover" src={RECRUITER_3} alt="" />
-                    </>
-                  ) : (
-                    <>
-                      <Image 
-                        class="col-start-2 col-span-3 row-span-2 w-full h-full object-cover" src={CLIENT_2} alt="" />
-                      <Image 
-                        class="col-start-5 row-start-2 row-span-2 col-span-3 w-full h-full object-cover" src={CLIENT_3} alt="" />
-                      <Image 
-                        class="row-start-3 row-span-1 col-span-4 w-full h-full object-cover" src={CLIENT_1} alt="" />
-                    </>
-                  )}               
-                </div>
+                {index === 0 ? (
+                  <div class="grid grid-cols-7 grid-rows-3 gap-4">
+                    <Image
+                      class="col-start-2 col-span-3 row-span-2 w-full h-full object-cover"
+                      src={RECRUITER_2}
+                      alt=""
+                    />
+                    <Image
+                      class="col-start-5 row-start-2 row-span-2 col-span-3 w-full h-full object-cover"
+                      src={RECRUITER_1}
+                      alt=""
+                    />
+                    <Image
+                      class="row-start-3 row-span-1 col-span-4 w-full h-full object-cover"
+                      src={RECRUITER_3}
+                      alt=""
+                    />
+                  </div>
+                ) : (
+                  <div class="grid grid-cols-10 grid-rows-10 gap-4">
+                    <Image
+                      class="row-start-3 col-span-5 row-span-6 w-full h-full object-contain"
+                      src={CLIENT_1}
+                      alt=""
+                    />
+                    <Image
+                      class="col-start-6 col-span-4 row-span-6 w-full h-full object-cover"
+                      src={CLIENT_2}
+                      alt=""
+                    />
+
+                    <Image
+                      class="col-start-6 col-span-5 row-span-6 w-full h-full object-contain"
+                      style="object-position: 50% 0;"
+                      src={CLIENT_3}
+                      alt=""
+                    />
+                  </div>
+                )}
               </div>
             );
           })
