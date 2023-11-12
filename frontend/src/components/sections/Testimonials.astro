@@ -31,34 +31,34 @@ const BRAND_BANNER = [
   },
 ];
 
-const PADDING_TOP_ITEM = "pt-14";
+const PADDING_TOP_ITEM = "lg:pt-14";
 ---
 
-<section id="brand-banner" class="mt-36">
+<section id="brand-banner" class="my-36">
   <Container>
     <div
-      class="grid gap-4"
+      class="lg:grid gap-4"
       style="grid-template-columns: minmax(0, 15%) minmax(0, 85%)"
     >
-      <div class:list={["flex flex-col", PADDING_TOP_ITEM]}>
+      <div class:list={["flex flex-row lg:flex-col justify-center items-center lg:items-start lg:justify-start gap-10 lg:gap-2 mb-10", PADDING_TOP_ITEM]}>
         {
           BRAND_BANNER.map((item, index) => (
             <div
               class:list={[
-                "group flex flex-row gap-2 font-medium cursor-pointer text-gray-500 pb-3",
+                "group flex flex-row justify-center items-center gap-2 font-medium cursor-pointer text-gray-500 pb-3",
                 index === 0 ? "!text-black" : "",
               ]}
               data-index={index}
             >
               <span
                 class:list={[
-                  "for-title !block pointer-events-none text-lg is-invisible",
+                  "for-title !block pointer-events-none text-lg md:text-2xl lg:text-lg is-invisible",
                   index === 0 ? "is-visible" : "",
                 ]}
               >
                 {KEYWORD}
               </span>
-              <span class="pointer-events-none text-lg">{item.tag}</span>
+              <span class="pointer-events-none text-lg md:text-2xl lg:text-lg">{item.tag}</span>
             </div>
           ))
         }
@@ -70,7 +70,7 @@ const PADDING_TOP_ITEM = "pt-14";
             return (
               <div
                 class:list={[
-                  `grid content item-${index} is-invisible`,
+                  `flex flex-col gap-10 md:gap-0 md:grid content item-${index} is-invisible`,
                   index === 0 ? "is-visible" : "absolute top-0 right-0",
                 ]}
                 style="grid-template-columns: minmax(0, 45%) minmax(0, 55%)"
@@ -81,8 +81,8 @@ const PADDING_TOP_ITEM = "pt-14";
                     PADDING_TOP_ITEM,
                   ]}
                 >
-                  <h2 class="text-5xl leading-[4rem]">{title}</h2>
-                  <p class="text-lg text-gray-500 font-normal w-10/12">
+                  <h2 class="text-3xl lg:text-5xl lg:leading-[4rem]">{title}</h2>
+                  <p class="text-lg text-gray-500 font-normal md:w-10/12">
                     {content}
                   </p>
                   <a

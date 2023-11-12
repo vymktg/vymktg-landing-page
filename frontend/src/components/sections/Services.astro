@@ -14,7 +14,7 @@ import Testimonials from "./Testimonials.astro";
 <section id="services" class="relative">
   <Partners />
   <Testimonials />
-  <Container className="space-y-10 md:sapce-y-12 my-40">
+  <!-- <Container className="space-y-10 md:sapce-y-12 my-40">
     <div class="flex flex-col xl:flex-row justify-center gap-10">
       <div
         class="xl:w-5/12 flex flex-col gap-9 mb-5 md:mb-10 lg:mb-20 items-center sm:items-start"
@@ -60,6 +60,49 @@ import Testimonials from "./Testimonials.astro";
             <OnlineMarketing name="service-icon" />
           </Service>
         </div>
+      </div>
+    </div>
+  </Container> -->
+  <Container className="space-y-10 md:sapce-y-12 my-40">
+    <div class="flex flex-col justify-center gap-10">
+      <div class="flex flex-col gap-9 mb-5 md:mb-10 lg:mb-20 items-center">
+        <Title>How can I help?</Title>
+        <Paragraph
+          className="font-light w-10/12 md:w-3/5 sm:w-full text-center"
+          data-aos="fade-up"
+        >
+          With strategic planning, efficient execution, and nurturing tactics,
+          I'll optimize your digital landscape, propelling your business forward
+          and fostering sustainable growth.
+        </Paragraph>
+        <ButtonLink
+          href={NAVIGATION_ITEM[2].href}
+          text="Explore Our Services"
+          variant="primary"
+          className="bg-primary capitalize flex felx-row gap-2"
+        >
+          <svg
+            slot="right-icon"
+            class="w-4 h-4"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+            ><path
+              fill-rule="evenodd"
+              d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+              clip-rule="evenodd"></path></svg
+          >
+        </ButtonLink>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+        <Service {...SERVICE_LIST[0]}>
+          <WebSeo />
+        </Service>
+        <Service {...SERVICE_LIST[1]} />
+        <Service {...SERVICE_LIST[2]} />
+        <Service {...SERVICE_LIST[3]}>
+          <OnlineMarketing name="service-icon" />
+        </Service>
       </div>
     </div>
   </Container>
