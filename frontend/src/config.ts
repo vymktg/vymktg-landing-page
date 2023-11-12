@@ -386,8 +386,8 @@ export const HOW_IT_WORKS_STEP = [
 
 export const SITE = {
   name: "Vymktg",
-  title: "Vy Trinh digital marketing and communication specialist",
-  description: "Professional Digital Marketer",
+  title: "Your Digital Marketing Partner",
+  description: "Your partner in digital marketing, specializing in SEO/Website optimization, Content Creation, CRM Marketing, and Paid Advertising.",
   url: "https://vymktg.github.io/vymktg.com",
   githubUrl: "https://github.com/vymktg/vymktg.com",
   email: "vytrinh.mktg@gmail.com",
