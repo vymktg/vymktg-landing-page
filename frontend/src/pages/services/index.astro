@@ -12,16 +12,11 @@ import "../../styles/devices.min.css";
 import ServiceDetail from "../../components/sections/ServiceDetail.astro";
 import type { ServiceInterface } from "../../interface/Service";
 
-//const IMAGE_URL = "https://img.freepik.com/free-photo/executive-manager-woman-explaining-management-statistics-working-company-strategy-overtime-office-meeting-room_482257-2393.jpg?w=2000&t=st=1692199113~exp=1692199713~hmac=d5c916f23047dd54d2dd79780d0f4f52ce66d994dbf8c159fc1db74d57c66722";
-
-const itemPerColumn = SERVICE_LIST.length / 2;
-
-
 // const serviceImages:{[index:string]:any} = {}
 
 // await Astro.glob("../../assets/images/partners/*").then(
 //   (files) => {
-//     files.forEach((file) => { 
+//     files.forEach((file) => {
 //       const name = file.default.src.split(".")[0].split("/").pop()
 //       serviceImages[name]=file.default
 //     })
@@ -29,24 +24,24 @@ const itemPerColumn = SERVICE_LIST.length / 2;
 // );
 // await Astro.glob("../../assets/images/services/*").then(
 //   (files) => {
-//     files.forEach((file) => { 
+//     files.forEach((file) => {
 //       const name = file.default.src.split(".")[0].split("/").pop()
 //       serviceImages[name]=file.default
 //     })
 //   }
 // )
 
-const services = SERVICE_LIST.map((item) => { 
-  // const image = serviceImages[item.image_name];
-  return  {
-    ...item, 
-    testimonial: {
-      ...item.testimonial,
-      // avatar_url: serviceImages[item.testimonial.avatar],
-      // company_logo_url: serviceImages[item.testimonial.company_logo],
-    }
-  }
-});
+// const services = SERVICE_LIST.map((item) => {
+//   // const image = serviceImages[item.image_name];
+//   return {
+//     ...item,
+//     testimonial: {
+//       ...item.testimonial,
+//       // avatar_url: serviceImages[item.testimonial.avatar],
+//       // company_logo_url: serviceImages[item.testimonial.company_logo],
+//     },
+//   };
+// });
 ---
 
 <BasePage>
@@ -75,7 +70,7 @@ const services = SERVICE_LIST.map((item) => {
               <div
                 class="text-3xl md:text-5xl font-semibold text-black p-3 md:p-10"
               >
-                Strive to provide <br/> the best marketing services!
+                Strive to provide <br /> the best marketing services!
               </div>
             </div>
             <div
@@ -88,168 +83,13 @@ const services = SERVICE_LIST.map((item) => {
             </div>
           </div>
         </section>
-        <!-- <section id="service-list" class="flex flex-col pb-40">
-          <div class="grid grid-cols-1 md:grid-cols-2 relative">
-            <div class="w-full flex flex-col">
-              <div class="flex flex-col gap-4">
-                <div class="text-base font-medium">How we do it</div>
-                <div class="text-5xl font-semibold">
-                  We’ll scale your brand alongside you
-                </div>
-              </div>
-              <div class="invisible md:visible absolute bottom-8">
-                <div class="relative">
-                  <img
-                    src="https://weblearnbd.net/tphtml/seomy-prv/seomy/assets/img/services/analysis/services-analysis-shape-2.png"
-                  />
-                  <div class="absolute top-16 left-1/4">
-                    <div class="relative">
-                      <img
-                        src="https://weblearnbd.net/tphtml/seomy-prv/seomy/assets/img/services/analysis/services-analysis-bg-2.png"
-                      />
-                      <img
-                        class="round-shape absolute top-20 left-4"
-                        src="https://weblearnbd.net/tphtml/seomy-prv/seomy/assets/img/services/analysis/services-analysis-shape-8.png"
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="flex flex-row mx-5">
-              <div class="flex flex-col gap-10 mt-10">
-                {
-                  [...SERVICE_LIST]
-                    .splice(0, itemPerColumn)
-                    .map((item, index) => (
-                      <ServiceItem index={index + 1} {...item} />
-                    ))
-                }
-              </div>
-            </div>
-          </div>
-          <div class="grid grid-cols-1 md:grid-cols-2 mt-10 md:mt-32">
-            <div class="flex flex-col gap-10 mx-5 md:mx-0">
-              {
-                [...SERVICE_LIST]
-                  .splice(itemPerColumn)
-                  .map((item, index) => (
-                    <ServiceItem index={itemPerColumn + index + 1} {...item} />
-                  ))
-              }
-            </div>
-            <div class="h-full relative">
-              <div class="float-right md:absolute bottom-20 right-12">
-                <div class="relative">
-                  <img
-                    src="https://weblearnbd.net/tphtml/seomy-prv/seomy/assets/img/services/analysis/services-analysis-shape-3.png"
-                  />
-                  <div class="top-16 left-10 absolute">
-                    <div class="relative">
-                      <img
-                        class="chart-shadow"
-                        src="https://weblearnbd.net/tphtml/seomy-prv/seomy/assets/img/services/analysis/services-analysis-bg-3.png"
-                      />
-                      <div class="absolute right-3 bottom-4 chart-light">
-                        <img
-                          src="https://weblearnbd.net/tphtml/seomy-prv/seomy/assets/img/services/analysis/services-analysis-shape-9.png"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section> -->
       </Container>
     </div>
-    <!-- <section id="partners" class="my-10">
-      <div class="overflow-auto md:overflow-visible">
-        <div class="flex overflow-visible partner-list">
-          {
-            [1, 2, 3, 4].map((item) => (
-              <div class="flex overflow-visible flex-none">
-                {partnersImages.map((item) => (
-                  <div class="p-6 sm:p-5 group w-40 flex justify-center mx-auto">
-                    <Image
-                      height={64}
-                      src={item}
-                      alt="spotify"
-                      class="h-16 w-auto ease-linear duration-300 "
-                    />
-                  </div>
-                ))}
-              </div>
-            ))
-          }
-        </div>
-      </div>
-    </section> -->
-
-    <!-- <section class="bg-gray-50 py-40 hidden">
-      <Container>
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-24">
-          <div class="grid grid-cols-2 gap-4">
-            {
-              [...partnersImages].splice(0, 4).map((item, index) => (
-                <div class="bg-white shadow-2xl w-full h-60 flex flex-col justify-center items-center rounded-xl">
-                  <Image
-                    src={item}
-                    alt="spotify"
-                    class="h-3/4 w-auto ease-linear duration-300 grayscale"
-                  />
-                </div>
-              ))
-            }
-          </div>
-          <div class="flex flex-col gap-10">
-            <div class="text-4xl font-bold">
-              Unlocking Success in the Digital World
-            </div>
-            <div class="text-lg font-medium">
-              Pntroduced day her apartments. Fully as taste he mr do smile abode
-              every. Luckily offered article led lasting country minutes nor
-              old. Happen people things oh is oppose up parish effect. Law
-              handsome old outweigh humoured far appetite. Connection has put
-              impossible own apartments boisterous. At jointure ladyship an
-              insisted so humanity he. Friendly bachelor entrance to
-
-              <div>
-                <button
-                  class="border-blue-600 border-2 flex-initial mt-10 px-8 py-2 rounded-3xl text-blue-600 font-semibold"
-                >
-                  Start Now
-                </button>
-              </div>
-            </div>
-            <hr />
-            <div class="grid grid-cols-2 gap-12">
-              {
-                BY_NUMBERS.map((item) => (
-                  <div class="flex flex-col">
-                    <div class="font-bold text-5xl relative">
-                      {item.number}{" "}
-                      <span class="text-blue-600 absolute text-4xl top-[-.8rem]">
-                        +
-                      </span>{" "}
-                    </div>
-                    <div class="font-medium text-lg">{item.title}</div>
-                  </div>
-                ))
-              }
-            </div>
-          </div>
-        </div>
-      </Container>
-    </section> -->
     {
-      services.map((item: ServiceInterface) => (<ServiceDetail
-          {...item}
-        />
-        ))
+      SERVICE_LIST.map((item) => (
+        <ServiceDetail {...(item as ServiceInterface)} />
+      ))
     }
-    <!-- <CaseStudy /> -->
     <GetInTouch />
   </div>
 </BasePage>
