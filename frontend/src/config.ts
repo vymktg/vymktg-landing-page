@@ -273,8 +273,8 @@ export const PROJECT_LIST = [
     industry: "High Tech Software",
   },
   {
-    url: "content-strategy-for-health-and-wellness-industry",
-    name: "Content Strategy for Health and Wellness Industry",
+    url: "content-strategy",
+    name: "Content Strategy",
     image_url:
       "https://wp.themepure.net/seomy/wp-content/uploads/2023/09/project-2-thumb-1.jpg",
     services: [SERVICE_LIST[2], SERVICE_LIST[3]],
