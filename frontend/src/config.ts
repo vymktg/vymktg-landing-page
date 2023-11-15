@@ -265,32 +265,36 @@ export const SERVICE_LIST = [
 
 export const PROJECT_LIST = [
   {
-    url: "",
-    name: "Project 1",
+    url: "enhancing-website-seo",
+    name: "Enhancing Website/SEO",
     image_url:
       "https://wp.themepure.net/seomy/wp-content/uploads/2023/09/project-2-thumb-4.jpg",
     services: [SERVICE_LIST[0], SERVICE_LIST[1]],
+    industry: "High Tech Software",
   },
   {
-    url: "",
-    name: "Project 2",
+    url: "content-strategy-for-health-and-wellness-industry",
+    name: "Content Strategy for Health and Wellness Industry",
     image_url:
       "https://wp.themepure.net/seomy/wp-content/uploads/2023/09/project-2-thumb-1.jpg",
     services: [SERVICE_LIST[2], SERVICE_LIST[3]],
+    industry: "Medical Spa",
   },
   {
-    url: "",
-    name: "Project 3",
+    url: "cost-effective-paid-advertising",
+    name: "Cost Effective Paid Advertising",
     image_url:
       "https://wp.themepure.net/seomy/wp-content/uploads/2023/09/project-2-thumb-3.jpg",
     services: [SERVICE_LIST[1], SERVICE_LIST[3]],
+    industry: "Health and Wellness",
   },
   {
-    url: "",
-    name: "Project 4",
+    url: "nurturing-customer-relationships",
+    name: "Nurturing Customer Relationships",
     image_url:
       "https://wp.themepure.net/seomy/wp-content/uploads/2023/09/project-2-thumb-2.jpg",
     services: [SERVICE_LIST[0], SERVICE_LIST[2]],
+    industry: "High Tech Software",
   },
 ];
 

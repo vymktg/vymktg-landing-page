@@ -1,17 +1,19 @@
 ---
+import { NAVIGATION_ITEM } from "../../config";
 import type { Service } from "../../interface/Service";
 export interface Props {
   url: string;
   name: string;
   image_url: string;
-className: string;
+  className: string;
+  industry: string;
   services: Array<Service>;
 }
-const { className, url, name, image_url, services, ...props } = Astro.props;
+const { className, url, name, image_url, services, industry, ...props } = Astro.props;
 ---
 
 <a
-  href={url}
+  href={`${NAVIGATION_ITEM[3].href}/${url}`}
   class={`project-item group relative transition-all duration-700 xl:flex-1 ${className} group`}
   {...props}
 >
@@ -30,10 +32,11 @@ const { className, url, name, image_url, services, ...props } = Astro.props;
     <div class="flex flex-col gap-3">
       <span class="text-xl xl:text-2xl font-semibold">{name}</span>
       <div class="service flex flex-row gap-3 transition-all delay-100">
-        {
+        <!-- {
           services.length > 0 &&
             services.map((item: Service) => <span class="whitespace-nowrap text-sx xl:text-xl">{item?.title}</span>)
-        }
+        } -->
+        <span class="whitespace-nowrap text-sx xl:text-xl">{industry}</span>
       </div>
     </div>
   </span>
