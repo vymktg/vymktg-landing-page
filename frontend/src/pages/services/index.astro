@@ -11,6 +11,7 @@ import { Image } from "astro:assets";
 import "../../styles/devices.min.css";
 import ServiceDetail from "../../components/sections/ServiceDetail.astro";
 import type { ServiceInterface } from "../../interface/Service";
+import CTAFooter from "../../components/sections/CTAFooter.astro";
 
 // const serviceImages:{[index:string]:any} = {}
 
@@ -83,14 +84,17 @@ import type { ServiceInterface } from "../../interface/Service";
             </div>
           </div>
         </section>
+
+        {
+          SERVICE_LIST.map((item) => (
+            <ServiceDetail {...(item as ServiceInterface)} />
+          ))
+        }
       </Container>
     </div>
-    {
-      SERVICE_LIST.map((item) => (
-        <ServiceDetail {...(item as ServiceInterface)} />
-      ))
-    }
-    <GetInTouch />
+    <!-- <GetInTouch /> -->
+
+    <CTAFooter />
   </div>
 </BasePage>
 

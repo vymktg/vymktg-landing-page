@@ -5,6 +5,7 @@ import { Image } from "astro:assets";
 import Image_1 from "../../../src/assets/images/Vy-Pro-2023-106.jpg";
 import Image_3 from "../../../src/assets/images/Vy-Pro-2023-117.jpg";
 import Image_2 from "../../../src/assets/images/Vy-Pro-2023-66.jpg";
+import CTAFooter from "../../components/sections/CTAFooter.astro";
 ---
 
 <BasePage>
@@ -21,7 +22,9 @@ import Image_2 from "../../../src/assets/images/Vy-Pro-2023-66.jpg";
       </div>
       <div class="mt-[-5rem] bg-white md:rounded-tl-3xl md:rounded-tr-3xl">
         <Container className="flex flex-col gap-20 z-10 md:pt-28 pb-20">
-          <div class="flex flex-col md:flex-row gap-10 md:gap-20 justify-center items-stretch">
+          <div
+            class="flex flex-col md:flex-row gap-10 md:gap-20 justify-center items-stretch"
+          >
             <Image
               src={Image_3}
               densities={[0.1, 0.5, 0.7, 1]}
@@ -114,6 +117,8 @@ import Image_2 from "../../../src/assets/images/Vy-Pro-2023-66.jpg";
       </div>
     </div>
   </div>
+
+  <CTAFooter />
 </BasePage>
 
 <style></style>
