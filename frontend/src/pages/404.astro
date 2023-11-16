@@ -4,13 +4,13 @@ import Navbar from "../components/elements/Navbar.astro";
 ---
 
 <Base title="Not found page.">
-  <Navbar />
+  <Navbar isPageNotFound={true} />
   <main>
     <div
       class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
     >
       <div
-        class="flex flex-col justify-center items-center w-full mx-auto lg:px-8 z-20 mt-20"
+        class="flex flex-col justify-center items-center w-full mx-auto lg:px-8 z-20 mt-20 md:mt-0"
       >
         <p class="text-2xl max-w-md mx-auto text-gray-400 text-center">
           This page is not available right now, but it will be soon. Stay tuned!
@@ -26,18 +26,16 @@ import Navbar from "../components/elements/Navbar.astro";
           autoplay></dotlottie-player>
         <div class="lg:mt-0 lg:flex-shrink-0">
           <div class="inline-flex rounded-md shadow">
-            <button
-              onclick="location.href = `window.history.go(-1); return false;`;"
+            <a
+              href="/"
               type="button"
               class="py-4 px-6 bg-primary hover:bg-white border-2 hover:border-primary hover:text-primary text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 rounded-lg"
             >
               Back To Home
-            </button>
+            </a>
           </div>
         </div>
       </div>
     </div>
   </main>
 </Base>
-
-<style></style>

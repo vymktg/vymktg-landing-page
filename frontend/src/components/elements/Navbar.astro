@@ -9,9 +9,10 @@ import DesktopNavbar from "./DesktopNavbar.astro";
 import HeaderOffer from "./HeaderOffer.astro";
 
 const isHomePage = Astro.url.pathname === import.meta.env.BASE_URL;
+const { isPageNotFound } = Astro.props;
 ---
 
-<header class=`z-10 ${!isHomePage ? 'bg-[#E4ECF8]' : ''}` data-mode={import.meta.env.MODE}>
+<header class=`header z-10 ${!isHomePage && !isPageNotFound ? 'bg-[#E4ECF8]' : ''}` data-mode={import.meta.env.MODE}>
   <HeaderOffer />
   <Container>
     <div
