@@ -24,14 +24,12 @@ window.onload = () => {
     disableAttachment: true,
   };
 
-  window.hsConversationsOnReady = [
-    () => {
-      window.HubSpotConversations.widget.load({});
-    },
-  ];
 
   function onConversationsAPIReady() {
     console.log(`HubSpot Conversations API: ${window.HubSpotConversations}`);
+    console.log('window.HubSpotConversations', window.HubSpotConversations);
+
+    window.HubSpotConversations.widget.load({});
   }
 
   /*
@@ -40,10 +38,10 @@ window.onload = () => {
   if (window.HubSpotConversations) {
     onConversationsAPIReady();
   } else {
-    /*
-      Otherwise, callbacks can be added to the hsConversationsOnReady on the window object.
-      These callbacks will be called once the external API has been initialized.
-    */
-    window.hsConversationsOnReady = [onConversationsAPIReady];
+    window.hsConversationsOnReady = [
+      () => {
+        window.HubSpotConversations.widget.load({});
+      },
+    ];
   }
 };
