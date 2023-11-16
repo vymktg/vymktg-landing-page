@@ -15,7 +15,7 @@ declare global {
   };
 }
 
-function onConversationsAPIReady() {
+const onConversationsAPIReady = () => {
   console.log(`HubSpot Conversations API: ${window.HubSpotConversations}`);
 }
 /*
@@ -33,9 +33,5 @@ window.hsConversationsSettings = {
 if (window.HubSpotConversations) {
   console.log('The api is ready already');
 } else {
-  window.hsConversationsOnReady = [
-    () => {
-      console.log('Now the api is ready');
-    },
-  ];
+  window.hsConversationsOnReady = [onConversationsAPIReady];
 }
