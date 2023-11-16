@@ -10,22 +10,21 @@ declare global {
   var HubSpotConversations: {
     widget: {
       remove: () => void;
-      load: () => void;
+      load: ({}) => void;
     };
   };
 }
 
 const onConversationsAPIReady = () => {
   console.log(`HubSpot Conversations API: ${window.HubSpotConversations}`);
+  window.HubSpotConversations.widget.load({ widgetOpen: true});
 }
 /*
   configure window.hsConversationsSettings if needed.
 */
 window.hsConversationsSettings = {
-  loadImmediately: false,
+  loadImmediately: true,
   inlineEmbedSelector: "#hubspot-conversations-inline-parent",
-  enableWidgetCookieBanner: true,
-  disableAttachment: true,
 };
 /*
  If external API methods are already available, use them.
