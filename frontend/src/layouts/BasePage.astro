@@ -25,29 +25,28 @@ import Base from "./Base.astro";
 </style>
 
 <script>
+  function onConversationsAPIReady() {
+    console.log(`HubSpot Conversations API: ${window.HubSpotConversations}`);
+  }
+  /*
+    configure window.hsConversationsSettings if needed.
+  */
   window.hsConversationsSettings = {
     loadImmediately: false,
     inlineEmbedSelector: "#hubspot-conversations-inline-parent",
     enableWidgetCookieBanner: true,
     disableAttachment: true,
   };
-
-  function onConversationsAPIReady() {
-    console.log(`HubSpot Conversations API: ${window.HubSpotConversations}`);
-
-    window.HubSpotConversations.widget.load({});
-  }
-
   /*
    If external API methods are already available, use them.
   */
   if (window.HubSpotConversations) {
     onConversationsAPIReady();
   } else {
-    window.hsConversationsOnReady = [
-      () => {
-        window.HubSpotConversations.widget.load({});
-      },
-    ];
+    /*
+      Otherwise, callbacks can be added to the hsConversationsOnReady on the window object.
+      These callbacks will be called once the external API has been initialized.
+    */
+    window.hsConversationsOnReady = [onConversationsAPIReady];
   }
 </script>
