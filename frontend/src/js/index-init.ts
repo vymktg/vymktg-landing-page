@@ -5,6 +5,7 @@ import "./how-it-works";
 declare global {
   interface Window {
     hsConversationsSettings: Object;
+    hsConversationsOnReady: Object;
   }
   var HubSpotConversations: {
     widget: {
@@ -14,28 +15,27 @@ declare global {
   };
 }
 
-const loadHubSpot = async () => { 
-  window.hsConversationsSettings = {
-    loadImmediately: false,
-    inlineEmbedSelector: "#hubspot-conversations-inline-parent",
-    enableWidgetCookieBanner: true,
-    disableAttachment: true,
-  };
-
-  await window.HubSpotConversations.widget.load();
-
-  function onConversationsAPIReady() {
-    console.log(`HubSpot Conversations API: ${window.HubSpotConversations}`);
-  }
-
-  /*
-   If external API methods are already available, use them.
-  */
-  if (window.HubSpotConversations) {
-    onConversationsAPIReady();
-  }
-
+function onConversationsAPIReady() {
+  console.log(`HubSpot Conversations API: ${window.HubSpotConversations}`);
 }
-document.addEventListener("DOMContentLoaded", (event) => {
-  loadHubSpot();
-});
+/*
+  configure window.hsConversationsSettings if needed.
+*/
+window.hsConversationsSettings = {
+  loadImmediately: false,
+  inlineEmbedSelector: "#hubspot-conversations-inline-parent",
+  enableWidgetCookieBanner: true,
+  disableAttachment: true,
+};
+/*
+ If external API methods are already available, use them.
+*/
+if (window.HubSpotConversations) {
+  console.log('The api is ready already');
+} else {
+  window.hsConversationsOnReady = [
+    () => {
+      console.log('Now the api is ready');
+    },
+  ];
+}
