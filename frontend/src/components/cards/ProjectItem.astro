@@ -1,15 +1,18 @@
 ---
 import { NAVIGATION_ITEM } from "../../config";
 import type { Service } from "../../interface/Service";
+import { Image } from "astro:assets";
 export interface Props {
   url: string;
   name: string;
-  image_url: string;
+  image_name: string;
   className: string;
   industry: string;
   services: Array<Service>;
 }
-const { className, url, name, image_url, services, industry, ...props } = Astro.props;
+const { className, url, name, image_name, services, industry, ...props } = Astro.props;
+
+const insightImages = import.meta.glob("../../assets/images/insights/*");
 ---
 
 <a
@@ -17,8 +20,8 @@ const { className, url, name, image_url, services, industry, ...props } = Astro.
   class={`project-item group relative transition-all duration-700 xl:flex-1 ${className} group`}
   {...props}
 >
-  <img
-    src={image_url}
+  <Image
+    src={insightImages[`../../assets/images/insights/${image_name}`]()}
     class="object-cover rounded-xl xl:h-[420px] w-full"
     alt="Example"
   />

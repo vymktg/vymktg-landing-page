@@ -267,32 +267,28 @@ export const PROJECT_LIST = [
   {
     url: "enhancing-website-seo",
     name: "Enhancing Website/SEO",
-    image_url:
-      "https://wp.themepure.net/seomy/wp-content/uploads/2023/09/project-2-thumb-4.jpg",
+    image_name: "AdobeStock_114080936.png",
     services: [SERVICE_LIST[0], SERVICE_LIST[1]],
     industry: "High Tech Software",
   },
   {
     url: "content-strategy",
     name: "Content Strategy",
-    image_url:
-      "https://wp.themepure.net/seomy/wp-content/uploads/2023/09/project-2-thumb-1.jpg",
+    image_name: "Content Strategy Insight.png",
     services: [SERVICE_LIST[2], SERVICE_LIST[3]],
     industry: "Medical Spa",
   },
   {
     url: "cost-effective-paid-advertising",
     name: "Cost Effective Paid Advertising",
-    image_url:
-      "https://wp.themepure.net/seomy/wp-content/uploads/2023/09/project-2-thumb-3.jpg",
+    image_name: "Paid Advertising Insight.png",
     services: [SERVICE_LIST[1], SERVICE_LIST[3]],
     industry: "Health and Wellness",
   },
   {
     url: "nurturing-customer-relationships",
     name: "Nurturing Customer Relationships",
-    image_url:
-      "https://wp.themepure.net/seomy/wp-content/uploads/2023/09/project-2-thumb-2.jpg",
+    image_name: "CRM Customer relationship insight.png",
     services: [SERVICE_LIST[0], SERVICE_LIST[2]],
     industry: "High Tech Software",
   },

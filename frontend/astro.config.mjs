@@ -10,6 +10,7 @@ export default defineConfig({
       },
     }),
   ],
+  experimental: { optimizeHoistedScript: true },
   image: {
     service: passthroughImageService(),
   },
