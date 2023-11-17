@@ -1,11 +1,7 @@
 ---
 import Container from "../../components/shared/Container.astro";
-import Breadcrumb from "../../components/shared/Breadcrumb.astro";
 import BasePage from "../../layouts/BasePage.astro";
 import { SERVICE_LIST } from "../../config";
-import GetInTouch from "../../components/shared/GetInTouch.astro";
-import ServiceItem from "../../components/shared/ServiceItem.astro";
-import { Image } from "astro:assets";
 
 //https://devicescss.xyz/
 import "../../styles/devices.min.css";
@@ -54,7 +50,6 @@ import CTAFooter from "../../components/sections/CTAFooter.astro";
             className="flex flex-col justify-center items-center mb-12 pb-10"
           >
             <h2 class="text-7xl font-bold mx-auto">Services</h2>
-            <Breadcrumb />
           </Container>
         </div>
       </div>
@@ -65,22 +60,27 @@ import CTAFooter from "../../components/sections/CTAFooter.astro";
         >
           <div class="flex flex-col">
             <div
-              class="flex flex-row gap-4 md:gap-10 justify-start items-center divide-x"
+              class="flex flex-row gap-4 md:gap-12 justify-start items-center divide-x"
             >
-              <div class="uppercase text-2xl font-medium">What</div>
+              <div class="text-2xl font-medium flex flex-col gap-6">
+                <span>Strategy</span>
+                <span>Execution</span>
+                <span>Nurturing</span>
+              </div>
               <div
-                class="text-3xl md:text-5xl font-semibold text-black p-3 md:p-10"
+                class="text-3xl md:text-5xl font-semibold text-black p-3 md:p-12"
               >
                 Strive to provide <br /> the best marketing services!
               </div>
             </div>
             <div
-              class="md:w-5/6 lg:w-10/12 mx-auto text-base md:text-xl mt-8 font-normal"
+              class="md:w-5/6 lg:w-10/12 mx-auto text-base md:text-xl mt-14 font-normal"
             >
-              Dedicated to excellence, our relentless pursuit is delivering
-              unparalleled marketing services. With unwavering commitment, we
-              ensure your brand's success through our top-tier strategies and
-              innovative approaches.
+              Recognizing that every business is unique, my approach is
+              customized to address your specific needs. This involves strategic
+              planning to establish a solid foundation, efficient execution of
+              marketing initiatives, and ongoing nurturing to foster growth and
+              success.
             </div>
           </div>
         </section>
