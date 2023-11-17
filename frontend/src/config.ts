@@ -267,7 +267,7 @@ export const PROJECT_LIST = [
   {
     url: "enhancing-website-seo",
     name: "Enhancing Website/SEO",
-    image_name: "AdobeStock_114080936.png",
+    image_name: "",
     services: [SERVICE_LIST[0], SERVICE_LIST[1]],
     industry: "High Tech Software",
   },

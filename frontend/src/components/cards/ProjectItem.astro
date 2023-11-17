@@ -10,7 +10,8 @@ export interface Props {
   industry: string;
   services: Array<Service>;
 }
-const { className, url, name, image_name, services, industry, ...props } = Astro.props;
+const { className, url, name, image_name, services, industry, ...props } =
+  Astro.props;
 
 const insightImages = import.meta.glob("../../assets/images/insights/*");
 ---
@@ -20,11 +21,20 @@ const insightImages = import.meta.glob("../../assets/images/insights/*");
   class={`project-item group relative transition-all duration-700 xl:flex-1 ${className} group`}
   {...props}
 >
-  <Image
-    src={insightImages[`../../assets/images/insights/${image_name}`]()}
-    class="object-cover rounded-xl xl:h-[420px] w-full"
-    alt="Example"
-  />
+  {
+    image_name ? (
+      <Image
+        src={insightImages[`../../assets/images/insights/${image_name}`]()}
+        class="object-cover rounded-xl xl:h-[420px] w-full"
+        alt="Example"
+      />
+    ) : (
+      <img
+        src="https://wp.themepure.net/seomy/wp-content/uploads/2023/09/project-2-thumb-4.jpg"
+        class="object-cover rounded-xl xl:h-[420px] w-full"
+      />
+    )
+  }
   <!-- <div
     class="h-[420px] backdrop-blur-md bg-blue-600/20 w-full absolute top-0 opacity-0 group-hover:opacity-100 duration-300 rounded-xl"
   >
