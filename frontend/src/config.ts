@@ -4,12 +4,12 @@ export const NAVIGATION_ITEM = [
     href: import.meta.env.BASE_URL,
   },
   {
-    title: "How it Works",
-    href: `${import.meta.env.BASE_URL}how-it-works`,
-  },
-  {
     title: "Services",
     href: `${import.meta.env.BASE_URL}services`,
+  },
+  {
+    title: "How it Works",
+    href: `${import.meta.env.BASE_URL}how-it-works`,
   },
   {
     title: "Insights",
