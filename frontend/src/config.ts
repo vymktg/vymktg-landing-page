@@ -102,7 +102,7 @@ export const SERVICE_LIST = [
     ],
     testimonial: {
       company_name: "",
-      name: "Mr. Diane. M",
+      name: "Testimonial: Diane. M",
       position: "Chief marketing officer",
       comment:
         "Our website is easier to use, more intuitive, and looks better. One of the clients even mentioned that the new website makes us seem like a bigger company than we actually are.",
@@ -143,10 +143,10 @@ export const SERVICE_LIST = [
     ],
     testimonial: {
       company_name: "",
-      name: "Mr. Rhett. L",
+      name: "Testimonial: Rhett. L",
       position: "Marketing manager",
       comment:
-        "Vy's strategic contributions significantly enhanced operational efficiency, resulting in an impressive 50% revenue boost. Such expertise and commitment are invaluable for businesses aiming to achieve excellence.",
+        "Vy's input played a big role in making our operations work better, leading to a 50% increase in revenue. Having someone with that kind of know-how and dedication is really valuable for businesses trying to do their best.",
       company_logo: "meridian-restaurants",
       avatar: "henry",
     },
@@ -213,7 +213,7 @@ export const SERVICE_LIST = [
     ],
     testimonial: {
       company_name: "",
-      name: "Mr. Anonymous",
+      name: "Source: Anonymous",
       position: "Product manager",
       comment:
         "A customer is worth about $100 to my business, so I am willing to spend $50 to get that customer.",
@@ -253,7 +253,7 @@ export const SERVICE_LIST = [
     ],
     testimonial: {
       company_name: "",
-      name: "Mr. Andrew Davis",
+      name: "Source: Andrew Davis",
       position: "Chief executive officer",
       comment:
         "Content builds relationships. Relationships are built on trust. Trust drives revenue.",
