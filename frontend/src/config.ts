@@ -227,7 +227,7 @@ export const SERVICE_LIST = [
     detail:
       "Engaging and informative content plays a vital role in attracting and retaining customers. My focus is to craft captivating blog posts, attention-grabbing videos, and visually appealing infographics that align with your brand. By delivering high-quality content, businesses can drive website traffic, boost engagement, and foster brand loyalty.",
     icon: "tabler:award",
-    image_name: "web-and-seo",
+    image_name: "content-creation",
     background: "pink",
     service_detail: [
       {
