@@ -3,21 +3,34 @@
 
 <div class="absolute w-10/12 md:w-11/12 h-11/12 mx-auto left-0 right-0">
   <svg
-    xmlns="http://www.w3.org/2000/svg"
     width="100%"
-    height="415"
+    height="421"
+    viewBox="0 0 997 421"
     class="hidden lg:block lg:mt-20"
-    preserveAspectRatio="none"
-    viewBox="0 0 552 205"
     fill="none"
+    xmlns="http://www.w3.org/2000/svg"
   >
+    <defs>
+      <mask id="dash-mask">
+        <path
+          class="st0 mask-style"
+          stroke-dasharray="10,6"
+          stroke-width="2.5"
+          d="M73.8849 393.611C547.142 418.712 345.112 450.728 832.143 360.751C1187.33 278.418 902.185 -51.1814 570.095 7.9274C238.004 67.0362 94.6028 57.0058 0.804688 7.92747"
+        ></path>
+      </mask>
+    </defs>
     <path
       id="svg-desktop-hiw"
-      d="M64.3271 190.598C326.19 202.738 191.012 219.169 460.497 175.65C657.029 135.828 499.252 -23.5891 315.5 5.00005C131.748 33.5892 52.4005 28.7378 0.5 5.00008"
+      class="st0"
+      d="M73.8849 393.611C547.142 418.712 345.112 450.728 832.143 360.751C1187.33 278.418 902.185 -51.1814 570.095 7.9274C238.004 67.0362 94.6028 57.0058 0.804688 7.92747"
+      stroke-linejoin="round"
       stroke="#D8D8D8"
-      stroke-width="1.5"
-      stroke-dasharray="6 6"></path>
+      stroke-width="2.5"
+      stroke-dasharray="10,6"
+      mask="url(#dash-mask)"></path>
   </svg>
+
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width="100%"
@@ -33,10 +46,6 @@
       stroke-linecap="round"
       stroke-dasharray="8 8"></path>
   </svg>
-  <!--
-    width="347"
-    height="463"
-   -->
   <svg
     class="block md:hidden"
     xmlns="http://www.w3.org/2000/svg"
@@ -54,3 +63,17 @@
       stroke-dasharray="8 8"></path>
   </svg>
 </div>
+
+<style>
+  .st0 {
+    fill: none;
+    stroke-dashoffset: 3px;
+    stroke-miterlimit: 10;
+    stroke-dasharray: 10, 6;
+  }
+
+  .mask-style {
+    stroke: white;
+    stroke-width: 7;
+  }
+</style>

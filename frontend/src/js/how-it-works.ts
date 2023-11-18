@@ -1,47 +1,61 @@
-// set height of the svg path as constant
-const svg = document.getElementById(
+/*
+  initialized SVG element
+*/
+
+const svgElement = document.getElementById(
   "svg-desktop-hiw"
-) as SVGGeometryElement | null;
+) as unknown as SVGGeometryElement | null;
 
-if (svg != null) {
-  const length = svg.getTotalLength();
+const svgLength = svgElement.getTotalLength();
 
-  //   // start positioning of svg drawing
-  svg.style.strokeDasharray = `${length}px`;
+svgElement.style.strokeDasharray = `${svgLength}`;
+svgElement.style.strokeDashoffset = `${svgLength}`;
 
-  //   // hide svg before scrolling starts
-  svg.style.strokeDashoffset = `${length}px`;
+let markScrollPercentage = 0;
 
-  console.log(length);
+const FAST_TIMER = 5;
 
-  let callback = (entries: IntersectionObserverEntry[]) => {
-    entries.forEach(() => {
-      window.addEventListener("scroll", function () {
-        const scrollpercent =
-          (document.body.scrollTop + document.documentElement.scrollTop) /
-          (document.documentElement.scrollHeight -
-            document.documentElement.clientHeight);
+/*
+  initialized Draw SVG function
+*/
 
-        const draw = length * (scrollpercent * 3.5);
-        console.log("draw", draw);
+const drawSVG = () => {
+  let scrollPercentage =
+    (document.body.scrollTop + document.documentElement.scrollTop) /
+    (document.documentElement.scrollHeight -
+      document.documentElement.clientHeight);
 
-        // Reverse the drawing when scroll upwards
-        svg.style.strokeDashoffset = `${draw}`;
-      });
-    });
-  };
+  if (!markScrollPercentage) markScrollPercentage = scrollPercentage;
 
-  const observer = new IntersectionObserver(callback, {
-    root: null,
-    rootMargin: "30px",
-    threshold: 0,
+  scrollPercentage = scrollPercentage - markScrollPercentage;
+
+  var draw = svgLength * scrollPercentage;
+  const currentLength = (draw * FAST_TIMER) - svgLength;
+  console.log(currentLength);
+
+  svgElement.style.strokeDashoffset = `${currentLength}`;
+};
+
+/*
+  setting observers
+*/
+
+let option = {
+  root: null,
+  rootMargin: "0px",
+  threshold: 0,
+};
+
+const callback = (entries) => {
+  entries.forEach((entry) => {
+    const intersecting = entry.isIntersecting;
+    if (intersecting) {
+      window.addEventListener("scroll", drawSVG);
+    } else {
+      window.removeEventListener("scroll", drawSVG);
+    }
   });
+};
 
-  const elements = document.querySelectorAll("section#how-it-works");
-
-  if (elements != null) {
-    elements.forEach((section) => {
-      observer.observe(section);
-    });
-  }
-}
+const observer = new IntersectionObserver(callback, option);
+observer.observe(document.querySelector("#how-it-works__content-layer"));
