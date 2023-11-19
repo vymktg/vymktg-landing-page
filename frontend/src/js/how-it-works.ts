@@ -34,10 +34,12 @@ const drawSVG = () => {
 
   scrollPercentage = scrollPercentage - markScrollPercentage;
 
+  const fastTime = parseFloat(fastTimer);
+
   var draw = svgLength * scrollPercentage;
   let currentLength = isReverse
-    ? draw * fastTimer - svgLength
-    : svgLength - draw * fastTimer;
+    ? (draw * fastTime) - svgLength
+    : svgLength - (draw * fastTime);
 
   if (!!isReverse) {
     currentLength = currentLength < 0 ? currentLength : 0;
@@ -54,7 +56,7 @@ setting observers
 
 let option = {
   root: null,
-  rootMargin: "-30px",
+  rootMargin: "-20px",
   threshold: 0,
 };
 
