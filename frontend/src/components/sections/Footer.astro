@@ -1,5 +1,5 @@
 ---
-import { SITE } from "../../config";
+import { NAVIGATION_ITEM, SITE } from "../../config";
 import Container from "../shared/Container.astro";
 ---
 
@@ -54,7 +54,7 @@ import Container from "../shared/Container.astro";
           </a>
           <a
             class="flex flex-row gap-4 justify-start items-center hover:text-primary cursor-pointer"
-            href={`tel:${SITE.phoneNumber.replace('-', '')}`}
+            href={`tel:${SITE.phoneNumber.replace("-", "")}`}
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -82,7 +82,7 @@ import Container from "../shared/Container.astro";
         <ul class="mt-2 space-y-2">
           <li>
             <a
-              href="/"
+              href={NAVIGATION_ITEM[1].href}
               class="transition-colors duration-300 hover:text-primary"
               >Services</a
             >
@@ -90,13 +90,13 @@ import Container from "../shared/Container.astro";
 
           <li>
             <a
-              href="/"
+              href={NAVIGATION_ITEM[2].href}
               class="transition-colors duration-300 hover:text-primary"
               >How it Works</a
             >
           </li><li>
             <a
-              href="/"
+              href={NAVIGATION_ITEM[3].href}
               class="transition-colors duration-300 hover:text-primary"
               >Projects & Insight</a
             >
@@ -108,21 +108,21 @@ import Container from "../shared/Container.astro";
         <ul class="mt-2 space-y-2">
           <li>
             <a
-              href="/"
+              href={NAVIGATION_ITEM[4].href}
               class="transition-colors duration-300 hover:text-primary"
               >About us</a
             >
           </li>
           <li>
             <a
-              href="/"
+              href="https://meetings.hubspot.com/vytrinh-mktg"
               class="transition-colors duration-300 hover:text-primary"
               >Contact</a
             >
           </li>
           <li>
             <a
-              href="/"
+              href="https://meetings.hubspot.com/vytrinh-mktg"
               class="transition-colors duration-300 hover:text-primary"
               >Help Center</a
             >
