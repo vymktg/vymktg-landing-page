@@ -113,7 +113,7 @@ export const SERVICE_LIST = [
   {
     title: "CRM Marketing",
     description:
-      "Nurturing a positive reputation by building trust to drive sustainable business growth.",
+      "Using Customer Relationship Management (CRM) tool to help nurturing a positive reputation by building trust to drive sustainable business growth.",
     detail:
       "Maintaining a positive online reputation is essential for your business. I will assist you to effectively monitoring and managing online reviews, addressing customer feedback, and building a strong brand image. By prioritizing cultivating trust and maintaining a stellar reputation, you can foster customer loyalty and support sustainable growth.",
     icon: "tabler:award",
