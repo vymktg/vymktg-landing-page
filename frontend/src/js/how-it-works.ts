@@ -17,7 +17,7 @@ svgLayerElement.forEach((element: Element) => {
 });
 
 const svgLength = svgElement.getTotalLength();
-const { fastTimer = 5, isReverse = false } = svgElement.dataset;
+const { fastTimer = 8, isReverse = false } = svgElement.dataset;
 
 svgElement.style.strokeDasharray = `${svgLength}`;
 svgElement.style.strokeDashoffset = `${svgLength}`;
