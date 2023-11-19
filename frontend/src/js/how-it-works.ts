@@ -2,22 +2,27 @@
   initialized SVG element
 */
 
-const svgElement = document.getElementById(
-  "svg-desktop-hiw"
-) as unknown as SVGGeometryElement | null;
+const svgLayerElement = document.querySelectorAll(
+  ".how-it-works__svg-layer svg"
+);
+
+let svgElement = null;
+
+svgLayerElement.forEach((element: Element) => {
+  if (element.getBoundingClientRect().width > 0) {
+    svgElement = element.getElementsByClassName(
+      "svg-drawer"
+    )[0] as unknown as SVGGeometryElement | null;
+  }
+});
 
 const svgLength = svgElement.getTotalLength();
+const { fastTimer = 5, isReverse = false } = svgElement.dataset;
 
 svgElement.style.strokeDasharray = `${svgLength}`;
 svgElement.style.strokeDashoffset = `${svgLength}`;
 
 let markScrollPercentage = 0;
-
-const FAST_TIMER = 5;
-
-/*
-  initialized Draw SVG function
-*/
 
 const drawSVG = () => {
   let scrollPercentage =
@@ -30,14 +35,21 @@ const drawSVG = () => {
   scrollPercentage = scrollPercentage - markScrollPercentage;
 
   var draw = svgLength * scrollPercentage;
-  const currentLength = (draw * FAST_TIMER) - svgLength;
-  console.log(currentLength);
+  let currentLength = isReverse
+    ? draw * fastTimer - svgLength
+    : svgLength - draw * fastTimer;
+
+  if (!!isReverse) {
+    currentLength = currentLength < 0 ? currentLength : 0;
+  } else {
+    currentLength = currentLength > 0 ? currentLength : 0;
+  }
 
   svgElement.style.strokeDashoffset = `${currentLength}`;
 };
 
 /*
-  setting observers
+setting observers
 */
 
 let option = {
@@ -46,8 +58,8 @@ let option = {
   threshold: 0,
 };
 
-const callback = (entries) => {
-  entries.forEach((entry) => {
+const callback = (entries: any[]) => {
+  entries.forEach((entry: { isIntersecting: any }) => {
     const intersecting = entry.isIntersecting;
     if (intersecting) {
       window.addEventListener("scroll", drawSVG);
@@ -58,4 +70,4 @@ const callback = (entries) => {
 };
 
 const observer = new IntersectionObserver(callback, option);
-observer.observe(document.querySelector("#how-it-works__content-layer"));
+observer.observe(document.querySelector(".how-it-works__svg-layer"));
