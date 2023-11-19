@@ -42,7 +42,7 @@ const drawSVG = () => {
   if (!!isReverse) {
     currentLength = currentLength < 0 ? currentLength : 0;
   } else {
-    currentLength = currentLength > 0 ? currentLength : 0;fig
+    currentLength = currentLength > 0 ? currentLength : 0;
   }
 
   svgElement.style.strokeDashoffset = `${currentLength}`;
@@ -54,7 +54,7 @@ setting observers
 
 let option = {
   root: null,
-  rootMargin: "0px",
+  rootMargin: "-30px",
   threshold: 0,
 };
 
@@ -70,4 +70,4 @@ const callback = (entries: any[]) => {
 };
 
 const observer = new IntersectionObserver(callback, option);
-observer.observe(document.querySelector(".how-it-works__svg-layer"));
+observer.observe(document.querySelector("#how-it-works-item-1"));
