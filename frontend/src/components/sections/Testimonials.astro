@@ -40,7 +40,12 @@ const PADDING_TOP_ITEM = "lg:pt-14";
       class="lg:grid gap-4"
       style="grid-template-columns: minmax(0, 15%) minmax(0, 85%)"
     >
-      <div class:list={["flex flex-row lg:flex-col justify-center items-center lg:items-start lg:justify-start gap-10 lg:gap-2 mb-10", PADDING_TOP_ITEM]}>
+      <div
+        class:list={[
+          "flex flex-row lg:flex-col justify-center items-center lg:items-start lg:justify-start gap-10 lg:gap-2 mb-10",
+          PADDING_TOP_ITEM,
+        ]}
+      >
         {
           BRAND_BANNER.map((item, index) => (
             <div
@@ -58,7 +63,9 @@ const PADDING_TOP_ITEM = "lg:pt-14";
               >
                 {KEYWORD}
               </span>
-              <span class="pointer-events-none text-lg md:text-2xl lg:text-lg">{item.tag}</span>
+              <span class="pointer-events-none text-lg md:text-2xl lg:text-lg">
+                {item.tag}
+              </span>
             </div>
           ))
         }
@@ -81,7 +88,9 @@ const PADDING_TOP_ITEM = "lg:pt-14";
                     PADDING_TOP_ITEM,
                   ]}
                 >
-                  <h2 class="text-3xl lg:text-5xl lg:leading-[4rem]">{title}</h2>
+                  <h2 class="text-3xl lg:text-5xl lg:leading-[4rem]">
+                    {title}
+                  </h2>
                   <p class="text-lg text-gray-500 font-normal md:w-10/12">
                     {content}
                   </p>
@@ -158,6 +167,8 @@ const PADDING_TOP_ITEM = "lg:pt-14";
         }
       </div>
     </div>
+
+    <hr class="flex-grow border-t border-gray-200 mt-10" />
   </Container>
 </section>
 
