@@ -42,7 +42,7 @@ const drawSVG = () => {
   if (!!isReverse) {
     currentLength = currentLength < 0 ? currentLength : 0;
   } else {
-    currentLength = currentLength > 0 ? currentLength : 0;
+    currentLength = currentLength > 0 ? currentLength : 0;fig
   }
 
   svgElement.style.strokeDashoffset = `${currentLength}`;

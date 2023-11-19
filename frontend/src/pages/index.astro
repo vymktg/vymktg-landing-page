@@ -13,6 +13,7 @@ import "@splidejs/splide/css/core";
 import "../styles/devices.min.css";
 import Partners from "../components/sections/Partners.astro";
 import Testimonials from "../components/sections/Testimonials.astro";
+import Container from "../components/shared/Container.astro";
 ---
 
 <BasePage>
@@ -20,6 +21,9 @@ import Testimonials from "../components/sections/Testimonials.astro";
     <HeroBanner />
     <Partners />
     <Testimonials />
+    <Container>
+      <hr class="flex-grow border-t border-gray-200" />
+    </Container>
     <!-- <div class="relative">
       <div class="background">
         <div></div>
@@ -28,7 +32,7 @@ import Testimonials from "../components/sections/Testimonials.astro";
     </div> -->
     <Services />
     <CTACalculator />
-    <Qoute />
+    <!-- <Qoute /> -->
     <HowItWorks />
     <ProjectsInsights />
     <FAQs />

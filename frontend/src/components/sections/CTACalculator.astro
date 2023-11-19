@@ -7,45 +7,16 @@ import { Image } from "astro:assets";
 import ctaImage from "../../assets/images/cta-cal.png";
 ---
 
-<section class="cta-calculator">
+<section id="cta-calculator" class="xl:mt-56 bg-gray-50 py-20 md:py-44">
   <Container>
     <div class="flex flex-col md:flex-row gap-10 md:gap-0">
-      <div class="w-full md:w-1/2 xl:w-5/12 cta-calculator__image">
-        <div class="relative">
-          <!-- <Image
-            src={ctaImage}
-            style={`
-            -webkit-mask-image: url(${sketchImage.src});`}
-            alt=""
-          /> -->
-          <Image
-            class="rounded-3xl shadow-2xl md:w-[95%]"
-            src={ctaImage}
-            alt=""
-            widths={[250, 400, 600, 800]}
-          />
-          <div
-            class="bg-white right-[-0.5rem] bottom-16 z-10 absolute rounded-lg cross-sale-banner"
-          >
-            <div class="p-4 flex flex-col gap-2 items-center">
-              <div>
-                <span class="text-4xl text-primary font-bold font-sans">
-                  FREE
-                </span>
-              </div>
-              <div class="uppercase font-semibold">First month</div>
-            </div>
-          </div>
-        </div>
-      </div>
-
       <div
-        class="w-full md:w-1/2 xl:w-7/12 flex flex-col gap-10 justify-center items-center md:items-start px-10"
+        class="w-full md:7/12 lg:w-1/2 flex flex-col gap-10 justify-center items-center md:items-start px-10"
       >
         {
           CTA_CALCULATOR.map((item, index) => (
             <div
-              class="flex flex-col md:flex-row justify-center items-center md:items-start md:gap-4"
+              class="flex flex-col md:flex-row justify-center items-center md:items-start gap-4"
               data-aos="fade-up"
               data-aos-delay={500 * index}
               data-aos-once="true"
@@ -95,7 +66,7 @@ import ctaImage from "../../assets/images/cta-cal.png";
           <ButtonLink
             text="Estimate Your Investment"
             variant="primary"
-            href="https://share.hsforms.com/1PMdQ2Le4RKymiD2aam9bLApvhj3" 
+            href="https://share.hsforms.com/1PMdQ2Le4RKymiD2aam9bLApvhj3"
             className="bg-primary capitalize flex felx-row gap-2 mb-3"
           >
             <svg
@@ -110,6 +81,34 @@ import ctaImage from "../../assets/images/cta-cal.png";
                 clip-rule="evenodd"></path></svg
             >
           </ButtonLink>
+        </div>
+      </div>
+      <div class="w-full md:5/12 lg:w-1/2 cta-calculator__image">
+        <div class="relative">
+          <!-- <Image
+            src={ctaImage}
+            style={`
+            -webkit-mask-image: url(${sketchImage.src});`}
+            alt=""
+          /> -->
+          <Image
+            class="rounded-3xl shadow-2xl md:w-[95%]"
+            src={ctaImage}
+            alt=""
+            widths={[250, 400, 600, 800]}
+          />
+          <div
+            class="bg-white right-[-0.5rem] bottom-16 z-10 absolute rounded-lg cross-sale-banner"
+          >
+            <div class="p-4 flex flex-col gap-2 items-center">
+              <div>
+                <span class="text-4xl text-primary font-bold font-sans">
+                  FREE
+                </span>
+              </div>
+              <div class="uppercase font-semibold">First month</div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

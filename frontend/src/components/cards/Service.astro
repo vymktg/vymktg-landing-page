@@ -30,9 +30,9 @@ const { title, description, className } = Astro.props;
     </div>
   </div>
 </a> -->
-<a
-  href="#"
+<div
   class:list={[
+    "service-item cursor-pointer",
     "rounded-3xl bg-white hover:shadow-2xl shadow-services-box p-8 sm:p-6 md:p-8 group duration-500 hover:scale-105 sm:h-72",
     className,
   ]}
@@ -47,9 +47,9 @@ const { title, description, className } = Astro.props;
       {title}
     </h2>
     <div
-      class="line-clamp-3 text-base font-light text-text-gray w-10/12 sm:w-full text-center sm:text-left"
+      class="text-base font-light text-text-gray w-10/12 sm:w-full text-center sm:text-left"
     >
       {description}
     </div>
   </div>
-</a>
+</div>

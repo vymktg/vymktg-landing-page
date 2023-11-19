@@ -4,13 +4,20 @@ import Paragraph from "../shared/Paragraph.astro";
 import Container from "../shared/Container.astro";
 import Service from "../cards/Service.astro";
 import ButtonLink from "../shared/ButtonLink.astro";
-import WebSeo from "../icon/WebSeo.astro";
-import OnlineMarketing from "../icon/OnlineMarketing.astro";
 import Title from "../shared/Title.astro";
+import { Image } from "astro:assets";
+import POSTER_IMAGE from "../../assets/images/services/content.png";
+import PAID_ADVERTISING from "../../assets/images/services/paid-advertising.png";
+import WEB_AND_SEO from "../../assets/images/services/manage-data.png";
+import CRM from "../../assets/images/services/CRM.png";
+import SEO_ICON from "../../assets/images/seo-128.png";
+import FUNNEL_ICON from "../../assets/images/funnel-128.png";
+import DIAGRAM_ICON from "../../assets/images/diagram-128.png";
+import CONTENT_CREATION from "../../assets/images/online-advertising-128.png";
 ---
 
 <section id="services" class="relative">
-  <!-- <Container className="space-y-10 md:sapce-y-12 my-40">
+  <Container className="space-y-10 md:sapce-y-12">
     <div class="flex flex-col xl:flex-row justify-center gap-10">
       <div
         class="xl:w-5/12 flex flex-col gap-9 mb-5 md:mb-10 lg:mb-20 items-center sm:items-start"
@@ -43,23 +50,64 @@ import Title from "../shared/Title.astro";
           >
         </ButtonLink>
       </div>
-      <div class="xl:w-7/12 flex flex-col sm:flex-row gap-10">
+      <div class="xl:w-6/12 flex flex-col sm:flex-row gap-10 xl:mt-10">
         <div class="flex flex-col sm:w-1/2 gap-y-10">
           <Service {...SERVICE_LIST[0]}>
-            <WebSeo />
+            <Image class="w-8 h-8" src={SEO_ICON} alt="" />
           </Service>
-          <Service {...SERVICE_LIST[1]} />
+          <Service {...SERVICE_LIST[1]}>
+            <Image class="w-8 h-8" src={FUNNEL_ICON} alt="" />
+          </Service>
         </div>
         <div class="flex flex-col sm:w-1/2 gap-y-10 xl:mt-10">
-          <Service {...SERVICE_LIST[2]} />
+          <Service {...SERVICE_LIST[2]}>
+            <Image class="w-8 h-8" src={DIAGRAM_ICON} alt="" />
+          </Service>
           <Service {...SERVICE_LIST[3]}>
-            <OnlineMarketing name="service-icon" />
+            <Image class="w-8 h-8" src={CONTENT_CREATION} alt="" />
           </Service>
         </div>
       </div>
     </div>
-  </Container> -->
-  <Container className="space-y-10 md:sapce-y-12">
+  </Container>
+
+  <div
+    class="xl:absolute bottom-[-15rem] left-[-3rem] flex justify-center items-center"
+  >
+    <div
+      class="device device-macbook-pro-2018 !scale-[60%] sm:!scale-75 md:scale-100"
+    >
+      <div class="device-frame">
+        <Image
+          class="device-screen !absolute top-[29px] opacity-0 transition-opacity duration-300 !object-contain opacity-100"
+          src={WEB_AND_SEO}
+          alt=""
+        />
+        <Image
+          class="device-screen !absolute top-[29px] opacity-0 transition-opacity duration-300 !object-contain"
+          src={CRM}
+          alt=""
+        />
+        <Image
+          class="device-screen !absolute top-[29px] opacity-0 transition-opacity duration-300"
+          src={PAID_ADVERTISING}
+          alt=""
+        />
+        <Image
+          class="device-screen !absolute top-[29px] opacity-0 transition-opacity duration-300"
+          src={POSTER_IMAGE}
+          alt=""
+        />
+      </div>
+      <div class="device-stripe"></div>
+      <div class="device-header"></div>
+      <div class="device-sensors"></div>
+      <div class="device-btns"></div>
+      <div class="device-power"></div>
+      <div class="device-home"></div>
+    </div>
+  </div>
+  <!-- <Container className="space-y-10 md:sapce-y-12">
     <div class="flex flex-col justify-center gap-10">
       <div class="flex flex-col gap-9 mb-5 md:mb-10 lg:mb-20 items-center">
         <Title>How can I help?</Title>
@@ -101,5 +149,29 @@ import Title from "../shared/Title.astro";
         </Service>
       </div>
     </div>
-  </Container>
+  </Container> -->
 </section>
+
+<script>
+  const serviceDeviceImgEls = document.querySelectorAll(
+    "#services .device img"
+  );
+
+  const handleServicesElClicked = (index) => {
+    serviceDeviceImgEls.forEach((element, position) => {
+      element.classList.remove("opacity-100");
+      if (index === position) {
+        element.classList.add("opacity-100");
+      }
+    });
+  };
+
+  document.addEventListener("DOMContentLoaded", (_) => {
+    const servicesEl = document.querySelectorAll(" #services .service-item");
+    servicesEl.forEach((item, index) => {
+      item.addEventListener("mouseover", (_) => {
+        handleServicesElClicked(index);
+      });
+    });
+  });
+</script>
