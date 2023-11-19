@@ -63,7 +63,7 @@ module.exports = {
         '10': 'repeat(10, minmax(0, 1fr))',
       },
       animation: {
-        typing: "typing 2s steps(20) alternate, blink 1.2s infinite",
+        typing: "typing 1.5s steps(20) alternate, blink 1.2s infinite",
         light: "light 2.5s linear forwards infinite alternate"
       },
       bottom: {
