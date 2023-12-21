@@ -42,35 +42,8 @@ export const PARTNER_LIST = [
 ];
 
 export const SERVICE_LIST = [
-  // {
-  //   title: "Social Media Management",
-  //   description: "Streamlined your social media accounts with engaging content",
-  //   detail: "Managing social media accounts effectively can be time-consuming and overwhelming. My social media management services aim to alleviate this burden. I will ensure timely updates, engaging content, and consistent brand representation across platforms. This includes monitoring audience engagement, analyzing metrics, and implementing strategies to maximize reach and impact. It involves tasks such as content creation, scheduling, community and influencers management, and staying updated with the latest social media trends and algorithms.",
-  //   icon: "tabler:social",
-  //   service_detail: [
-  //     {
-  //       title: "Content Creation",
-  //       description: "Tailored social media content to engage your audience, including eye-catching visuals and compelling captions."
-  //     },
-  //     {
-  //       title: "Analytics Insights",
-  //       description: "Data-driven strategies using in-depth analytics to optimize your social media performance and boost ROI."
-  //     },
-  //     {
-  //       title: "Community Engagement",
-  //       description: "Foster relationships with your online community through timely responses and active interaction."
-  //     },
-  //     {
-  //       title: "Ad Campaigns",
-  //       description: "Precision-targeted advertising to expand your reach and drive conversions on social media platforms."
-  //     },
-  //     {
-  //       title: "Influencer Collaboration",
-  //       description: "Collaborate with industry influencers to increase brand visibility and credibility within your niche."
-  //     }
-  //   ]
-  // },
   {
+    section_id: "website-and-seo",
     title: "Website and SEO",
     description: `Boost your online visibility with tailored SEO strategies and website management`,
     detail:
@@ -111,6 +84,7 @@ export const SERVICE_LIST = [
     },
   },
   {
+    section_id: "crm-marketing",
     title: "CRM Marketing",
     description:
       "Using Customer Relationship Management (CRM) tool to help nurturing a positive reputation by building trust to drive sustainable business growth.",
@@ -151,37 +125,8 @@ export const SERVICE_LIST = [
       avatar: "henry",
     },
   },
-  // {
-  //   title: "Email & SMS Marketing",
-  //   description:
-  //     "Enhance customer engagement, nurture relationships with direct communication",
-  //   detail:
-  //     "Both email and text marketing are valuable tools for businesses to connect with their target audience, deliver relevant and personalized content, and drive engagement and conversions. When used strategically and in compliance with applicable regulations and guidelines, email and text marketing can be powerful channels for effective communication and customer relationship-building.",
-  //   icon: "mdi:email-seal-outline",
-  //   service_detail: [
-  //     {
-  //       title: "Email Campaigns",
-  //       description: "Craft and deliver engaging email marketing campaigns tailored to your audience for increased engagement and conversions."
-  //     },
-  //     {
-  //       title: "SMS Blasts",
-  //       description: "Send targeted SMS messages to reach your customers with time-sensitive promotions and updates."
-  //     },
-  //     {
-  //       title: "Segmentation Strategies",
-  //       description: "Divide your audience into segments for more personalized email and SMS communication, enhancing relevance and response rates."
-  //     },
-  //     {
-  //       title: "Automation Sequences",
-  //       description: "Set up automated email and SMS sequences to nurture leads and guide them through the customer journey."
-  //     },
-  //     {
-  //       title: "Analytics & Optimization",
-  //       description: "Monitor campaign performance, gather insights, and optimize future strategies for better results in email and SMS marketing."
-  //     }
-  //   ]
-  // },
   {
+    section_id: "paid-advertising",
     title: "Paid Advertising",
     description: "Fuel your growth with effective paid advertising Campaigns",
     detail:
@@ -222,6 +167,7 @@ export const SERVICE_LIST = [
     },
   },
   {
+    section_id: "content-creation",
     title: "Content Creation",
     description: "Harness the power of compelling and valuable content",
     detail:

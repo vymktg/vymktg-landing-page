@@ -8,6 +8,7 @@ export interface Props extends ServiceInterface {}
 
 const {
   title,
+  section_id,
   service_detail,
   description,
   testimonial: { name, position, comment, avatar, company_logo },
@@ -18,7 +19,7 @@ const {
 const images = import.meta.glob("../../assets/images/services/*");
 ---
 
-<section class="pb-32 ">
+<section id={section_id} class="pb-32">
   <Container className="relative">
     <ServiceDetailBackground backgroundName={background} />
     <div class="px-0 py-10 md:p-14">
@@ -30,7 +31,9 @@ const images = import.meta.glob("../../assets/images/services/*");
               {description}
             </p>
           </div>
-          <div class="bg-white px-4 pb-4 md:px-8 md:pb-8 pt-2 md:pt-6 flex flex-col gap-4 rounded-xl">
+          <div
+            class="bg-white px-4 pb-4 md:px-8 md:pb-8 pt-2 md:pt-6 flex flex-col gap-4 rounded-xl"
+          >
             <!-- <Image src={QouteLeft} alt=""></Image> -->
             <div class="relative">
               <svg
@@ -49,7 +52,9 @@ const images = import.meta.glob("../../assets/images/services/*");
             >
               <!-- <Image src={images[`../../assets/images/services/${avatar}.png`]()} class="object-cover w-14 h-14 rounded-full" alt="" /> -->
               <div class="w-full">
-                <p class="text-sm font-thin float-right text-gray-400">{name}</p>
+                <p class="text-sm font-thin float-right text-gray-400">
+                  {name}
+                </p>
                 <!-- <p class="text-base">{position}</p> -->
               </div>
             </div>

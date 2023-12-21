@@ -1,0 +1,32 @@
+---
+---
+
+<span class="scroll-down-icon"> </span>
+
+<style>
+  .scroll-down-icon {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    width: 46px;
+    height: 46px;
+    margin-left: -23px;
+    border: 1px solid #000000;
+    border-radius: 100%;
+    box-sizing: border-box;
+  }
+  .scroll-down-icon::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    content: "";
+    width: 16px;
+    height: 16px;
+    margin: -12px 0 0 -8px;
+    border-left: 1px solid #000000;
+    border-bottom: 1px solid #000000;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    box-sizing: border-box;
+  }
+</style>

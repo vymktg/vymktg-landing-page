@@ -22,4 +22,5 @@ export interface ServiceInterface {
   testimonial: TestimonialInterface;
   background: ServiceBackgroundEnum;
   image_name: string;
+  section_id: string;
 }

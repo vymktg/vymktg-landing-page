@@ -8,6 +8,7 @@ import "../../styles/devices.min.css";
 import ServiceDetail from "../../components/sections/ServiceDetail.astro";
 import type { ServiceInterface } from "../../interface/Service";
 import CTAFooter from "../../components/sections/CTAFooter.astro";
+import ScrollDown from "../../components/icon/scrollDown.astro";
 
 // const serviceImages:{[index:string]:any} = {}
 
@@ -45,7 +46,7 @@ import CTAFooter from "../../components/sections/CTAFooter.astro";
   <div class="flex flex-col">
     <div class="">
       <div class="bg-[#E4ECF8]">
-        <div class="pb-52 pt-40">
+        <div class="pb-52 pt-28">
           <Container
             className="flex flex-col justify-center items-center mb-10 pb-10"
           >
@@ -62,14 +63,16 @@ import CTAFooter from "../../components/sections/CTAFooter.astro";
             <div
               class="flex flex-col md:flex-row gap-4 md:gap-10 justify-start items-center md:divide-x"
             >
-              <div class="text-base font-normal md:text-xl flex flex-row md:flex-col gap-6 text-gray-500">
+              <div
+                class="text-base font-normal md:text-xl flex flex-row md:flex-col gap-6 text-gray-500"
+              >
                 <span>Strategy</span>
                 <span>Execution</span>
                 <span>Nurturing</span>
               </div>
               <div
                 class="text-center md:text-left text-3xl md:text-5xl font-semibold text-black md:p-10"
-              > 
+              >
                 Strive to provide <br /> unique solutions for your business!
               </div>
             </div>
@@ -83,6 +86,7 @@ import CTAFooter from "../../components/sections/CTAFooter.astro";
               success.
             </div>
           </div>
+          <a href={`#${SERVICE_LIST[0].section_id}`}><ScrollDown /></a>
         </section>
 
         {
