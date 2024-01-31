@@ -1,0 +1,94 @@
+---
+import CTAFooter from "../../components/sections/CTAFooter.astro";
+import HeroBanner from "../../components/sections/HowItWork/HeroBanner.astro";
+import StepDesktop from "../../components/sections/HowItWork/StepDesktop.astro";
+import StepTablet from "../../components/sections/HowItWork/StepTablet.astro";
+import GetInTouch from "../../components/shared/GetInTouch.astro";
+import BasePage from "../../layouts/BasePage.astro";
+import "@splidejs/splide/css/core";
+import "@splidejs/splide/css";
+
+const LIST = [
+  {
+    title: "Strategy",
+    description:
+      "Deep consultation, tailored plan, seamless implementation with transparent onboarding for business growth and achievement.",
+    steps: [
+      {
+        title: "Initial Consultation",
+        description:
+          "During the free initial consultation, we'll understand your business, goals, and challenges. We'll discuss your target audience, industry, and current marketing efforts.",
+      },
+      {
+        title: "Needs Assessment",
+        description:
+          "After our first meeting, I will perform a thorough needs assessment. I analyze your business's current marketing strategies and identify opportunities for improvement. This step allows me to create a tailored plan to meet your goals.",
+      },
+      {
+        title: "Proposal and Quote",
+        description:
+          "Following the assessment, I'll create a proposal that suggests strategies and services for your business, with a detailed quote including pricing and service breakdown.",
+      },
+      {
+        title: "Onboarding",
+        description:
+          "Once you approve the proposal, we'll set a start date. The onboarding process ensures a seamless transition as we implement the marketing plan.",
+      },
+    ],
+  },
+  {
+    title: "Execution",
+    description:
+      "Kickstart marketing, stay updated, adjust based on feedback—achieving tangible and measurable results.",
+    steps: [
+      {
+        title: "Strategy Execution",
+        description:
+          "After onboarding, we kickstart the marketing plan. I'll oversee its execution, keeping you in the loop with progress and milestones.",
+      },
+      {
+        title: "Reporting and Feedback",
+        description:
+          "You'll get regular reports on your marketing performance, including key indicators. Your feedback is important, and I'll make adjustments as needed to meet your expectations.",
+      },
+    ],
+  },
+  {
+    title: "Nuturing",
+    description:
+      "Continual optimization, lasting partnership, ongoing support, ensuring adaptability and success in a dynamic business landscape.",
+    steps: [
+      {
+        title: "Ongoing Optimization",
+        description:
+          "We continually optimize your marketing strategies to adapt to changes and maximize results. The goal is to deliver ongoing success for your business.",
+      },
+      {
+        title: "Long-Term Partnership",
+        description:
+          "As we work together and achieve your marketing goals, The aim is to build a long-term partnership. I will support your business's growth, providing expertise and strategies to keep you ahead of the competition.",
+      },
+    ],
+  },
+];
+
+const images = await Astro.glob(
+  "/src/assets/images/house-construction-phase/*"
+).then((files) => {
+  return files.map((file) => file.default);
+});
+---
+
+<BasePage>
+  <div class="flex flex-col">
+    <div class="">
+      <HeroBanner hiwPhase={LIST} />
+      <div class="" />
+      <StepDesktop hiwPhase={LIST} images={images} />
+      <StepTablet hiwPhase={LIST} images={images} />
+    </div>
+    <GetInTouch />
+
+    <CTAFooter />
+  </div>
+</BasePage>

@@ -9,37 +9,6 @@ import ServiceDetail from "../../components/sections/ServiceDetail.astro";
 import type { ServiceInterface } from "../../interface/Service";
 import CTAFooter from "../../components/sections/CTAFooter.astro";
 import ScrollDown from "../../components/icon/scrollDown.astro";
-
-// const serviceImages:{[index:string]:any} = {}
-
-// await Astro.glob("../../assets/images/partners/*").then(
-//   (files) => {
-//     files.forEach((file) => {
-//       const name = file.default.src.split(".")[0].split("/").pop()
-//       serviceImages[name]=file.default
-//     })
-//   }
-// );
-// await Astro.glob("../../assets/images/services/*").then(
-//   (files) => {
-//     files.forEach((file) => {
-//       const name = file.default.src.split(".")[0].split("/").pop()
-//       serviceImages[name]=file.default
-//     })
-//   }
-// )
-
-// const services = SERVICE_LIST.map((item) => {
-//   // const image = serviceImages[item.image_name];
-//   return {
-//     ...item,
-//     testimonial: {
-//       ...item.testimonial,
-//       // avatar_url: serviceImages[item.testimonial.avatar],
-//       // company_logo_url: serviceImages[item.testimonial.company_logo],
-//     },
-//   };
-// });
 ---
 
 <BasePage>
