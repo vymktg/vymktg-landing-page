@@ -1,0 +1,114 @@
+---
+import { Image } from "astro:assets";
+import type { HIWPhase } from "../../../interface/HIWPhase";
+import type { ImageInterface } from "../../../interface/Image";
+import Step from "./Step.astro";
+
+export interface Props {
+  hiwPhase: HIWPhase[];
+  images: ImageInterface[];
+}
+
+const { hiwPhase, images } = Astro.props;
+
+const IMAGE_POSTION = [0, 5, 8];
+const BACKGROUND = ["bg-left", "bg-right-bottom", "bg-center"];
+const BACKGROUND_COLOR = ["bg-[#F4F5FD]", "bg-[#EEF9F5]", "bg-[#F8FAFF]"];
+---
+
+<div class="relative">
+  <div class="flex flex-col gap-32">
+    {
+      hiwPhase.map(({ title, description, steps }, index) => (
+        <div
+          class={`px-12 ${BACKGROUND_COLOR[index]} rounded-2xl z-10 h-[400px] relative`}
+        >
+          <div class="absolute w-16 h-16 bg-white top-[-1.5rem] left-[-1.5rem] rounded-full flex justify-center items-center shadow-2xl border text-xl font-semibold">
+            {index + 1}
+          </div>
+          <section class="splide h-full grid grid-cols-[1fr_0.07fr]">
+            <div class="splide__track h-full">
+              <ul class="splide__list h-full">
+                <li class="splide__slide">
+                  <div class="grid grid-cols-2 h-full">
+                    <div class="flex flex-col gap-5 justify-center items-start">
+                      <h3 class="text-4xl">{title}</h3>
+                      <div class=" text-gray-500 flex flex-col gap-3">
+                        {description.split(".").map((item) => (
+                          <p class="text-lg font-light">{`${item}${
+                            !!item ? "." : ""
+                          }`}</p>
+                        ))}
+                      </div>
+                    </div>
+                    <div class="ml-auto relative">
+                      <Image
+                        class={`mr-10 ${index > 0 ? "pt-8" : ""}`}
+                        src={images[IMAGE_POSTION[index]]}
+                        alt=""
+                        loading="lazy"
+                        width={300}
+                        height={300}
+                      />
+                    </div>
+                  </div>
+                </li>
+                {[0, 2].map(
+                  (item) =>
+                    steps[item] && (
+                      <Step
+                        steps={steps}
+                        index={item}
+                        stepIndex={index}
+                        images={images}
+                      />
+                    )
+                )}
+              </ul>
+            </div>
+            <div class="splide__arrows flex flex-col justify-center items-center gap-4">
+              <button class="splide__arrow--next w-16 h-16 bg-black rounded-full ml-auto flex justify-center items-center shadow-xl">
+                <img
+                  src="https://assets.website-files.com/6035e7f3f25cec45fe78866f/6035e7f3f25cec47337886a4_Slider%20Right%20Arrow.svg"
+                  alt=""
+                  loading="lazy"
+                  width={6}
+                  height={10}
+                />
+              </button>
+              <button class="splide__arrow--prev w-16 h-16 bg-white rounded-full ml-auto flex justify-center items-center shadow-xl">
+                <img
+                  src="https://assets.website-files.com/6035e7f3f25cec45fe78866f/6035e7f3f25cec07d67886a9_Slider%20Left%20Arrow.svg"
+                  alt=""
+                  loading="lazy"
+                  width={6}
+                  height={10}
+                />
+              </button>
+            </div>
+          </section>
+        </div>
+      ))
+    }
+  </div>
+  <div class="line"></div>
+</div>
+
+<script src="./step-slider.ts"></script>
+
+<style>
+  .line {
+    position: absolute;
+    left: calc(50% - 4px);
+    top: 14%;
+    right: auto;
+    bottom: auto;
+    z-index: 1;
+    width: 9px;
+    height: 70%;
+    background-image: url(https://uploads-ssl.webflow.com/605ba92cee75fcdebfce666c/605ba92cee75fc8b48ce6702_Dot.svg);
+    background-position: 50% 50%;
+    background-size: 12px;
+    background-repeat: repeat-y;
+  }
+</style>

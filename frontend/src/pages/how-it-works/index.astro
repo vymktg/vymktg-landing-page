@@ -1,74 +1,108 @@
 ---
 import CTAFooter from "../../components/sections/CTAFooter.astro";
 import HeroBanner from "../../components/sections/HowItWork/HeroBanner.astro";
+import HeroBannerV2 from "../../components/sections/HowItWork/HeroBanner-v2.astro";
+import StepDesktopV2 from "../../components/sections/HowItWork/StepDesktop-v2.astro";
+import StepDesktopV3 from "../../components/sections/HowItWork/StepDesktop-v3.astro";
 import StepDesktop from "../../components/sections/HowItWork/StepDesktop.astro";
 import StepTablet from "../../components/sections/HowItWork/StepTablet.astro";
 import GetInTouch from "../../components/shared/GetInTouch.astro";
 import BasePage from "../../layouts/BasePage.astro";
 import "@splidejs/splide/css/core";
 import "@splidejs/splide/css";
+import Container from "../../components/shared/Container.astro";
+import { Image } from "astro:assets";
 
 const LIST = [
   {
     title: "Strategy",
     description:
-      "Deep consultation, tailored plan, seamless implementation with transparent onboarding for business growth and achievement.",
+      "In our consultation, we design a tailored plan—a blueprint for success. With seamless implementation and transparent onboarding, we build a sturdy foundation for your business growth and achievement.",
     steps: [
       {
         title: "Initial Consultation",
         description:
           "During the free initial consultation, we'll understand your business, goals, and challenges. We'll discuss your target audience, industry, and current marketing efforts.",
+        imageIndex: 0,
       },
       {
         title: "Needs Assessment",
         description:
           "After our first meeting, I will perform a thorough needs assessment. I analyze your business's current marketing strategies and identify opportunities for improvement. This step allows me to create a tailored plan to meet your goals.",
+        imageIndex: 1,
       },
       {
         title: "Proposal and Quote",
         description:
           "Following the assessment, I'll create a proposal that suggests strategies and services for your business, with a detailed quote including pricing and service breakdown.",
+        imageIndex: 2,
       },
       {
         title: "Onboarding",
         description:
           "Once you approve the proposal, we'll set a start date. The onboarding process ensures a seamless transition as we implement the marketing plan.",
+        imageIndex: 3,
       },
     ],
   },
   {
     title: "Execution",
     description:
-      "Kickstart marketing, stay updated, adjust based on feedback—achieving tangible and measurable results.",
+      "Kickstarting your marketing strategy is like constructing a well-planned building. We keep you updated, adjust based on feedback, and achieve tangible, measurable results.",
     steps: [
       {
         title: "Strategy Execution",
         description:
           "After onboarding, we kickstart the marketing plan. I'll oversee its execution, keeping you in the loop with progress and milestones.",
+        imageIndex: 4,
       },
       {
         title: "Reporting and Feedback",
         description:
           "You'll get regular reports on your marketing performance, including key indicators. Your feedback is important, and I'll make adjustments as needed to meet your expectations.",
+        imageIndex: 6,
       },
     ],
   },
   {
     title: "Nuturing",
     description:
-      "Continual optimization, lasting partnership, ongoing support, ensuring adaptability and success in a dynamic business landscape.",
+      "Continual optimization is our commitment, ensuring a lasting partnership. With ongoing support, we adapt to the dynamic business landscape, fostering long-term success.",
     steps: [
       {
         title: "Ongoing Optimization",
         description:
           "We continually optimize your marketing strategies to adapt to changes and maximize results. The goal is to deliver ongoing success for your business.",
+        imageIndex: 7,
       },
       {
         title: "Long-Term Partnership",
         description:
           "As we work together and achieve your marketing goals, The aim is to build a long-term partnership. I will support your business's growth, providing expertise and strategies to keep you ahead of the competition.",
+        imageIndex: 8,
       },
     ],
+  },
+];
+
+const PACKAGES = [
+  {
+    icon: "https://cdn-icons-png.freepik.com/128/3064/3064863.png?ga=GA1.1.2011190104.1706178946&",
+    title: "Start-Up Booster",
+    description:
+      "This package is ideal for start-ups that are just getting started and need to establish a robust digital presence. It focuses on creating the necessary elements for online success from scratch.",
+  },
+  {
+    icon: "https://cdn-icons-png.freepik.com/128/2806/2806955.png?ga=GA1.1.2011190104.1706178946&",
+    title: "Elevated",
+    description:
+      "This package is designed for businesses with existing digital strategies that need a refresh and revitalization to stay competitive in the ever-evolving digital landscape.",
+  },
+  {
+    icon: "https://cdn-icons-png.freepik.com/128/3064/3064827.png?ga=GA1.1.2011190104.1706178946&",
+    title: "Tailored Solutions",
+    description:
+      "This package is for businesses with unique goals and specific requirements. It offers a highly customized approach to digital marketing, addressing the specific needs of the client.",
   },
 ];
 
@@ -77,18 +111,148 @@ const images = await Astro.glob(
 ).then((files) => {
   return files.map((file) => file.default);
 });
+
+//https://www.freepik.com/author/user17392997/icons/pixel-perfect-tritone_347?t=f&query=chart+rise
+
+const POSITION = [
+  "row-start-2 row-span-2 col-start-1",
+  "col-start-2 row-span-2 row-start-1",
+  "row-start-3 row-span-2 col-start-2",
+];
 ---
 
 <BasePage>
-  <div class="flex flex-col">
-    <div class="">
-      <HeroBanner hiwPhase={LIST} />
-      <div class=""></div>
+  <div class="flex flex-col gap-32 bg-white">
+    <div class="flex flex-col gap-32">
+      <!-- <HeroBanner hiwPhase={LIST} />
       <StepDesktop hiwPhase={LIST} images={images} />
-      <StepTablet hiwPhase={LIST} images={images} />
+      <StepTablet hiwPhase={LIST} images={images} /> -->
+
+      <HeroBannerV2 hiwPhase={LIST} images={images} />
+      <!-- <Container className="flex flex-col gap-40">
+        {
+          LIST.map(({ title, description }, index) => (
+            <section
+              id={title.toLowerCase()}
+              class="border rounded-xl relative p-10"
+            >
+              <div class="absolute top-[-2rem] left-[-2rem] w-16 h-16 bg-primary rounded-full flex justify-center items-center">
+                <span class="text-white font-bold text-3xl">{index + 1}</span>
+              </div>
+
+              <div class="grid grid-cols-2 gap-10 justify-center items-center">
+                <div class="grid grid-cols-2 justify-center items-center gap-10">
+                  <Image
+                    class={index < 2 ? "mt-[-4.5rem]" : ""}
+                    src={images[IMAGE_POSTION[index]]}
+                    alt=""
+                    loading="lazy"
+                  />
+                  <div class="text-4xl font-semibold">{title}</div>
+                </div>
+                <div class="text-xl font-normal">{description}</div>
+              </div>
+            </section>
+          ))
+        }
+      </Container> -->
+
+      <Container className="flex flex-col gap-32">
+        <h5 class="mx-auto text-2xl font-light w-4/6 text-center text-gray-700">
+          My goal is to help your business grow and thrive and to achieve this,
+          I provide a step-by-step plan detailing how we will work together.
+        </h5>
+
+        <StepDesktopV2 hiwPhase={LIST} images={images} />
+        <!-- <StepDesktopV3 hiwPhase={LIST} images={images} /> -->
+      </Container>
+
+      <div>
+        <div
+          class="bg-[#F2FDF9] w-full mx-auto h-full rounded-3xl bg-[url('https://assets.website-files.com/6035e7f3f25cec45fe78866f/6035e7f3f25cec716b7886c0_Sprinkles%20Light.svg')]"
+        >
+          <Container>
+            <div class={`grid grid-cols-[0.6fr_1fr] gap-10 z-10 py-16 px-10`}>
+              <div class="flex flex-col justify-center items-start">
+                <h4 class="text-4xl font-medium w-4/6 mb-5">
+                  Too much information?
+                </h4>
+                <h5 class="text-gray-700 text-lg font-light">
+                  Let’s make it easy for you, I designed these packages to fit
+                  you specific needs. Find one that fit best with your business
+                  and we can start our journey.
+                </h5>
+              </div>
+              <div class="grid grid-cols-2 grid-rows-2 gap-10">
+                {
+                  PACKAGES.map(({ title, description, icon }, index) => (
+                    <div
+                      class={`${POSITION[index]} group bg-white grid grid-rows-[80px_1fr_50px] gap-3 px-8 py-4 rounded-3xl hover:border-primary border-2 border-transparent transition-all duration-300 shadow-xl cursor-pointer`}
+                    >
+                      <div class="flex flex-row justify-between items-center">
+                        <img src={icon} width={55} height={55} />
+                        <div class="flex flex-col gap-1 justify-end items-end">
+                          <h3 class="text-xl font-semibold">{title}</h3>
+                          <h5 class="text-md text-gray-400 font-medium">
+                            Package
+                          </h5>
+                        </div>
+                      </div>
+                      <div class="text-gray-600 font-light flex flex-col gap-2 text-md">
+                        {description
+                          .split(".")
+                          .map(
+                            (item, index) =>
+                              index === 0 && (
+                                <div class="line-clamp-4">{`${item}${
+                                  !!item ? "." : ""
+                                }`}</div>
+                              )
+                          )}
+                      </div>
+                      <div class="flex justify-start items-center h-full text-primary font-medium gap-2">
+                        Get Started
+                        <img
+                          class="mt-[2px] group-hover:translate-x-2 duration-300"
+                          src="https://assets.website-files.com/5e7adffc6e755a6bb3a7d516/5e7adffc6e755ad555a7d5aa_Arrow.svg"
+                          width={14}
+                        />
+                      </div>
+                    </div>
+                  ))
+                }
+              </div>
+            </div>
+          </Container>
+        </div>
+      </div>
     </div>
-    <!-- <GetInTouch /> -->
+    <!-- <GetInTouch />-->
 
     <CTAFooter />
   </div>
+
+  <script>
+    const btnSteps = document.querySelectorAll("#step-detail");
+
+    btnSteps.forEach((item) => {
+      item.addEventListener("click", () => {
+        const index = item.getAttribute("data-index");
+
+        document.getElementById(`step-${index}`).classList.add("left-[-130%]");
+        document.getElementById(`detail-${index}`).classList.add("!right-0");
+      });
+    });
+  </script>
+
+  <style>
+    [id^="step-"] {
+      transition: left 0.3s ease;
+    }
+
+    /* Select all elements with ID starting with 'detail-' */
+    [id^="detail-"] {
+      transition: right 0.3s ease;
+    }
+  </style>
 </BasePage>

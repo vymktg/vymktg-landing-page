@@ -1,0 +1,64 @@
+---
+import { Image } from "astro:assets";
+import type { HIWPhase } from "../../../interface/HIWPhase";
+import type { ImageInterface } from "../../../interface/Image";
+import Container from "../../shared/Container.astro";
+
+export interface Props {
+  hiwPhase: HIWPhase[];
+  images: ImageInterface[];
+}
+
+const { hiwPhase, images } = Astro.props;
+
+let imagePosition = -1;
+---
+
+<div>
+  <div class="pt-28">
+    <Container className="flex flex-col justify-center items-center gap-20">
+      <h2 class="text-3xl md:text-5xl md:w-1/2 text-center leading-10">
+        Three steps to take your business to the next level
+      </h2>
+      <div
+        class={`grid grid-cols-1 md:grid-cols-${hiwPhase.length} gap-10 w-full`}
+      >
+        {
+          hiwPhase.map(({ title, steps }, index) => (
+            <div class="bg-[#edf2fa] rounded-xl p-10 flex flex-col gap-8">
+              <div class="flex flex-col gap-2">
+                <span class="text-gray-500">{`Phase ${index + 1}`}</span>
+                <a href={`#${title.toLowerCase()}`} class="text-2xl">
+                  {title}
+                </a>
+              </div>
+              <div class="flex flex-col">
+                {steps.map((item, stepIndex) => {
+                  imagePosition += 1;
+                  return (
+                    <div
+                      class={`${
+                        stepIndex === 0 ? "" : "border-t"
+                      } group p-3 hover:bg-gray-200 transition-all duration-200 cursor-pointer text-lg font-normal flex flex-row justify-start items-center gap-2`}
+                    >
+                      <Image
+                        class={`step-image transition-all duration-500 object-contain rounded-lg w-10 h-10 grayscale group-hover:grayscale-0 ${
+                          index === 0 ? "mt-[-1rem]" : "mt-[-.5rem]"
+                        }`}
+                        data-position={index}
+                        src={images[imagePosition]}
+                        alt=""
+                        loading="lazy"
+                      />
+                      {item.title}
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </Container>
+  </div>
+</div>

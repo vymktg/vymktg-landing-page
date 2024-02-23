@@ -8,11 +8,20 @@ import bannerShape from "../../assets/images/banner-shape.png";
 import DesktopNavbar from "./DesktopNavbar.astro";
 import HeaderOffer from "./HeaderOffer.astro";
 
+const notUseBG = [
+  import.meta.env.BASE_URL,
+  `${import.meta.env.BASE_URL}how-it-works`,
+];
+
+const isUseBG = notUseBG.includes(Astro.url.pathname);
 const isHomePage = Astro.url.pathname === import.meta.env.BASE_URL;
 const { isPageNotFound } = Astro.props;
 ---
 
-<header class=`header z-10 ${!isHomePage && !isPageNotFound ? 'bg-[#E4ECF8]' : ''}` data-mode={import.meta.env.MODE}>
+<header
+  class=`header z-10 ${!isUseBG && !isPageNotFound ? 'bg-[#E4ECF8]' : ''}`
+  data-mode={import.meta.env.MODE}
+>
   <HeaderOffer />
   <Container>
     <div
