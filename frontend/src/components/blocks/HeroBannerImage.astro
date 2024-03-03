@@ -8,26 +8,23 @@ import { Image } from "astro:assets";
 import heroImage from "../../assets/images/hero-image2.png";
 
 const TOP_RIGHT_IMAGE = "absolute top-[7.7rem] lg:top-[8.2rem] right-0";
-const TOP_RIGHT_IMAGE_WIDTH = "w-[300px] sm:w-[450px] md:w-[550px] lg:w-[570px] xl:w-[650px]";
+const TOP_RIGHT_IMAGE_WIDTH =
+  "w-[300px] sm:w-[450px] md:w-[550px] lg:w-[570px] xl:w-[650px]";
 ---
 
 <div class="">
   <div class:list={[TOP_RIGHT_IMAGE, "z-[-1]"]}>
-    <Image
-      src={heroImage}
-      class={TOP_RIGHT_IMAGE_WIDTH}
-      alt=""
-    />
+    <Image src={heroImage} class={TOP_RIGHT_IMAGE_WIDTH} alt="" />
   </div>
   <div class:list={[TOP_RIGHT_IMAGE, "z-[-2]"]}>
     <img
-    class={TOP_RIGHT_IMAGE_WIDTH}
+      class={TOP_RIGHT_IMAGE_WIDTH}
       src="https://wp.themepure.net/seomy/wp-content/themes/seomy/assets/img/shape/banner-4-shape-1.png"
     />
   </div>
   <div class:list={[TOP_RIGHT_IMAGE, "z-[-3]"]}>
     <img
-    class={TOP_RIGHT_IMAGE_WIDTH}
+      class={TOP_RIGHT_IMAGE_WIDTH}
       src="https://wp.themepure.net/seomy/wp-content/themes/seomy/assets/img/shape/banner-4-shape-2.png"
     />
   </div>

@@ -15,7 +15,7 @@ import ScrollDown from "../../components/icon/scrollDown.astro";
   <div class="flex flex-col">
     <div class="">
       <div class="bg-[#E4ECF8]">
-        <div class="pb-52 pt-28">
+        <div class="py-52">
           <Container
             className="flex flex-col justify-center items-center mb-10 pb-10"
           >
@@ -26,7 +26,7 @@ import ScrollDown from "../../components/icon/scrollDown.astro";
       <Container className="flex flex-col gap-20 z-10 pb-40">
         <section
           id="service-hero"
-          class="mt-[-15rem] bg-white rounded-3xl w-full p-10 md:px-16 md:py-14 lg:px-24 lg:py-20 drop-shadow-2xl"
+          class="mt-[-15rem] bg-white rounded-3xl w-full pt-10 px-10 pb-5 md:px-16 md:pt-14 lg:px-24 lg:pt-20 drop-shadow-2xl"
         >
           <div class="flex flex-col">
             <div
@@ -55,9 +55,12 @@ import ScrollDown from "../../components/icon/scrollDown.astro";
               success.
             </div>
           </div>
-          <a href={`#${SERVICE_LIST[0].section_id}`}><ScrollDown /></a>
+          <div class="flex justify-center items-center mt-10">
+            <a href={`#${SERVICE_LIST[0].section_id}`}>
+              <ScrollDown />
+            </a>
+          </div>
         </section>
-
         {
           SERVICE_LIST.map((item) => (
             <ServiceDetail {...(item as ServiceInterface)} />

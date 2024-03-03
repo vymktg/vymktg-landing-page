@@ -6,8 +6,8 @@ import RECRUITER_1 from "../../../src/assets/images/Vy-Pro-2023-46-X2.jpg";
 import RECRUITER_2 from "../../../src/assets/images/Vy-Pro-2023-54-X2.jpg";
 import RECRUITER_3 from "../../../src/assets/images/Vy-Pro-2023-83-X2.jpg";
 
-import CLIENT_1 from "../../../src/assets/images/Vy-Pro-2023-105 1.png";
-import CLIENT_2 from "../../../src/assets/images/Vy-Pro-2023-117.jpg";
+import CLIENT_1 from "../../../src/assets/images/Vy-Pro-2023-105-X2.png";
+import CLIENT_2 from "../../../src/assets/images/Vy-Pro-2023-117-X2.png";
 import CLIENT_3 from "../../../src/assets/images/Vy-Pro-2023-145-X2.jpg";
 
 const KEYWORD = "For";
@@ -30,68 +30,52 @@ const BRAND_BANNER = [
     target: "_self",
   },
 ];
-
-const PADDING_TOP_ITEM = "lg:pt-14";
 ---
 
 <section id="brand-banner">
   <Container>
-    <div
-      class="lg:grid gap-4"
-      style="grid-template-columns: minmax(0, 15%) minmax(0, 85%)"
-    >
-      <div
-        class:list={[
-          "flex flex-row lg:flex-col justify-center items-center lg:items-start lg:justify-start gap-10 lg:gap-2 mb-10",
-          PADDING_TOP_ITEM,
-        ]}
-      >
-        {
-          BRAND_BANNER.map((item, index) => (
+    <div class="flex flex-row justify-center items-center gap-10 mb-10">
+      {
+        BRAND_BANNER.map((item, index) => (
+          <div
+            class:list={[
+              "group flex flex-row justify-center items-end gap-1 font-medium cursor-pointer text-gray-500 pb-3 border-primary",
+              index === 0 ? "!text-black border-b-4" : "",
+            ]}
+            data-index={index}
+          >
+            <span
+              class:list={[
+                "for-title !block pointer-events-none text-lg md:text-2xl is-invisible",
+                index === 0 ? "is-visible" : "",
+              ]}
+            >
+              {KEYWORD}
+            </span>
+            <span class="pointer-events-none text-lg md:text-2xl">
+              {item.tag}
+            </span>
+          </div>
+        ))
+      }
+    </div>
+    <div class="relative">
+      {
+        BRAND_BANNER.map((item, index) => {
+          const { title, content, href, target } = item;
+          return (
             <div
               class:list={[
-                "group flex flex-row justify-center items-center gap-2 font-medium cursor-pointer text-gray-500 pb-3",
-                index === 0 ? "!text-black" : "",
+                `content grid grid-cols-1 xl:grid-cols-[0.8fr_1fr] gap-10 md:gap-0 item-${index} is-invisible`,
+                index === 0 ? "is-visible" : "absolute top-0 right-0",
               ]}
-              data-index={index}
             >
-              <span
-                class:list={[
-                  "for-title !block pointer-events-none text-lg md:text-2xl lg:text-lg is-invisible",
-                  index === 0 ? "is-visible" : "",
-                ]}
-              >
-                {KEYWORD}
-              </span>
-              <span class="pointer-events-none text-lg md:text-2xl lg:text-lg">
-                {item.tag}
-              </span>
-            </div>
-          ))
-        }
-      </div>
-      <div class="relative">
-        {
-          BRAND_BANNER.map((item, index) => {
-            const { title, content, href, target } = item;
-            return (
-              <div
-                class:list={[
-                  `flex flex-col gap-10 md:gap-0 md:grid content item-${index} is-invisible`,
-                  index === 0 ? "is-visible" : "absolute top-0 right-0",
-                ]}
-                style="grid-template-columns: minmax(0, 45%) minmax(0, 55%)"
-              >
-                <div
-                  class:list={[
-                    "flex flex-col gap-10 items-start",
-                    PADDING_TOP_ITEM,
-                  ]}
-                >
+              <div class="row-start-1 row-end-2 col-start-1">
+                <div class="flex flex-col gap-10 items-start md:w-11/12">
                   <h2 class="text-3xl lg:text-5xl lg:leading-[4rem]">
                     {title}
                   </h2>
-                  <p class="text-lg text-gray-500 font-normal md:w-10/12">
+                  <p class="text-lg text-[#7b88a8] font-normal md:w-10/12">
                     {content}
                   </p>
                   <a
@@ -115,60 +99,56 @@ const PADDING_TOP_ITEM = "lg:pt-14";
                         <path
                           id="XMLID_27_"
                           d="M15,180h263.787l-49.394,49.394c-5.858,5.857-5.858,15.355,0,21.213C232.322,253.535,236.161,255,240,255
-                          s7.678-1.465,10.606-4.394l75-75c5.858-5.857,5.858-15.355,0-21.213l-75-75c-5.857-5.857-15.355-5.857-21.213,0
-                          c-5.858,5.857-5.858,15.355,0,21.213L278.787,150H15c-8.284,0-15,6.716-15,15S6.716,180,15,180z"
+                        s7.678-1.465,10.606-4.394l75-75c5.858-5.857,5.858-15.355,0-21.213l-75-75c-5.857-5.857-15.355-5.857-21.213,0
+                        c-5.858,5.857-5.858,15.355,0,21.213L278.787,150H15c-8.284,0-15,6.716-15,15S6.716,180,15,180z"
                         />
                       </svg>
                     </span>
                   </a>
                 </div>
-                {index === 0 ? (
-                  <div class="grid grid-cols-7 grid-rows-3 gap-4">
-                    <Image
-                      class="col-start-2 col-span-3 row-span-2 w-full h-full object-cover"
-                      src={RECRUITER_2}
-                      alt=""
-                    />
-                    <Image
-                      class="col-start-5 row-start-2 row-span-2 col-span-3 w-full h-full object-cover"
-                      src={RECRUITER_1}
-                      alt=""
-                    />
-                    <Image
-                      class="row-start-3 row-span-1 col-span-4 w-full h-full object-cover"
-                      src={RECRUITER_3}
-                      alt=""
-                    />
-                  </div>
-                ) : (
-                  <div class="grid grid-cols-10 grid-rows-10 gap-4">
-                    <Image
-                      class="row-start-3 col-span-5 row-span-6 w-full h-full object-contain"
-                      src={CLIENT_1}
-                      alt=""
-                    />
-                    <Image
-                      class="col-start-6 col-span-4 row-span-6 w-full h-full object-cover"
-                      src={CLIENT_2}
-                      alt=""
-                    />
-
-                    <Image
-                      class="col-start-6 col-span-5 row-span-6 w-full h-full object-contain"
-                      style="object-position: 50% 0;"
-                      src={CLIENT_3}
-                      alt=""
-                    />
-                  </div>
-                )}
               </div>
-            );
-          })
-        }
-      </div>
+              {index === 0 ? (
+                <div class="grid grid-cols-2 grid-rows-2 md:grid-cols-7 md:grid-rows-5 gap-2 md:w-2/3 xl:w-10/12 ml-auto">
+                  <Image
+                    class="col-start-1 row-span-2 md:col-start-2 md:col-span-3 md:row-span-3 w-full rounded-2xl h-full"
+                    src={RECRUITER_2}
+                    alt=""
+                  />
+                  <Image
+                    class="col-start-2 row-start-1 md:col-start-5 md:row-start-2 md:col-span-3 md:row-span-3 h-full object-cover rounded-2xl"
+                    src={RECRUITER_1}
+                    alt=""
+                  />
+                  <Image
+                    class="col-start-2 row-start-2 md:col-start-0 md:row-start-4 md:row-span-2 md:col-span-4 h-full object-cover rounded-2xl"
+                    src={RECRUITER_3}
+                    alt=""
+                  />
+                </div>
+              ) : (
+                <div class="grid grid-cols-2 grid-rows-2 md:grid-cols-10 md:grid-rows-10 gap-2 md:w-2/3 xl:w-10/12 ml-auto">
+                  <Image
+                    class="row-span-2 md:col-start-6 md:col-span-4 md:row-span-6 h-full rounded-2xl object-cover"
+                    src={CLIENT_2}
+                    alt=""
+                  />
+                  <Image
+                    class="col-start-2 row-start-1 md:row-start-3 md:col-span-5 md:row-span-6 rounded-2xl h-full object-cover"
+                    src={CLIENT_1}
+                    alt=""
+                  />
+                  <Image
+                    class="col-start-2 row-start-2 md:col-start-6 md:col-span-5 md:row-span-6 h-full object-cover rounded-2xl object-right-top"
+                    src={CLIENT_3}
+                    alt=""
+                  />
+                </div>
+              )}
+            </div>
+          );
+        })
+      }
     </div>
-
-    <hr class="flex-grow border-t border-gray-200 mt-10" />
   </Container>
 </section>
 
@@ -198,14 +178,14 @@ const PADDING_TOP_ITEM = "lg:pt-14";
     brandBannerEl.forEach((item) => {
       const forTitle = item.querySelector(".for-title");
       forTitle.classList.remove("is-visible");
-      item.classList.remove("!text-black");
+      item.classList.remove("!text-black", "border-b-4");
     });
 
     contentEl.forEach((item) => {
       item.classList.remove("is-visible");
     });
     activeForTitle.classList.add("is-visible");
-    activeItem.classList.add("!text-black");
+    activeItem.classList.add("!text-black", "border-b-4");
 
     const contentActive = document.querySelector(
       `#brand-banner .item-${index}`

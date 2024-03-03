@@ -18,12 +18,9 @@ const isHomePage = Astro.url.pathname === import.meta.env.BASE_URL;
 const { isPageNotFound } = Astro.props;
 ---
 
-<header
-  class=`header z-10 ${!isUseBG && !isPageNotFound ? 'bg-[#E4ECF8]' : ''}`
-  data-mode={import.meta.env.MODE}
->
-  <HeaderOffer />
+<header class="absolute top-4 w-full" data-mode={import.meta.env.MODE}>
   <Container>
+    <HeaderOffer />
     <div
       class="shadow-2xl rounded-full backdrop-blur-md bg-[#ffffff0a] px-4 py-3 border border-[#ffffff80]"
     >

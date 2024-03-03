@@ -1,13 +1,13 @@
 ---
 import Container from "../shared/Container.astro";
-import { CTA_CALCULATOR, NAVIGATION_ITEM } from "../../config";
+import { CTA_CALCULATOR } from "../../config";
 import ButtonLink from "../shared/ButtonLink.astro";
 import { Image } from "astro:assets";
 
 import ctaImage from "../../assets/images/cta-cal.png";
 ---
 
-<section id="cta-calculator" class="bg-gray-50 py-20 md:py-40">
+<section id="cta-calculator" class="bg-gray-50 py-20 md:py-56">
   <Container>
     <div class="flex flex-col md:flex-row gap-10 md:gap-0">
       <div
@@ -78,12 +78,6 @@ import ctaImage from "../../assets/images/cta-cal.png";
       </div>
       <div class="w-full md:5/12 lg:w-1/2 cta-calculator__image">
         <div class="relative">
-          <!-- <Image
-            src={ctaImage}
-            style={`
-            -webkit-mask-image: url(${sketchImage.src});`}
-            alt=""
-          /> -->
           <Image
             class="rounded-3xl shadow-2xl md:w-[95%]"
             src={ctaImage}

@@ -16,21 +16,47 @@ import DIAGRAM_ICON from "../../assets/images/diagram-128.png";
 import CONTENT_CREATION from "../../assets/images/online-advertising-128.png";
 ---
 
-<section id="services" class="relative">
-  <Container className="space-y-10 md:sapce-y-12">
-    <div class="flex flex-col xl:flex-row justify-center gap-10">
+<section id="services">
+  <Container>
+    <div
+      class="grid grid-cols-1 grid- xl:grid-cols-[1fr_.8fr] justify-center gap-20"
+    >
+      <div class="relative">
+        <div
+          class="hidden sm:block z-[-1] absolute top-0 bottom-0 left-0 right-0 m-auto rounded-3xl w-full max-w-[400px] h-[400px] xl:max-w-[480px] xl:min-h-[424px] bg-[#f3efff] xl:-top-10 xl:-left-10 xl:right-auto xl:bottom-auto bg-[url(https://assets.website-files.com/5e7adffc6e755a6bb3a7d516/5e7adffc6e755aa75ca7d5eb_Wave%20Purple.svg)]"
+          style="background-position: 50% 50%; background-size: 360%;"
+        >
+        </div>
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 gap-10 sm:gap-x-10 sm:gap-y-0"
+        >
+          <Service {...SERVICE_LIST[0]}>
+            <Image class="w-8 h-8" src={SEO_ICON} alt="" />
+          </Service>
+          <Service className="sm:mt-10" {...SERVICE_LIST[1]}>
+            <Image class="w-8 h-8" src={FUNNEL_ICON} alt="" />
+          </Service>
+          <Service {...SERVICE_LIST[2]}>
+            <Image class="w-8 h-8" src={DIAGRAM_ICON} alt="" />
+          </Service>
+          <Service className="sm:mt-10" {...SERVICE_LIST[3]}>
+            <Image class="w-8 h-8" src={CONTENT_CREATION} alt="" />
+          </Service>
+        </div>
+      </div>
+
       <div
-        class="xl:w-5/12 flex flex-col gap-9 mb-5 md:mb-10 lg:mb-20 items-center sm:items-start"
+        class="flex flex-col gap-9 justify-center items-center sm:items-start -order-1 xl:order-2"
       >
-        <Title>How can I help?</Title>
-        <Paragraph
-          className="font-light w-10/12 sm:w-full text-center sm:text-left"
+        <h3 class="font-medium text-5xl text-dark">How can I help?</h3>
+        <p
+          class="w-10/12 text-lg text-[#7b88a8] font-normal md:w-10/12 text-center sm:text-start"
           data-aos="fade-up"
         >
           In a highly competitive digital landmark, selecting the right
           marketing approach not only optimizes your investment but also ensures
           your business will stand out.
-        </Paragraph>
+        </p>
         <ButtonLink
           href={NAVIGATION_ITEM[1].href}
           text="Explore Our Services"
@@ -50,106 +76,44 @@ import CONTENT_CREATION from "../../assets/images/online-advertising-128.png";
           >
         </ButtonLink>
       </div>
-      <div class="xl:w-6/12 flex flex-col sm:flex-row gap-10 xl:mt-10">
-        <div class="flex flex-col sm:w-1/2 gap-y-10">
-          <Service {...SERVICE_LIST[0]}>
-            <Image class="w-8 h-8" src={SEO_ICON} alt="" />
-          </Service>
-          <Service {...SERVICE_LIST[1]}>
-            <Image class="w-8 h-8" src={FUNNEL_ICON} alt="" />
-          </Service>
+    </div>
+    <div
+      class="hidden xl:absolute -bottom-60 -right-40 flex justify-center items-center"
+    >
+      <div
+        class="device device-macbook-pro-2018 !scale-[60%] sm:!scale-75 md:scale-100"
+      >
+        <div class="device-frame">
+          <Image
+            class="device-screen !absolute top-[29px] opacity-0 transition-opacity duration-300 !object-contain opacity-100"
+            src={WEB_AND_SEO}
+            alt=""
+          />
+          <Image
+            class="device-screen !absolute top-[29px] opacity-0 transition-opacity duration-300 !object-contain"
+            src={CRM}
+            alt=""
+          />
+          <Image
+            class="device-screen !absolute top-[29px] opacity-0 transition-opacity duration-300"
+            src={PAID_ADVERTISING}
+            alt=""
+          />
+          <Image
+            class="device-screen !absolute top-[29px] opacity-0 transition-opacity duration-300"
+            src={POSTER_IMAGE}
+            alt=""
+          />
         </div>
-        <div class="flex flex-col sm:w-1/2 gap-y-10 xl:mt-10">
-          <Service {...SERVICE_LIST[2]}>
-            <Image class="w-8 h-8" src={DIAGRAM_ICON} alt="" />
-          </Service>
-          <Service {...SERVICE_LIST[3]}>
-            <Image class="w-8 h-8" src={CONTENT_CREATION} alt="" />
-          </Service>
-        </div>
+        <div class="device-stripe"></div>
+        <div class="device-header"></div>
+        <div class="device-sensors"></div>
+        <div class="device-btns"></div>
+        <div class="device-power"></div>
+        <div class="device-home"></div>
       </div>
     </div>
   </Container>
-
-  <div
-    class="xl:absolute bottom-[-18rem] left-[-3rem] flex justify-center items-center"
-  >
-    <div
-      class="device device-macbook-pro-2018 !scale-[60%] sm:!scale-75 md:scale-100"
-    >
-      <div class="device-frame">
-        <Image
-          class="device-screen !absolute top-[29px] opacity-0 transition-opacity duration-300 !object-contain opacity-100"
-          src={WEB_AND_SEO}
-          alt=""
-        />
-        <Image
-          class="device-screen !absolute top-[29px] opacity-0 transition-opacity duration-300 !object-contain"
-          src={CRM}
-          alt=""
-        />
-        <Image
-          class="device-screen !absolute top-[29px] opacity-0 transition-opacity duration-300"
-          src={PAID_ADVERTISING}
-          alt=""
-        />
-        <Image
-          class="device-screen !absolute top-[29px] opacity-0 transition-opacity duration-300"
-          src={POSTER_IMAGE}
-          alt=""
-        />
-      </div>
-      <div class="device-stripe"></div>
-      <div class="device-header"></div>
-      <div class="device-sensors"></div>
-      <div class="device-btns"></div>
-      <div class="device-power"></div>
-      <div class="device-home"></div>
-    </div>
-  </div>
-  <!-- <Container className="space-y-10 md:sapce-y-12">
-    <div class="flex flex-col justify-center gap-10">
-      <div class="flex flex-col gap-9 mb-5 md:mb-10 lg:mb-20 items-center">
-        <Title>How can I help?</Title>
-        <Paragraph
-          className="font-light w-10/12 md:w-3/5 sm:w-full text-center"
-          data-aos="fade-up"
-        >
-          With strategic planning, efficient execution, and nurturing tactics,
-          I'll optimize your digital landscape, propelling your business forward
-          and fostering sustainable growth.
-        </Paragraph>
-        <ButtonLink
-          href={NAVIGATION_ITEM[1].href}
-          text="Explore Our Services"
-          variant="primary"
-          className="bg-primary capitalize flex felx-row gap-2"
-        >
-          <svg
-            slot="right-icon"
-            class="w-4 h-4"
-            fill="currentColor"
-            viewBox="0 0 20 20"
-            xmlns="http://www.w3.org/2000/svg"
-            ><path
-              fill-rule="evenodd"
-              d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-              clip-rule="evenodd"></path></svg
-          >
-        </ButtonLink>
-      </div>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
-        <Service {...SERVICE_LIST[0]}>
-          <WebSeo />
-        </Service>
-        <Service {...SERVICE_LIST[1]} />
-        <Service {...SERVICE_LIST[2]} />
-        <Service {...SERVICE_LIST[3]}>
-          <OnlineMarketing name="service-icon" />
-        </Service>
-      </div>
-    </div>
-  </Container> -->
 </section>
 
 <script>

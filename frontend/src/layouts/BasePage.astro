@@ -5,9 +5,9 @@ import Base from "./Base.astro";
 ---
 
 <Base title="Welcome to Astro.">
-  <main class="relative">
-    <Navbar />
+  <Navbar />
+  <main>
     <slot />
-    <Footer />
   </main>
+  <Footer />
 </Base>

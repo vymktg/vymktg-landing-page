@@ -9,27 +9,6 @@ export interface Props {
 const { title, description, className } = Astro.props;
 ---
 
-<!-- <a
-  href="#"
-  class:list={[
-    "rounded-3xl bg-white hover:shadow-2xl shadow-services-box p-8 sm:p-6 md:p-8 lg:p-14 group duration-500 hover:scale-105 sm:h-72",
-    className,
-  ]}
->
-  <div class="flex flex-col gap-4 items-center sm:items-start">
-    <div class="bg-gray-100 w-14 h-14 flex justify-center items-center rounded-full">
-      <slot />
-    </div>
-    <h2 class="text-xl font-semibold">
-      {title}
-    </h2>
-    <div
-      class="line-clamp-3 text-base font-light text-text-gray w-10/12 sm:w-full text-center sm:text-left"
-    >
-      {description}
-    </div>
-  </div>
-</a> -->
 <div
   class:list={[
     "service-item cursor-pointer",
