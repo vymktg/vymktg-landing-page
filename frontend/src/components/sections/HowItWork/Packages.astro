@@ -1,0 +1,82 @@
+---
+import Container from "../../../components/shared/Container.astro";
+//https://www.freepik.com/author/user17392997/icons/pixel-perfect-tritone_347?t=f&query=chart+rise
+
+const POSITION = [
+  "md:row-start-2 md:row-span-2 md:col-start-1",
+  "md:col-start-2 md:row-span-2 md:row-start-1",
+  "md:row-start-3 md:row-span-2 md:col-start-2",
+];
+
+interface Package {
+  icon: string;
+  title: string;
+  description: string;
+}
+
+export interface Props {
+  packages: Package[];
+}
+
+const { packages } = Astro.props;
+---
+
+<div
+  class="bg-[#F2FDF9] w-full mx-auto h-full rounded-3xl bg-[url('https://assets.website-files.com/6035e7f3f25cec45fe78866f/6035e7f3f25cec716b7886c0_Sprinkles%20Light.svg')]"
+>
+  <Container>
+    <div
+      class={`grid grid-cols-1 lg:grid-cols-[0.6fr_1fr] gap-10 z-10 py-10 lg:py-16 lg:px-10`}
+    >
+      <div class="flex flex-col justify-center items-start gap-5">
+        <h4 class="text-4xl font-semibold md:font-medium w-4/6 mb-5">
+          Too much information?
+        </h4>
+        <h5 class="text-gray-700 md:text-lg font-light">
+          Let’s make it easy for you, I designed these packages to fit you
+          specific needs. Find one that fit best with your business and we can
+          start our journey.
+        </h5>
+      </div>
+      <div
+        class="grid grid-cols-1 grid-rows-1 md:grid-cols-2 md:grid-rows-2 gap-10"
+      >
+        {
+          packages.map(({ title, description, icon }, index) => (
+            <div
+              class={`${POSITION[index]} group bg-white grid grid-rows-[80px_1fr_50px] gap-3 px-6 py-4 rounded-3xl hover:border-primary border-2 border-transparent transition-all duration-300 shadow-xl cursor-pointer`}
+            >
+              <div class="flex flex-row justify-between items-center">
+                <img src={icon} width={55} height={55} />
+                <div class="flex flex-col gap-1 justify-end items-end">
+                  <h3 class="text-xl font-semibold text-right">{title}</h3>
+                  <h5 class="text-md text-gray-400 font-medium">Package</h5>
+                </div>
+              </div>
+              <div class="text-gray-600 font-light flex flex-col gap-2 text-md">
+                {description
+                  .split(".")
+                  .map(
+                    (item, index) =>
+                      index === 0 && (
+                        <div class="line-clamp-4">{`${item}${
+                          !!item ? "." : ""
+                        }`}</div>
+                      )
+                  )}
+              </div>
+              <div class="flex justify-start items-center h-full text-primary font-medium gap-2">
+                Get Started
+                <img
+                  class="mt-[2px] group-hover:translate-x-2 duration-300"
+                  src="https://assets.website-files.com/5e7adffc6e755a6bb3a7d516/5e7adffc6e755ad555a7d5aa_Arrow.svg"
+                  width={14}
+                />
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </Container>
+</div>

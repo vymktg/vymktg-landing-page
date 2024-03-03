@@ -1,17 +1,27 @@
 ---
 import Container from "../shared/Container.astro";
 import Title from "../shared/Title.astro";
-import { FAQ_LIST } from "../../config";
 import FAQ from "../shared/FAQ.astro";
+
+export interface Props {
+  faqs: any[];
+  title?: string;
+}
+
+const { faqs, title = "Frequently Asked Questions" } = Astro.props;
 ---
 
 <section id="faq">
   <Container className="lg:w-4/6">
     <div class="w-full mb-10 text-center space-y-4">
-      <Title className="text-dark">Frequently Asked Questions</Title>
+      <Title className="text-dark">{title}</Title>
     </div>
-    <div class="flex justify-between flex-col border-0 shadow-xl shadow-gray-200 rounded-xl p-4">
-      {FAQ_LIST.map((item, index) => <FAQ {...item} index={index} />)}
+    <div
+      class="flex justify-between flex-col border-0 shadow-xl shadow-gray-200 rounded-xl p-4"
+    >
+      {faqs.map((item, index) => <FAQ {...item} index={index} />)}
     </div>
   </Container>
 </section>
+
+<script src="../../js/faq.ts"></script>

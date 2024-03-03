@@ -14,6 +14,7 @@ import "../styles/devices.min.css";
 import Partners from "../components/sections/Partners.astro";
 import Testimonials from "../components/sections/Testimonials.astro";
 import Container from "../components/shared/Container.astro";
+import { FAQ_LIST } from "../config";
 ---
 
 <BasePage>
@@ -32,7 +33,7 @@ import Container from "../components/shared/Container.astro";
     <!-- <Qoute /> -->
     <HowItWorks />
     <ProjectsInsights />
-    <FAQs />
+    <FAQs faqs={FAQ_LIST} />
     <CTAFooter />
   </div>
 </BasePage>

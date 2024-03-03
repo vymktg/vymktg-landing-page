@@ -1,39 +1,34 @@
 ---
-import type { HIWPhase } from "../../../interface/HIWPhase";
-import Container from "../../shared/Container.astro";
-
-export interface Props {
-  hiwPhase: HIWPhase[];
-}
-
-const { hiwPhase } = Astro.props;
+import HERO_IMAGE from "../../../assets/images/hiw-hero-image.jpg";
+import { Image } from "astro:assets";
+import ScrollDown from "../../icon/scrollDown.astro";
 ---
 
-<div class="bg-[#E4ECF8]">
-  <div class="pt-28">
-    <Container
-      className="flex flex-col justify-center items-center mb-10 pb-10"
+<div
+  class="bg-[#ebfbff] px-5 sm:px-8 md:px-14 lg:px-5 bg-[url('https://assets.website-files.com/5e7adffc6e755a6bb3a7d516/5e7adffc6e755a6903a7d596_Hero%20Wave%20Company.svg')]"
+>
+  <div class="pt-20 pb-5 flex flex-col justify-center items-center gap-20">
+    <h2 class="text-3xl md:text-6xl text-center font-bold mx-auto md:w-1/2">
+      Three steps to take
+      <div class="my-3">your business to</div> the next level
+    </h2>
+
+    <h5 class="mx-auto text-lg text-center text-[#7b88a8] w-3/4 md:w-1/2">
+      My goal is to help your business grow and thrive and to achieve this, I
+      provide a step-by-step plan detailing how we will work together.
+    </h5>
+
+    <!-- -->
+
+    <div
+      class="w-full sm:max-w-[700px] p-5 rounded-3xl bg-white shadow-lg -mb-20"
     >
-      <h2 class="text-3xl font-bold">
-        Three steps to take your business to the next level
-      </h2>
-      <div
-        class={`my-20 grid grid-cols-1 md:grid-cols-${hiwPhase.length} gap-10 md:gap-0`}
-      >
-        {
-          hiwPhase.map((item, index) => (
-            <div class="flex flex-col justify-start items-center gap-3 md:gap-5">
-              <div class="w-24 h-24 bg-blue-200 rounded-full flex justify-center items-center">
-                <span class="font-bold text-5xl">{index + 1}</span>
-              </div>
-              <div class="text-xl font-semibold">{item.title}</div>
-              <div class="md:w-11/12 lg:w-3/4 text-center text-sm">
-                {item.description}
-              </div>
-            </div>
-          ))
-        }
-      </div>
-    </Container>
+      <Image
+        class="rounded-2xl bg-cover max-h-[300px] object-cover"
+        src={HERO_IMAGE}
+        alt=""
+      />
+    </div>
   </div>
 </div>
+f
