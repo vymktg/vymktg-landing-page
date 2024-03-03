@@ -4,13 +4,15 @@
 import HeroBannerImage from "../blocks/HeroBannerImage.astro";
 import HeroBannerContent from "../blocks/HeroBannerContent.astro";
 import Container from "../shared/Container.astro";
+import Partners from "./Partners.astro";
 ---
 
 <!-- Hero -->
 <section id="hero-banner">
-  <Container className="flex flex-col lg:flex-row  gap-8 lg:gap-0">
+  <HeroBannerImage />
+  <Container className="flex flex-col gap-10">
     <HeroBannerContent />
-    <HeroBannerImage />
+    <Partners />
   </Container>
 </section>
 

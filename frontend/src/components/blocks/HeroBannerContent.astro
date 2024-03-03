@@ -4,48 +4,46 @@ import ButtonLink from "../shared/ButtonLink.astro";
 import { HERO_BANNER_CONTENT, NAVIGATION_ITEM } from "../../config";
 ---
 
-<div class="pt-72 sm:pt-96 md:pt-[28rem] lg:pt-40">
+<div
+  class="min-h-[600px] sm:min-h-[770px] flex flex-col justify-end lg:justify-center items-start h-full gap-5 sm:gap-7 md:gap-10"
+>
   <div
-    class="flex flex-col justify-center items-start gap-5 sm:gap-7 md:gap-10"
+    class="text-3xl/tight sm:text-4xl/tight md:text-5xl/tight xl:text-6xl/tight font-bold"
   >
-    <div
-      class="text-3xl/tight sm:text-4xl/tight md:text-5xl/tight xl:text-6xl/tight font-bold"
+    <h2>{HERO_BANNER_CONTENT.title}</h2>
+    <h2
+      class="animate-typing overflow-hidden whitespace-nowrap border-r-4 bg-hero-text-content text-transparent bg-clip-text md:pr-3"
     >
-      <h2>{HERO_BANNER_CONTENT.title}</h2>
-      <h2
-        class="animate-typing overflow-hidden whitespace-nowrap border-r-4 bg-hero-text-content text-transparent bg-clip-text md:pr-3"
-      >
-        {HERO_BANNER_CONTENT.highlight_title}
-      </h2>
-    </div>
-    <Paragraph className="lg:w-1/2 text-[#7b88a8]" data-aos="fade-up">
-      {HERO_BANNER_CONTENT.description}
-    </Paragraph>
-    <div
-      class="flex flex-row gap-2 sm:gap-4 w-full justify-center sm:justify-start"
+      {HERO_BANNER_CONTENT.highlight_title}
+    </h2>
+  </div>
+  <Paragraph className="lg:w-1/2 text-[#7b88a8]" data-aos="fade-up">
+    {HERO_BANNER_CONTENT.description}
+  </Paragraph>
+  <div
+    class="flex flex-row gap-2 sm:gap-4 w-full justify-center sm:justify-start"
+  >
+    <ButtonLink
+      href={NAVIGATION_ITEM[1].href}
+      text="Get started"
+      variant="primary"
+    />
+    <ButtonLink
+      href={NAVIGATION_ITEM[4].href}
+      text="About me"
+      variant="secondary"
     >
-      <ButtonLink
-        href={NAVIGATION_ITEM[1].href}
-        text="Get started"
-        variant="primary"
-      />
-      <ButtonLink
-        href={NAVIGATION_ITEM[4].href}
-        text="About me"
-        variant="secondary"
+      <svg
+        slot="right-icon"
+        class="w-5 h-5 ml-2 -mr-1"
+        fill="currentColor"
+        viewBox="0 0 20 20"
+        xmlns="http://www.w3.org/2000/svg"
+        ><path
+          fill-rule="evenodd"
+          d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+          clip-rule="evenodd"></path></svg
       >
-        <svg
-          slot="right-icon"
-          class="w-5 h-5 ml-2 -mr-1"
-          fill="currentColor"
-          viewBox="0 0 20 20"
-          xmlns="http://www.w3.org/2000/svg"
-          ><path
-            fill-rule="evenodd"
-            d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-            clip-rule="evenodd"></path></svg
-        >
-      </ButtonLink>
-    </div>
+    </ButtonLink>
   </div>
 </div>

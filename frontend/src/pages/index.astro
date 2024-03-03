@@ -3,7 +3,6 @@ import HeroBanner from "../components/sections/HeroBanner.astro";
 import HowItWorks from "../components/sections/HowItWorks.astro";
 import Services from "../components/sections/Services.astro";
 import FAQs from "../components/sections/FAQs.astro";
-import Qoute from "../components/sections/Qoute.astro";
 import ProjectsInsights from "../components/sections/Projects&Insights.astro";
 import CTACalculator from "../components/sections/CTACalculator.astro";
 import CTAFooter from "../components/sections/CTAFooter.astro";
@@ -11,16 +10,13 @@ import BasePage from "../layouts/BasePage.astro";
 
 import "@splidejs/splide/css/core";
 import "../styles/devices.min.css";
-import Partners from "../components/sections/Partners.astro";
 import Testimonials from "../components/sections/Testimonials.astro";
-import Container from "../components/shared/Container.astro";
 import { FAQ_LIST } from "../config";
 ---
 
 <BasePage>
   <div class="flex flex-col gap-y-20 md:gap-y-60 overflow-hidden">
     <HeroBanner />
-    <Partners />
     <Testimonials />
     <Services />
     <CTACalculator />
