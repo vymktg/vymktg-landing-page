@@ -1,7 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 
-module.exports = {
-  content: ["./public/**/*.html", "./src/**/*.{astro,js,ts}"],
+export default {
+  content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
   theme: {
     extend: {
       colors: {
@@ -14,7 +14,7 @@ module.exports = {
         gradient: "linear-gradient(310deg, #7928ca, #ff0080)",
         'hero-text-content': "linear-gradient(90deg, #501E9C 0%, #A44CEE 43.75%, #FF847F 100%)",
       },
-      boxShadow: { 
+      boxShadow: {
         'services-box': '0px 0px 60px 0px rgba(0, 0, 0, 0.05)',
       },
       screens: {
@@ -69,6 +69,16 @@ module.exports = {
       bottom: {
         24: "6rem",
       },
+    },
+  },
+  variants: {
+    extend: {
+      fontWeight: ["responsive", "hover", "focus"],
+      opacity: ["hover"],
+      borderColor: ["hover", "focus"],
+      margin: ["first", "last"],
+      backgroundColor: ["odd", "even"],
+      scale: ["hover", "active", "group-hover"],
     },
   },
   plugins: [],

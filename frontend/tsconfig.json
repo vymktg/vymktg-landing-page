@@ -7,6 +7,10 @@
       }
     ],
     "verbatimModuleSyntax": true,
-    "lib": ["es2018", "DOM"]
+    "lib": [
+      "es2018",
+      "DOM",
+      "ES2021.String"
+    ]
   }
 }

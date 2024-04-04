@@ -1,0 +1,267 @@
+---
+import HeroBanner from "../../components/sections/Insights/HeroBanner.astro";
+import Container from "../../components/shared/Container.astro";
+import BasePage from "../../layouts/BasePage.astro";
+import InsightContainer from "../../components/elements/insights/Container";
+
+const DUMMY_DATA = [
+  {
+    title: "10 Effective Strategies for Email Marketing Success",
+    service: "Email Marketing",
+    category: "Furniture & Home",
+    tag: "Strategies",
+  },
+  {
+    title: "The Power of Visual Storytelling in Social Media Marketing",
+    service: "SMM",
+    category: "Health Care & Beauty",
+    tag: "Best Practices",
+  },
+  {
+    title: "How to Optimize Your Website for Search Engine Rankings",
+    service: "Search Engine Optimization",
+    category: "Real estate",
+    tag: "Tips",
+  },
+  {
+    title: "Understanding Google Ads: A Beginner's Guide to Paid Advertising",
+    service: "Paid Ads",
+    category: "Fintech & Banking",
+    tag: "Insights",
+  },
+  {
+    title: "Maximizing ROI with Data-Driven Analytics in Digital Marketing",
+    service: "Analytics",
+    category: "Marketplaces",
+    tag: "Analysis",
+  },
+  {
+    title: "The Importance of Mobile Optimization in Digital Marketing",
+    service: "Mobile Marketing",
+    category: "Automotive",
+    tag: "Trends",
+  },
+  {
+    title: "Creating Compelling Content: Tips for Content Marketing Success",
+    service: "Design & Creative",
+    category: "Fashion & Apparel",
+    tag: "Strategies",
+  },
+  {
+    title: "Harnessing the Power of Influencer Marketing for Brand Growth",
+    service: "Paid Media",
+    category: "Food & Beverage",
+    tag: "Best Practices",
+  },
+  {
+    title: "Social Media Trends to Watch Out for in the Coming Year",
+    service: "SMM",
+    category: "Pet care",
+    tag: "Trends",
+  },
+  {
+    title: "The Future of Marketing: Emerging Trends and Technologies",
+    service: "Strategy",
+    category: "Consumer electronics",
+    tag: "Insights",
+  },
+  {
+    title: "Effective Email Marketing Strategies for E-commerce Businesses",
+    service: "Email Marketing",
+    category: "Marketplaces",
+    tag: "Best Practices",
+  },
+  {
+    title: "The Impact of Visual Content in Social Media Marketing",
+    service: "SMM",
+    category: "Fashion & Apparel",
+    tag: "Analysis",
+  },
+  {
+    title: "SEO Techniques to Boost Your Website's Visibility",
+    service: "Search Engine Optimization",
+    category: "Real estate",
+    tag: "Trends",
+  },
+  {
+    title: "Tips for Crafting Engaging Copy in Paid Advertising",
+    service: "Paid Ads",
+    category: "Fintech & Banking",
+    tag: "Strategies",
+  },
+  {
+    title: "Utilizing Data Analytics for Better Marketing Decision-Making",
+    service: "Analytics",
+    category: "Consumer electronics",
+    tag: "Tips",
+  },
+  {
+    title: "Mobile Marketing Strategies for Automotive Brands",
+    service: "Mobile Marketing",
+    category: "Automotive",
+    tag: "Insights",
+  },
+  {
+    title: "Innovative Design Ideas for Content Marketing Campaigns",
+    service: "Design & Creative",
+    category: "Fashion & Apparel",
+    tag: "Best Practices",
+  },
+  {
+    title: "The Role of Influencers in the Food & Beverage Industry",
+    service: "Paid Media",
+    category: "Food & Beverage",
+    tag: "Trends",
+  },
+  {
+    title: "Social Media Engagement Strategies for Pet Care Brands",
+    service: "SMM",
+    category: "Pet care",
+    tag: "Analysis",
+  },
+  {
+    title:
+      "Developing Sustainable Marketing Strategies for Consumer Electronics",
+    service: "Strategy",
+    category: "Consumer electronics",
+    tag: "Strategies",
+  },
+];
+
+let tagList = DUMMY_DATA.reduce((arr, item) => {
+  const tagId = item.tag.toLowerCase().trim().replaceAll(" ", "-");
+  const tag = item.tag;
+
+  if (arr.find((tag) => tag.tagId === tagId)) return arr;
+
+  arr.push({
+    tagId,
+    tag,
+  });
+
+  return arr;
+}, []).sort();
+
+tagList = [
+  {
+    tagId: "all",
+    tag: "All",
+  },
+  ...tagList,
+];
+
+const COLOR_LIST = ["yellow", "green", "cyan", "purple", "fuchsia", "lime"];
+
+function getRandomInt(max) {
+  return Math.floor(Math.random() * max);
+}
+
+function generateRandomColor() {
+  return COLOR_LIST[getRandomInt(5)];
+}
+---
+
+<BasePage>
+  <HeroBanner />
+  <Container>
+    <!-- <InsightContainer client:load /> -->
+
+    <div class="my-20">
+      <div
+        class="flex flex-row justify-center items-center gap-9 my-20 flex-wrap"
+      >
+        {
+          tagList.map(({ tagId, tag }) => (
+            <div
+              data-filter={tagId === "all" ? "all" : `.${tagId}`}
+              class={`mix-button capitalize px-1 py-2 border-b-2 border-transparent font-medium cursor-pointer hover:border-b-2 hover:border-primary hover:text-primary transition-all duration-300${
+                tagId === "all" ? " !border-primary !text-primary" : ""
+              }`}
+            >
+              {tag}
+            </div>
+          ))
+        }
+      </div>
+      <div
+        class="mixitup-container grid md:grid-cols-2 xl:grid-cols-3 gap-5 md:gap-16 mt-10"
+      >
+        {
+          DUMMY_DATA.map(({ tag, service, title, category }) => {
+            return (
+              <div
+                class={`mix relative rounded-xl insight-item cursor-pointer ${tag
+                  .toLowerCase()
+                  .trim()
+                  .replaceAll(" ", "-")} group`}
+              >
+                <div class="overflow-hidden rounded-xl">
+                  <img
+                    class="rounded-xl group-hover:scale-110 transition-all duration-700"
+                    src="https://picsum.photos/500"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="absolute text-color top-0 left-0 p-5 flex flex-col justify-between items-start h-full overflow-hidden  z-20">
+                  <span
+                    class={`bg-white px-4 py-1 rounded-full text-[0.8rem] font-semibold`}
+                  >
+                    {service}
+                  </span>
+                  <div class="flex flex-col gap-5 justify-start items-start">
+                    <h3 class="text-white font-medium text-xl">{title}</h3>
+                    <span class="text-white font-medium text-[0.7rem] opacity-90 uppercase">
+                      {category}
+                    </span>
+                    <span class="-mb-14 group-hover:!mb-0 transition-all duration-[800ms] bg-white font-semibold px-4 py-1 rounded-full text-sm">
+                      Learn more
+                    </span>
+                  </div>
+                </div>
+              </div>
+            );
+          })
+        }
+      </div>
+    </div>
+  </Container>
+</BasePage>
+
+<style>
+  .insight-item::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0.4) 75%,
+      rgba(0, 0, 0, 0.8) 100%
+    );
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    z-index: 10;
+  }
+</style>
+
+<script>
+  import mixitup from "mixitup";
+
+  var mixer = mixitup(".mixitup-container", {
+    animation: {
+      duration: 700,
+    },
+    callbacks: {
+      onMixClick: function (state, originalEvent) {
+        const mixButtons = document.querySelectorAll(".mix-button");
+        mixButtons.forEach((item) => {
+          item.classList.remove("!border-primary", "!text-primary");
+        });
+        this.classList.add("!border-primary", "!text-primary");
+      },
+    },
+  });
+</script>
