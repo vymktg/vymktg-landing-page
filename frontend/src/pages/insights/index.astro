@@ -187,7 +187,7 @@ function generateRandomColor() {
         class="mixitup-container grid md:grid-cols-2 xl:grid-cols-3 gap-5 md:gap-16 mt-10"
       >
         {
-          DUMMY_DATA.map(({ tag, service, title, category }) => {
+          DUMMY_DATA.map(({ tag, service, title, category }, index) => {
             return (
               <div
                 class={`mix relative rounded-xl insight-item cursor-pointer ${tag
@@ -197,8 +197,10 @@ function generateRandomColor() {
               >
                 <div class="overflow-hidden rounded-xl">
                   <img
-                    class="rounded-xl group-hover:scale-110 transition-all duration-700"
-                    src="https://picsum.photos/500"
+                    class="rounded-xl group-hover:scale-110 transition-all duration-700 w-full h-full"
+                    width="400"
+                    height="400"
+                    src={`https://picsum.photos/500?random=${index + 1}`}
                     loading="lazy"
                   />
                 </div>
