@@ -6,6 +6,14 @@ const isActivePage = (url: URL, href: string) => {
       ? `${href}/`
       : href;
 
+  if (!pathName) {
+    if (itemHref === '/') {
+      return true;
+    }
+
+    return false;
+  }
+
   return itemHref.includes(pathName);
 };
 
