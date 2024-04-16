@@ -10,7 +10,7 @@ import ButtonLink from "../shared/ButtonLink.astro";
       <li
         class:list={[
           "my-auto menu-item relative",
-          isActivePage(Astro.url.pathname, item.href) ? "active" : "",
+          isActivePage(Astro.url, item.href) ? "active" : "",
         ]}
       >
         <a
@@ -47,7 +47,6 @@ import ButtonLink from "../shared/ButtonLink.astro";
   href="https://meetings.hubspot.com/vytrinh-mktg"
   variant="primary"
 />
-
 
 <style>
   .menu-item.active .stroke-current > path {

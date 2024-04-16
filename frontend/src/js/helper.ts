@@ -1,10 +1,12 @@
-const isActivePage = (pathName: string, href: string) => {
+const isActivePage = (url: URL, href: string) => {
+  const pathName = url.pathname.split('/')[1];
+
   const itemHref =
     href !== import.meta.env.BASE_URL && import.meta.env.PROD
       ? `${href}/`
       : href;
 
-  return pathName === itemHref;
+  return itemHref.includes(pathName);
 };
 
 export { isActivePage };

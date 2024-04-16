@@ -334,6 +334,108 @@ export const HOW_IT_WORKS_STEP = [
   },
 ];
 
+export const HIW_LIST = [
+  {
+    title: "Strategy",
+    description:
+      "In our consultation, we design a tailored plan—a blueprint for success. With seamless implementation and transparent onboarding, we build a sturdy foundation for your business growth and achievement.",
+    steps: [
+      {
+        title: "Initial Consultation",
+        question: "What is Initial Consultation step?",
+        description:
+          "During the free initial consultation, we'll understand your business, goals, and challenges. We'll discuss your target audience, industry, and current marketing efforts.",
+        imageIndex: 0,
+      },
+      {
+        title: "Needs Assessment",
+        question: "What is Needs Assessment step??",
+        description:
+          "After our first meeting, I will perform a thorough needs assessment. I analyze your business's current marketing strategies and identify opportunities for improvement. This step allows me to create a tailored plan to meet your goals.",
+        imageIndex: 1,
+      },
+      {
+        title: "Proposal and Quote",
+        question: "What is Proposal and Quote step??",
+        description:
+          "Following the assessment, I'll create a proposal that suggests strategies and services for your business, with a detailed quote including pricing and service breakdown.",
+        imageIndex: 2,
+      },
+      {
+        title: "Onboarding",
+        question: "What is Onboarding step?",
+        description:
+          "Once you approve the proposal, we'll set a start date. The onboarding process ensures a seamless transition as we implement the marketing plan.",
+        imageIndex: 3,
+      },
+    ],
+  },
+  {
+    title: "Execution",
+    description:
+      "Kickstarting your marketing strategy is like constructing a well-planned building. We keep you updated, adjust based on feedback, and achieve tangible, measurable results.",
+    steps: [
+      {
+        title: "Strategy Execution",
+        question: "What is Strategy Execution step?",
+        description:
+          "After onboarding, we kickstart the marketing plan. I'll oversee its execution, keeping you in the loop with progress and milestones.",
+        imageIndex: 4,
+      },
+      {
+        title: "Reporting and Feedback",
+        question: "What is Reporting and Feedback step?",
+        description:
+          "You'll get regular reports on your marketing performance, including key indicators. Your feedback is important, and I'll make adjustments as needed to meet your expectations.",
+        imageIndex: 6,
+      },
+    ],
+  },
+  {
+    title: "Nuturing",
+    description:
+      "Continual optimization is our commitment, ensuring a lasting partnership. With ongoing support, we adapt to the dynamic business landscape, fostering long-term success.",
+    steps: [
+      {
+        title: "Ongoing Optimization",
+        question: "What is Ongoing Optimization step?",
+        description:
+          "We continually optimize your marketing strategies to adapt to changes and maximize results. The goal is to deliver ongoing success for your business.",
+        imageIndex: 7,
+      },
+      {
+        title: "Long-Term Partnership",
+        question: "What is Long-Term Partnership step?",
+        description:
+          "As we work together and achieve your marketing goals, The aim is to build a long-term partnership. I will support your business's growth, providing expertise and strategies to keep you ahead of the competition.",
+        imageIndex: 8,
+      },
+    ],
+  },
+];
+
+export const PACKAGES = [
+  {
+    icon: "https://cdn-icons-png.freepik.com/128/3064/3064863.png?ga=GA1.1.2011190104.1706178946&",
+    title: "Start-Up Booster",
+    description:
+      "This package is ideal for start-ups that are just getting started and need to establish a robust digital presence. It focuses on creating the necessary elements for online success from scratch.",
+  },
+  {
+    icon: "https://cdn-icons-png.freepik.com/128/2806/2806955.png?ga=GA1.1.2011190104.1706178946&",
+    title: "Elevated",
+    description:
+      "This package is designed for businesses with existing digital strategies that need a refresh and revitalization to stay competitive in the ever-evolving digital landscape.",
+  },
+  {
+    icon: "https://cdn-icons-png.freepik.com/128/3064/3064827.png?ga=GA1.1.2011190104.1706178946&",
+    title: "Tailored Solutions",
+    description:
+      "This package is for businesses with unique goals and specific requirements. It offers a highly customized approach to digital marketing, addressing the specific needs of the client.",
+  },
+];
+
+
 export const SITE = {
   name: "Vymktg",
   title: "Your Digital Marketing Partner",

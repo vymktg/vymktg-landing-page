@@ -1,0 +1,37 @@
+---
+import { HIW_LIST } from "../../../config";
+import HIWStep from "../../../layouts/HIWStep.astro";
+import { Image } from "astro:assets";
+
+const PAGE_TITLE = "Execution";
+
+const STEP_INFO = HIW_LIST.find((item) => item.title === PAGE_TITLE);
+
+const { title, description, steps } = STEP_INFO;
+
+const images = await Astro.glob(
+  "/src/assets/images/house-construction-phase/*"
+).then((files) => {
+  return files.map((file) => file.default);
+});
+---
+
+<HIWStep title={title}>
+  <!-- <div>{description}</div> -->
+  <div class="flex flex-col gap-20 my-20">
+    {
+      steps.map((item, index) => (
+        <div class="grid grid-cols-[1fr_350px] gap-32 bg-gray-50 rounded-2xl p-10 relative">
+          <span class="bg-white shadow-2xl absolute left-1/2 top-[-20px] w-14 h-14 rounded-full border flex justify-center items-center text-lg font-medium">
+            {index + 1}
+          </span>
+          <div class="flex flex-col gap-10 justify-center items-start">
+            <span class="text-2xl font-medium">{item.title}</span>
+            <span class="text-gray-600">{item.description}</span>
+          </div>
+          <Image class="-mt-5" src={images[item.imageIndex]} alt="" />
+        </div>
+      ))
+    }
+  </div>
+</HIWStep>

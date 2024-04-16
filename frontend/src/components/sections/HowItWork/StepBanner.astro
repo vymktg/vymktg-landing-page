@@ -32,13 +32,14 @@ const BACKGROUND = ["bg-left", "bg-right-bottom", "bg-center"];
                     !!item ? "." : ""
                   }`}</p>
                 ))}
-                <button
+                <a
+                  href={`${Astro.url.href}/${title.toLowerCase()}`}
                   id="step-detail"
                   data-index={index}
                   class="text-primary text-md font-semibold text-start"
                 >
                   Step details
-                </button>
+                </a>
               </div>
             </div>
             <div class="mx-auto order-1 lg:order-2">
