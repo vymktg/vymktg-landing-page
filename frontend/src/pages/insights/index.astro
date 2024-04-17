@@ -2,133 +2,9 @@
 import HeroBanner from "../../components/sections/Insights/HeroBanner.astro";
 import Container from "../../components/shared/Container.astro";
 import BasePage from "../../layouts/BasePage.astro";
-import InsightContainer from "../../components/elements/insights/Container";
+import { INSIGHTS } from "../../config";
 
-const DUMMY_DATA = [
-  {
-    title: "10 Effective Strategies for Email Marketing Success",
-    service: "Email Marketing",
-    category: "Furniture & Home",
-    tag: "Strategies",
-  },
-  {
-    title: "The Power of Visual Storytelling in Social Media Marketing",
-    service: "SMM",
-    category: "Health Care & Beauty",
-    tag: "Best Practices",
-  },
-  {
-    title: "How to Optimize Your Website for Search Engine Rankings",
-    service: "Search Engine Optimization",
-    category: "Real estate",
-    tag: "Tips",
-  },
-  {
-    title: "Understanding Google Ads: A Beginner's Guide to Paid Advertising",
-    service: "Paid Ads",
-    category: "Fintech & Banking",
-    tag: "Insights",
-  },
-  {
-    title: "Maximizing ROI with Data-Driven Analytics in Digital Marketing",
-    service: "Analytics",
-    category: "Marketplaces",
-    tag: "Analysis",
-  },
-  {
-    title: "The Importance of Mobile Optimization in Digital Marketing",
-    service: "Mobile Marketing",
-    category: "Automotive",
-    tag: "Trends",
-  },
-  {
-    title: "Creating Compelling Content: Tips for Content Marketing Success",
-    service: "Design & Creative",
-    category: "Fashion & Apparel",
-    tag: "Strategies",
-  },
-  {
-    title: "Harnessing the Power of Influencer Marketing for Brand Growth",
-    service: "Paid Media",
-    category: "Food & Beverage",
-    tag: "Best Practices",
-  },
-  {
-    title: "Social Media Trends to Watch Out for in the Coming Year",
-    service: "SMM",
-    category: "Pet care",
-    tag: "Trends",
-  },
-  {
-    title: "The Future of Marketing: Emerging Trends and Technologies",
-    service: "Strategy",
-    category: "Consumer electronics",
-    tag: "Insights",
-  },
-  {
-    title: "Effective Email Marketing Strategies for E-commerce Businesses",
-    service: "Email Marketing",
-    category: "Marketplaces",
-    tag: "Best Practices",
-  },
-  {
-    title: "The Impact of Visual Content in Social Media Marketing",
-    service: "SMM",
-    category: "Fashion & Apparel",
-    tag: "Analysis",
-  },
-  {
-    title: "SEO Techniques to Boost Your Website's Visibility",
-    service: "Search Engine Optimization",
-    category: "Real estate",
-    tag: "Trends",
-  },
-  {
-    title: "Tips for Crafting Engaging Copy in Paid Advertising",
-    service: "Paid Ads",
-    category: "Fintech & Banking",
-    tag: "Strategies",
-  },
-  {
-    title: "Utilizing Data Analytics for Better Marketing Decision-Making",
-    service: "Analytics",
-    category: "Consumer electronics",
-    tag: "Tips",
-  },
-  {
-    title: "Mobile Marketing Strategies for Automotive Brands",
-    service: "Mobile Marketing",
-    category: "Automotive",
-    tag: "Insights",
-  },
-  {
-    title: "Innovative Design Ideas for Content Marketing Campaigns",
-    service: "Design & Creative",
-    category: "Fashion & Apparel",
-    tag: "Best Practices",
-  },
-  {
-    title: "The Role of Influencers in the Food & Beverage Industry",
-    service: "Paid Media",
-    category: "Food & Beverage",
-    tag: "Trends",
-  },
-  {
-    title: "Social Media Engagement Strategies for Pet Care Brands",
-    service: "SMM",
-    category: "Pet care",
-    tag: "Analysis",
-  },
-  {
-    title:
-      "Developing Sustainable Marketing Strategies for Consumer Electronics",
-    service: "Strategy",
-    category: "Consumer electronics",
-    tag: "Strategies",
-  },
-];
-
-let tagList = DUMMY_DATA.reduce((arr, item) => {
+let tagList = INSIGHTS.reduce((arr, item) => {
   const tagId = item.tag.toLowerCase().trim().replaceAll(" ", "-");
   const tag = item.tag;
 
@@ -187,40 +63,46 @@ function generateRandomColor() {
         class="mixitup-container grid md:grid-cols-2 xl:grid-cols-3 gap-5 md:gap-16 mt-10"
       >
         {
-          DUMMY_DATA.map(({ tag, service, title, category }, index) => {
+          INSIGHTS.map(({ tag, service, title, category }, index) => {
             return (
-              <div
-                class={`mix relative rounded-xl insight-item cursor-pointer ${tag
+              <a
+                href={`${Astro.url.href}/${title
                   .toLowerCase()
-                  .trim()
-                  .replaceAll(" ", "-")} group`}
+                  .replaceAll(" ", "-")}`}
               >
-                <div class="overflow-hidden rounded-xl">
-                  <img
-                    class="rounded-xl group-hover:scale-110 transition-all duration-700 w-full h-full"
-                    width="400"
-                    height="400"
-                    src={`https://picsum.photos/500?random=${index + 1}`}
-                    loading="lazy"
-                  />
-                </div>
-                <div class="absolute text-color top-0 left-0 p-5 flex flex-col justify-between items-start h-full overflow-hidden  z-20">
-                  <span
-                    class={`bg-white px-4 py-1 rounded-full text-[0.8rem] font-semibold`}
-                  >
-                    {service}
-                  </span>
-                  <div class="flex flex-col gap-5 justify-start items-start">
-                    <h3 class="text-white font-medium text-xl">{title}</h3>
-                    <span class="text-white font-medium text-[0.7rem] opacity-90 uppercase">
-                      {category}
+                <div
+                  class={`mix relative rounded-xl insight-item cursor-pointer ${tag
+                    .toLowerCase()
+                    .trim()
+                    .replaceAll(" ", "-")} group`}
+                >
+                  <div class="overflow-hidden rounded-xl">
+                    <img
+                      class="rounded-xl group-hover:scale-110 transition-all duration-700 w-full h-full"
+                      width="400"
+                      height="400"
+                      src={`https://picsum.photos/500?random=${index + 1}`}
+                      loading="lazy"
+                    />
+                  </div>
+                  <div class="absolute text-color top-0 left-0 p-5 flex flex-col justify-between items-start h-full overflow-hidden  z-20">
+                    <span
+                      class={`bg-white px-4 py-1 rounded-full text-[0.8rem] font-semibold`}
+                    >
+                      {service}
                     </span>
-                    <span class="-mb-14 group-hover:!mb-0 transition-all duration-[800ms] bg-white font-semibold px-4 py-1 rounded-full text-sm">
-                      Learn more
-                    </span>
+                    <div class="flex flex-col gap-5 justify-start items-start">
+                      <h3 class="text-white font-medium text-xl">{title}</h3>
+                      <span class="text-white font-medium text-[0.7rem] opacity-90 uppercase">
+                        {category}
+                      </span>
+                      <span class="-mb-14 group-hover:!mb-0 transition-all duration-[800ms] bg-white font-semibold px-4 py-1 rounded-full text-sm">
+                        Learn more
+                      </span>
+                    </div>
                   </div>
                 </div>
-              </div>
+              </a>
             );
           })
         }

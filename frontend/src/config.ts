@@ -435,6 +435,130 @@ export const PACKAGES = [
   },
 ];
 
+export const INSIGHTS = [
+  {
+    title: "10 Effective Strategies for Email Marketing Success",
+    service: "Email Marketing",
+    category: "Furniture & Home",
+    tag: "Strategies",
+  },
+  {
+    title: "The Power of Visual Storytelling in Social Media Marketing",
+    service: "SMM",
+    category: "Health Care & Beauty",
+    tag: "Best Practices",
+  },
+  {
+    title: "How to Optimize Your Website for Search Engine Rankings",
+    service: "Search Engine Optimization",
+    category: "Real estate",
+    tag: "Tips",
+  },
+  {
+    title: "Understanding Google Ads: A Beginner's Guide to Paid Advertising",
+    service: "Paid Ads",
+    category: "Fintech & Banking",
+    tag: "Insights",
+  },
+  {
+    title: "Maximizing ROI with Data-Driven Analytics in Digital Marketing",
+    service: "Analytics",
+    category: "Marketplaces",
+    tag: "Analysis",
+  },
+  {
+    title: "The Importance of Mobile Optimization in Digital Marketing",
+    service: "Mobile Marketing",
+    category: "Automotive",
+    tag: "Trends",
+  },
+  {
+    title: "Creating Compelling Content: Tips for Content Marketing Success",
+    service: "Design & Creative",
+    category: "Fashion & Apparel",
+    tag: "Strategies",
+  },
+  {
+    title: "Harnessing the Power of Influencer Marketing for Brand Growth",
+    service: "Paid Media",
+    category: "Food & Beverage",
+    tag: "Best Practices",
+  },
+  {
+    title: "Social Media Trends to Watch Out for in the Coming Year",
+    service: "SMM",
+    category: "Pet care",
+    tag: "Trends",
+  },
+  {
+    title: "The Future of Marketing: Emerging Trends and Technologies",
+    service: "Strategy",
+    category: "Consumer electronics",
+    tag: "Insights",
+  },
+  {
+    title: "Effective Email Marketing Strategies for E-commerce Businesses",
+    service: "Email Marketing",
+    category: "Marketplaces",
+    tag: "Best Practices",
+  },
+  {
+    title: "The Impact of Visual Content in Social Media Marketing",
+    service: "SMM",
+    category: "Fashion & Apparel",
+    tag: "Analysis",
+  },
+  {
+    title: "SEO Techniques to Boost Your Website's Visibility",
+    service: "Search Engine Optimization",
+    category: "Real estate",
+    tag: "Trends",
+  },
+  {
+    title: "Tips for Crafting Engaging Copy in Paid Advertising",
+    service: "Paid Ads",
+    category: "Fintech & Banking",
+    tag: "Strategies",
+  },
+  {
+    title: "Utilizing Data Analytics for Better Marketing Decision-Making",
+    service: "Analytics",
+    category: "Consumer electronics",
+    tag: "Tips",
+  },
+  {
+    title: "Mobile Marketing Strategies for Automotive Brands",
+    service: "Mobile Marketing",
+    category: "Automotive",
+    tag: "Insights",
+  },
+  {
+    title: "Innovative Design Ideas for Content Marketing Campaigns",
+    service: "Design & Creative",
+    category: "Fashion & Apparel",
+    tag: "Best Practices",
+  },
+  {
+    title: "The Role of Influencers in the Food & Beverage Industry",
+    service: "Paid Media",
+    category: "Food & Beverage",
+    tag: "Trends",
+  },
+  {
+    title: "Social Media Engagement Strategies for Pet Care Brands",
+    service: "SMM",
+    category: "Pet care",
+    tag: "Analysis",
+  },
+  {
+    title:
+      "Developing Sustainable Marketing Strategies for Consumer Electronics",
+    service: "Strategy",
+    category: "Consumer electronics",
+    tag: "Strategies",
+  },
+];
+
 
 export const SITE = {
   name: "Vymktg",

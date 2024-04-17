@@ -1,0 +1,354 @@
+---
+import { INSIGHTS } from "../../config";
+import BasePage from "../../layouts/BasePage.astro";
+import Container from "../../components/shared/Container.astro";
+import CTAFooter from "../../components/sections/CTAFooter.astro";
+
+export async function getStaticPaths() {
+  //   [
+  //     {
+  //       slug: "/astro-handbook",
+  //       title: "The ultimate Astro handbook",
+  //       text: "If you want to learn Astro, you must read this book.",
+  //     },
+  //   ];
+  const pages = INSIGHTS.map(({ title, ...props }) => {
+    return {
+      slug: title.toLowerCase().replaceAll(" ", "-"),
+      title,
+      ...props,
+    };
+  });
+
+  return pages.map(({ slug, title, service, category, tag }) => {
+    return {
+      params: { slug },
+      props: { title, service, category, tag },
+    };
+  });
+}
+
+const { title, service, category, tag } = Astro.props;
+
+const relativeInsights = INSIGHTS.slice(0, 4);
+---
+
+<BasePage class:list="relative">
+  <img
+    src="https://picsum.photos/1920/800"
+    class="max-w-[1920px] mx-auto"
+    width="1920"
+    height="800"
+  />
+  <Container>
+    <div class="absolute top-1/3 z-10 w-2/3">
+      <h1 class="text-white text-5xl font-semibold">{title}</h1>
+    </div>
+  </Container>
+  <Container className="relative w-full">
+    <div
+      class="absolute bottom-[-65px] bg-white rounded-2xl w-full px-14 py-4 shadow-2xl"
+    >
+      <div
+        class="grid grid-cols-3 divide-x justify-center items-center text-center"
+      >
+        <div class="py-10">
+          <span class="font-semibold mr-2">Service:</span><span
+            class="cursor-pointer">{service}</span
+          >
+        </div>
+        <div class="py-10">
+          <span class="font-semibold mr-2">Category:</span><span
+            >{category}</span
+          >
+        </div>
+        <div class="py-10">
+          <span class="font-semibold mr-2">Tag:</span><span
+            class="cursor-pointer">{tag}</span
+          >
+        </div>
+      </div>
+    </div>
+  </Container>
+  <Container>
+    <div class="my-40">
+      <div class="grid grid-cols-[350px_1fr] gap-10">
+        <div class="flex flex-col gap-5 divide-y">
+          <div>
+            <h4 class="font-medium text-lg">Table Of Content</h4>
+            <div class="flex flex-col gap-3 p-5">
+              <span class="underline font-semibold cursor-pointer"
+                >Introduction</span
+              >
+              <span class="cursor-pointer hover:underline hover:font-semibold"
+                >Know Your Audience</span
+              >
+              <span class="cursor-pointer hover:underline hover:font-semibold"
+                >Personalization</span
+              >
+              <span class="cursor-pointer hover:underline hover:font-semibold"
+                >Compelling Subject Lines</span
+              >
+              <span class="cursor-pointer hover:underline hover:font-semibold"
+                >Mobile Optimization</span
+              >
+              <span class="cursor-pointer hover:underline hover:font-semibold"
+                >Clear Call-to-Action (CTA)</span
+              >
+              <span class="cursor-pointer hover:underline hover:font-semibold"
+                >Segmentation and Targeting</span
+              >
+              <span class="cursor-pointer hover:underline hover:font-semibold"
+                >A/B Testing</span
+              >
+              <span class="cursor-pointer hover:underline hover:font-semibold"
+                >Analytics and Metrics</span
+              >
+              <span class="cursor-pointer hover:underline hover:font-semibold"
+                >Automation</span
+              >
+              <span class="cursor-pointer hover:underline hover:font-semibold"
+                >Conclusion</span
+              >
+            </div>
+          </div>
+          <div class="flex flex-row justify-between gap-4 pt-10">
+            <button
+              class="flex flex-row justify-center items-center border border-gray-300 rounded-xl p-3 gap-3"
+              ><img
+                src="https://assets-global.website-files.com/637dd8d62ccaf602c8ad331c/63a087f107b97a5a3e09d799_copy%201.svg"
+                width="24"
+                height="24"
+              />
+              Copy link
+            </button>
+            <button
+              class="flex flex-row justify-center items-center border border-gray-300 rounded-xl p-3"
+              ><img
+                src="https://assets-global.website-files.com/637dd8d62ccaf602c8ad331c/63a08894fd3939586ca2fbea_faceb.svg"
+                width="24"
+                height="24"
+              />
+            </button>
+            <button
+              class="flex flex-row justify-center items-center border border-gray-300 rounded-xl p-3"
+              ><img
+                src="https://assets-global.website-files.com/637dd8d62ccaf602c8ad331c/63a08cbc772dda5043422326_fdff.svg"
+                width="24"
+                height="24"
+              />
+            </button>
+            <button
+              class="flex flex-row justify-center items-center border border-gray-300 rounded-xl p-3"
+              ><img
+                src="https://assets-global.website-files.com/637dd8d62ccaf602c8ad331c/63a08fc1b78efecdb5a452d8_icons%20twitter.svg"
+                width="24"
+                height="24"
+              />
+            </button>
+          </div>
+        </div>
+        <div class="flex flex-col gap-10">
+          <div>
+            <h3 class="text-2xl font-semibold mb-5">Introduction</h3>
+            <p>
+              Email marketing remains one of the most powerful tools in a
+              marketer's arsenal. However, achieving success in this domain
+              requires more than just sending out mass emails. In this guide,
+              we'll explore ten effective strategies that can significantly
+              enhance your email marketing efforts and drive better results.
+            </p>
+          </div>
+          <div>
+            <h3 class="text-2xl font-semibold mb-5">1. Know Your Audience</h3>
+            <p>
+              Email marketing remains one of the most powerful tools in a
+              marketer's arsenal. However, achieving success in this domain
+              requires more than just sending out mass emails. In this guide,
+              we'll explore ten effective strategies that can significantly
+              enhance your email marketing efforts and drive better results.
+            </p>
+          </div>
+          <div>
+            <h3 class="text-2xl font-semibold mb-5">2. Personalization</h3>
+            <p>
+              Personalized emails have a higher chance of engagement than
+              generic ones. Use subscriber data to personalize email content,
+              such as addressing recipients by their name and recommending
+              products based on their past purchases or browsing history.
+            </p>
+          </div>
+          <div>
+            <h3 class="text-2xl font-semibold mb-5">
+              3. Compelling Subject Lines
+            </h3>
+            <p>
+              The subject line is the first thing recipients see, so make it
+              compelling and relevant. A catchy subject line can increase open
+              rates and encourage recipients to explore the email further.
+              Experiment with different approaches to see what resonates best
+              with your audience.
+            </p>
+          </div>
+          <div>
+            <h3 class="text-2xl font-semibold mb-5">4. Mobile Optimization</h3>
+            <p>
+              With the majority of emails now being opened on mobile devices,
+              optimizing your emails for mobile is crucial. Ensure that your
+              emails are responsive and easy to read on smartphones and tablets
+              to provide a seamless experience for mobile users.
+            </p>
+          </div>
+          <div>
+            <h3 class="text-2xl font-semibold mb-5">
+              5. Clear Call-to-Action (CTA)
+            </h3>
+            <p>
+              Every email should have a clear and prominent call-to-action (CTA)
+              that guides recipients on what action to take next. Whether it's
+              making a purchase, signing up for an event, or downloading a
+              resource, the CTA should be persuasive and easy to understand.
+            </p>
+          </div>
+          <div>
+            <h3 class="text-2xl font-semibold mb-5">
+              6. Segmentation and Targeting
+            </h3>
+            <p>
+              Segmenting your email list based on demographics, interests, and
+              past interactions allows you to send more targeted and relevant
+              content to different groups of subscribers. This increases the
+              likelihood of engagement and conversion.
+            </p>
+          </div>
+          <div>
+            <h3 class="text-2xl font-semibold mb-5">7. A/B Testing</h3>
+            <p>
+              EA/B testing involves sending two versions of an email to
+              different segments of your audience to see which performs better.
+              Test different elements such as subject lines, CTAs, and email
+              designs to optimize your campaigns for maximum effectiveness.
+            </p>
+          </div>
+          <div>
+            <h3 class="text-2xl font-semibold mb-5">
+              8. Analytics and Metrics
+            </h3>
+            <p>
+              Regularly monitor key metrics such as open rates, click-through
+              rates, and conversion rates to gauge the performance of your email
+              campaigns. Use this data to identify areas for improvement and
+              refine your strategies over time.
+            </p>
+          </div>
+          <div>
+            <h3 class="text-2xl font-semibold mb-5">9. Automation</h3>
+            <p>
+              Automation allows you to send timely and relevant emails to your
+              subscribers based on their actions and behavior. Set up automated
+              workflows for welcome emails, abandoned cart reminders, and
+              follow-up sequences to nurture leads and drive conversions.
+            </p>
+          </div>
+          <div>
+            <h3 class="text-2xl font-semibold mb-5">10. Conclusion</h3>
+            <p>
+              By implementing these ten effective strategies, you can enhance
+              the success of your email marketing campaigns and achieve better
+              results. Remember to continually analyze data, experiment with
+              different approaches, and adapt your strategies to meet the
+              evolving needs of your audience. With dedication and creativity,
+              email marketing can become a powerful tool for driving engagement,
+              nurturing leads, and ultimately, boosting your bottom line.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </Container>
+
+  <div class="py-20 w-full mx-auto bg-slate-100 mb-80">
+    <Container className="flex flex-col gap-20">
+      <div class="flex flex-row justify-between items-center">
+        <div class="flex flex-col justify-center items-start gap-4">
+          <span class="text-primary font-semibold text-xs">SHOW CASE</span>
+          <h2 class="text-4xl font-bold justify-center items-center flex w-2/3">
+            More projects from our awesome portfolio
+          </h2>
+        </div>
+        <div>
+          <button
+            class="bg-primary rounded-xl text-white px-10 py-5 font-medium transition border-2 border-primary hover:bg-white hover:border-primary hover:text-primary duration-500"
+            >View More Insights</button
+          >
+        </div>
+      </div>
+      <div class="grid grid-cols-4 gap-10">
+        {
+          relativeInsights.map(({ tag, service, title, category }, index) => (
+            <a
+              href={`${Astro.url.href}/${title
+                .toLowerCase()
+                .replaceAll(" ", "-")}`}
+            >
+              <div
+                class={`mix relative rounded-xl insight-item cursor-pointer ${tag
+                  .toLowerCase()
+                  .trim()
+                  .replaceAll(" ", "-")} group`}
+              >
+                <div class="overflow-hidden rounded-xl">
+                  <img
+                    class="rounded-xl group-hover:scale-110 transition-all duration-700 w-full h-full"
+                    width="400"
+                    height="400"
+                    src={`https://picsum.photos/500?random=${index + 1}`}
+                    loading="lazy"
+                  />
+                </div>
+                <div class="absolute text-color top-0 left-0 p-5 flex flex-col justify-between items-start h-full overflow-hidden z-20">
+                  <span
+                    class={`bg-white px-4 py-1 rounded-full text-[0.8rem] font-semibold`}
+                  >
+                    {service}
+                  </span>
+                  <div class="flex flex-col gap-5 justify-start items-start">
+                    <h3 class="text-white font-medium text-xl">{title}</h3>
+                    <span class="text-white font-medium text-[0.7rem] opacity-90 uppercase">
+                      {category}
+                    </span>
+                    <span class="-mb-14 group-hover:!mb-0 transition-all duration-[800ms] bg-white font-semibold px-4 py-1 rounded-full text-sm">
+                      Learn more
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </a>
+          ))
+        }
+      </div>
+    </Container>
+  </div>
+
+  <CTAFooter />
+</BasePage>
+
+<style>
+  .insight-item::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0.4) 75%,
+      rgba(0, 0, 0, 0.8) 100%
+    );
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    z-index: 10;
+  }
+</style>
