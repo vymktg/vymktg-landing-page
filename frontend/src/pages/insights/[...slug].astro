@@ -3,6 +3,7 @@ import { INSIGHTS } from "../../config";
 import BasePage from "../../layouts/BasePage.astro";
 import Container from "../../components/shared/Container.astro";
 import CTAFooter from "../../components/sections/CTAFooter.astro";
+import { Image } from "astro:assets";
 
 export async function getStaticPaths() {
   //   [
@@ -30,21 +31,46 @@ export async function getStaticPaths() {
 
 const { title, service, category, tag } = Astro.props;
 
-const relativeInsights = INSIGHTS.slice(0, 4);
+const images = import.meta.glob('/src/assets/images/insights/abstract/*.{png,jpg,jpeg,gif}');
+
+const getRandomImage = (images: string[]): string => {
+  const randomIndex = Math.floor(Math.random() * images.length);
+  const [image] = images.splice(randomIndex, 1); // Remove the selected image
+  return image;
+};
+
+const mapInsightsToImages = (insights: any[]): any[] => {
+  // Convert the images object to an array of paths
+  const imageKeys = Object.keys(images);
+
+  if (imageKeys.length < insights.length) {
+    throw new Error("Not enough images to match each post.");
+  }
+
+  return insights.map(post => ({
+    ...post,
+    image: getRandomImage(imageKeys),
+  }));
+};
+
+const relativeInsights = mapInsightsToImages(INSIGHTS.slice(0, 4));
 ---
 
 <BasePage class:list="relative">
-  <img
-    src="https://picsum.photos/1920/800"
-    class="max-w-[1920px] mx-auto"
-    width="1920"
-    height="800"
-  />
-  <Container>
-    <div class="absolute top-1/3 z-10 w-2/3">
-      <h1 class="text-white text-5xl font-semibold">{title}</h1>
+  <div class="relative">
+    <div class="brightness-50 z-[-1] relative">
+      <Image
+        class="object-cover mx-auto h-[500px] lg:h-auto lg:max-h-[800px] w-full"
+        src={getRandomImage(Object.keys(images))}
+        alt=""
+        width="1920"
+        height="800"
+      />
     </div>
-  </Container>
+    <Container className="absolute top-1/2 lg:top-1/3 z-10 md:w-2/3 mx-auto">
+      <h1 class="text-white text-3xl sm:text-5xl font-semibold">{title}</h1>
+    </Container>
+  </div>
   <Container className="relative w-full">
     <div
       class="absolute bottom-[-65px] bg-white rounded-2xl w-full px-14 py-4 shadow-2xl"
@@ -285,7 +311,7 @@ const relativeInsights = INSIGHTS.slice(0, 4);
       </div>
       <div class="grid grid-cols-4 gap-10">
         {
-          relativeInsights.map(({ tag, service, title, category }, index) => (
+          relativeInsights.map(({ tag, service, title, category, image }, index) => (
             <a
               href={`${Astro.url.href}/${title
                 .toLowerCase()
@@ -298,12 +324,12 @@ const relativeInsights = INSIGHTS.slice(0, 4);
                   .replaceAll(" ", "-")} group`}
               >
                 <div class="overflow-hidden rounded-xl">
-                  <img
-                    class="rounded-xl group-hover:scale-110 transition-all duration-700 w-full h-full"
-                    width="400"
-                    height="400"
-                    src={`https://picsum.photos/500?random=${index + 1}`}
-                    loading="lazy"
+                  <Image
+                    class="rounded-xl group-hover:scale-110 transition-all duration-700 w-[1000px] h-[300px] object-cover"
+                    src={image}
+                    alt=""
+                    width={1000}
+                    height={300}
                   />
                 </div>
                 <div class="absolute text-color top-0 left-0 p-5 flex flex-col justify-between items-start h-full overflow-hidden z-20">
